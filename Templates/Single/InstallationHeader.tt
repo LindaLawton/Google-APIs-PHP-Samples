@@ -1,6 +1,6 @@
 ﻿// About 
 // 
-// Unofficial sample for the <#= CleanName #> <#= APIResponse.Version #> API for PHP. 
+// Unofficial sample for the <#= ((APIResponse.CanonicalName != null) ? APIResponse.CanonicalName : APIResponse.Name) #> <#= APIResponse.Version #> API for PHP. 
 // This sample is designed to be used with the Google PHP client library. (https://github.com/google/google-api-php-client)
 // 
 // API Description: <#= APIResponse.Description #>
