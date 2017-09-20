@@ -1,0 +1,40 @@
+<#@ template language="C#" #>
+<#@ output extension=".php" #>
+<#@ assembly name="C:\Users\HP_User\Source\Repos\discoverysamplebuilder\Src\GoogleSampleBuilder\packages\Google.Apis.1.27.1\lib\net45\Google.Apis.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="GoogleSampleBuilder.Core.Util" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Google.Apis.Discovery.v1.Data" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ parameter name="APIResponse" type="Google.Apis.Discovery.v1.Data.RestDescription" #>
+<# string thisFile = "ServiceAccount.tt"; 
+var CleanName = ((APIResponse.CanonicalName != null) ? APIResponse.CanonicalName : APIResponse.Name).Replace(" ",string.Empty); 
+CleanName = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(CleanName.ToLower()); #>
+<#@include file="LicenceHeader.tt" #>  
+<#@include file="InstallationHeader.tt" #> 
+// Load the Google API PHP Client Library.
+require_once __DIR__ . '/vendor/autoload.php';
+
+// Start a session to persist credentials.
+session_start();
+
+// Create the client object and set the authorization configuration
+// from the client_secrets.json you downloaded from the Developers Console.
+$client = new Google_Client();
+$client->setAuthConfig(__DIR__ . '/client_secrets.json');
+$client->setRedirectUri('http://' . $_SERVER['HTTP_HOST'] . '/oauth2callback.php');
+$client->addScope(Google_Service_Analytics::ANALYTICS_READONLY);
+
+// Handle authorization flow from the server.
+if (! isset($_GET['code'])) {
+  $auth_url = $client->createAuthUrl();
+  header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
+} else {
+  $client->authenticate($_GET['code']);
+  $_SESSION['access_token'] = $client->getAccessToken();
+  $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/';
+  header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
+}
+?>

@@ -1,0 +1,53 @@
+﻿<#@ template language="C#" #>
+<#@ output extension=".php" #>
+<#@ assembly name="C:\Users\HP_User\Source\Repos\discoverysamplebuilder\Src\GoogleSampleBuilder\packages\Google.Apis.1.27.1\lib\net45\Google.Apis.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="GoogleSampleBuilder.Core.Util" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Google.Apis.Discovery.v1.Data" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ parameter name="APIResponse" type="Google.Apis.Discovery.v1.Data.RestDescription" #>
+<# string thisFile = "Oauth2Authentication.tt"; 
+var CleanName = ((APIResponse.CanonicalName != null) ? APIResponse.CanonicalName : APIResponse.Name).Replace(" ",string.Empty); 
+CleanName = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(CleanName.ToLower()); #>
+<#@include file="LicenceHeader.tt" #>  
+<#@include file="InstallationHeader.tt" #>  
+// Load the Google API PHP Client Library.
+require_once __DIR__ . '/vendor/autoload.php';
+
+session_start();
+$service = getAuthenticateOAuth2();
+?> <pre> <?php print_r($service); ?> </pre> <?php
+
+/**
+ * Authenticating to Google using Oauth2
+ * Documentation: https://developers.google.com/identity/protocols/OAuth2
+ * Initializes an <#= CleanName #>.<#= APIResponse.Version #> service object.
+ * @return An authorized <#= CleanName #>.<#= APIResponse.Version #> service object.
+ */
+function getAuthenticateOAuth2() {
+	try {
+		$client = new Google_Client();
+		$client->setAuthConfig(__DIR__ . '/client_secrets.json');
+		$client->addScope(Google_Service_<#= CleanName #>::ANALYTICS_READONLY);
+
+		// If the user has already authorized this app then get an access token
+		// else redirect to ask the user to authorize access to Google Analytics.
+		if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
+			// Set the access token on the client.
+			$client->setAccessToken($_SESSION['access_token']);
+
+			// Create an authorized analytics service object.
+			return new Google_Service_<#= CleanName #>($client); 
+
+		} else {
+			$redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . '/oauth2callback.php';
+			header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
+		}
+	} catch (Exception $e) {
+		print "An error occurred: " . $e->getMessage();
+	}
+}
+?>

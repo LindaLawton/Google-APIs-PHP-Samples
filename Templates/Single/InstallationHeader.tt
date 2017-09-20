@@ -1,0 +1,21 @@
+﻿// About 
+// 
+// Unofficial sample for the <#= CleanName #> <#= APIResponse.Version #> API for PHP. 
+// This sample is designed to be used with the Google PHP client library. (https://github.com/google/google-api-php-client)
+// 
+// API Description: <#= APIResponse.Description #>
+// API Documentation Link <#= (APIResponse.DocumentationLink != null)? APIResponse.DocumentationLink : "" #>
+//
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/<#= CleanName #>/<#= APIResponse.Version.Replace(".","_") #>/rest
+//
+//------------------------------------------------------------------------------
+// Installation
+//
+// The preferred method is via https://getcomposer.org. Follow the installation instructions https://getcomposer.org/doc/00-intro.md 
+// if you do not already have composer installed.
+//
+// Once composer is installed, execute the following command in your project root to install this library:
+//
+// composer require google/apiclient:^2.0
+//
+//------------------------------------------------------------------------------

@@ -1,0 +1,54 @@
+﻿<#@ template language="C#" #>
+<#@ output extension=".php" #>
+<#@ assembly name="C:\Users\HP_User\Source\Repos\discoverysamplebuilder\Src\GoogleSampleBuilder\packages\Google.Apis.1.27.1\lib\net45\Google.Apis.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="GoogleSampleBuilder.Core.Util" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Google.Apis.Discovery.v1.Data" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ parameter name="APIResponse" type="Google.Apis.Discovery.v1.Data.RestDescription" #>
+<# string thisFile = "APIKey.tt"; 
+var CleanName = ((APIResponse.CanonicalName != null) ? APIResponse.CanonicalName : APIResponse.Name).Replace(" ",string.Empty); 
+CleanName = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(CleanName.ToLower()); #>
+<#@include file="LicenceHeader.tt" #>  
+<#@include file="InstallationHeader.tt" #>  
+// Load the Google API PHP Client Library.
+require_once __DIR__ . '/vendor/autoload.php';
+
+// APIKey from Google developer console.
+$apiKey = "YOUR API KEY";
+
+$service = getService($apiKey);
+
+?> <pre> <?php print_r($results); ?> </pre> <?php
+/**
+ * Authenticating to Google using a Service account
+ * Documentation: https://developers.google.com/accounts/docs/OAuth2#serviceaccount
+ * Initializes an <#= CleanName #>.<#= APIResponse.Version #> service object.
+ * @param string API key
+ * @return An authorized <#= CleanName #>.<#= APIResponse.Version #> service object.
+ */
+function getPublicService($apiKey) {
+	try {
+		
+		$client = new Google_Client();
+		$client->setApplicationName("Google <#= CleanName #> Sample");
+		
+		// Warn if the API key isn't set.
+		if ($apiKey = "") {
+			echo "Missing API key";
+			return;
+		}
+		
+		// Apply key to client.
+		$client->setDeveloperKey($apiKey);
+		// Create authenticated <#= CleanName #> service
+		return new Google_Service_<#= CleanName #>($client);
+	} catch (Exception $e) {
+		print "An error occurred: " . $e->getMessage();
+	}
+}
+
+?>
