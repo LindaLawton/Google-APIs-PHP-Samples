@@ -2,7 +2,7 @@
 
 # Unoffical Google Fonts Developer API Samples for .NET  
 
-##API Description
+## API Description
 
 Accesses the metadata for all families served by Google Fonts, providing a list of families currently available (including available styles and a list of supported script subsets).
 
@@ -28,7 +28,7 @@ Check API version README for information on how to install it and use these samp
 
 These samples have been programmatically generated. Changes must be made in the T4 template files. Changes made in the samples themselves will be over written the next time the project is generated.
 
-Generated date: 09/20/2017 15:55:56 
+Generated date: 09/20/2017 16:13:49 
 
 See [Contributing](CONTRIBUTING.md)
 
