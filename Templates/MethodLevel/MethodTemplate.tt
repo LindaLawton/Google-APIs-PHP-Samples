@@ -1,0 +1,53 @@
+﻿<#@ template language="C#" #>
+<#@ output extension=".php" #>
+<#@ assembly name="C:\Users\HP_User\Source\Repos\discoverysamplebuilder\Src\GoogleSampleBuilder\packages\Google.Apis.1.27.1\lib\net45\Google.Apis.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="GoogleSampleBuilder.Core.Util" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="Google.Apis.Discovery.v1.Data" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ parameter name="APIResponse" type="Google.Apis.Discovery.v1.Data.RestDescription" #>
+<#@ parameter name="Resource" type="System.Collections.Generic.KeyValuePair<string, Google.Apis.Discovery.v1.Data.RestResource>" #>
+<#@ parameter name="Method" type="System.Collections.Generic.KeyValuePair<string, Google.Apis.Discovery.v1.Data.RestMethod>" #>
+<#@ parameter name="Parent" type="System.String" #>
+<# string thisFile = "methodTemplate.tt"; 
+var CleanName = ((APIResponse.CanonicalName != null) ? APIResponse.CanonicalName : APIResponse.Name).Replace(" ",string.Empty); 
+CleanName = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(CleanName.ToLower()); #>
+<#@include file="LicenceHeader.tt" #>  
+<#@include file="InstallationHeader.tt" #>  
+// Load the Google API PHP Client Library.
+require_once __DIR__ . '/vendor/autoload.php';
+/***************************************************
+* Include this line for service account authencation.  Note: Not all APIs support service accounts.  
+//require_once __DIR__ . '/ServiceAccount.php';     
+* Include the following for Oauth2 authencation.
+//require_once __DIR__ . '/Oauth2Authentication.php';
+//$_SESSION['mainScript'] = basename($_SERVER['PHP_SELF']);   // Oauth2callback.php will return here.
+****************************************************/
+
+session_start();
+
+print_r(BatchGet($service, $body));
+
+function BatchGet($service, $body)
+{
+	try
+	{
+		// Initial validation.
+		if ($service == null)
+			throw new Exception("service");
+		if ($body == null)
+			throw new Exception("body");
+
+		// Make the request.
+		return $service->reports->batchGet($body);
+	}
+	catch (Exception $ex)
+	{
+		throw new Exception("Request Reports.BatchGet failed.", $ex->getMessage());
+	}
+}
+
+?>
