@@ -1,5 +1,5 @@
 
-# Uoffical Samples for the Google APIs PHP client library.  #
+# Unoffical Samples for the Google APIs PHP client library.  #
 
 Sample project for working with the diffrent Google APIs with PHP.  
 
