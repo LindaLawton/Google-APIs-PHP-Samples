@@ -53,24 +53,22 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 session_start();
 
-print_r(BatchGet($service, $body));
+print_r(batchGet($service));
 
 /**
 * Returns AMP URL(s) and equivalent[AMP Cache URL(s)](/amp/cache/overview#amp-cache-url-format).
 * @service Authenticated Analyticsreporting service.
+
 * @return BatchGetAmpUrlsResponse</returns>
 */
-function batchGet($service, )
+function batchGet($service)
 {
 	try
 	{
-		// Initial validation.
+		// Parameter validation.
 		if ($service == null)
-			throw new Exception("service");
-		if ($body == null)
-			throw new Exception("body");
-
-		// Make the request.
+			throw new Exception("service is required.");
+		// Make the request and return the results.
 		return $service->batchGet();
 	}
 	catch (Exception $ex)

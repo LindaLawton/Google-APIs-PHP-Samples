@@ -6,7 +6,6 @@
 
 Send and retrieve trace data from Stackdriver Trace. Data is generated and available by default for all App Engine applications. Data from other applications can be written to Stackdriver Trace for display, reporting, and analysis.
 
-
 [Offical Documentation](https://cloud.google.com/trace)
 
 ## Sample Description
@@ -29,7 +28,7 @@ Check API version README for information on how to install it and use these samp
 
 These samples have been programmatically generated. Changes must be made in the T4 template files. Changes made in the samples themselves will be over written the next time the project is generated.
 
-Generated date: 09/21/2017 09:20:15 
+Generated date: 09/21/2017 19:35:30 
 
 See [Contributing](CONTRIBUTING.md)
 

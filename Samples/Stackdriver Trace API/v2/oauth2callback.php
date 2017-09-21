@@ -26,7 +26,6 @@
 // This sample is designed to be used with the Google PHP client library. (https://github.com/google/google-api-php-client)
 // 
 // API Description: Send and retrieve trace data from Stackdriver Trace. Data is generated and available by default for all App Engine applications. Data from other applications can be written to Stackdriver Trace for display, reporting, and analysis.
-
 // API Documentation Link https://cloud.google.com/trace
 //
 // Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudtrace/v2/rest

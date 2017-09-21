@@ -26,7 +26,6 @@
 // This sample is designed to be used with the Google PHP client library. (https://github.com/google/google-api-php-client)
 // 
 // API Description: Accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.
-
 // API Documentation Link https://cloud.google.com/datastore/
 //
 // Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Datastore/v1/rest

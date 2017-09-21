@@ -4,8 +4,7 @@
 
 ## API Description
 
-The Google Cloud Translation API lets websites and programs integrate with
-    Google Translate programmatically.
+The Google Cloud Translation API lets websites and programs integrate with    Google Translate programmatically.
 
 [Official Documentation](https://code.google.com/apis/language/translate/v2/getting_started.html)
 

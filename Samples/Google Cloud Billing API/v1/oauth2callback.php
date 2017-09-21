@@ -25,8 +25,7 @@
 // Unofficial sample for the Cloudbilling v1 API for PHP. 
 // This sample is designed to be used with the Google PHP client library. (https://github.com/google/google-api-php-client)
 // 
-// API Description: Allows developers to manage billing for their Google Cloud Platform projects
-    programmatically.
+// API Description: Allows developers to manage billing for their Google Cloud Platform projects    programmatically.
 // API Documentation Link https://cloud.google.com/billing/
 //
 // Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudbilling/v1/rest

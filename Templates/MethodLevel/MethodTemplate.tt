@@ -29,28 +29,31 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 session_start();
 
-print_r(BatchGet($service, $body));
+print_r(<#= method.Key #>($service<#= (method.Value.ParameterOrder.Count() > 0) ? ", " + String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>));
 
 /**
 * <#=  method.Value.Description #>
 * @service Authenticated Analyticsreporting service.
+<# if(method.Value.Parameters != null) { #>
 <# foreach (var parm in method.Value.Parameters.Where(a => method.Value.ParameterOrder.Contains(a.Key)).Select(b => b).ToList()) { #>
 <#= string.Format("* @{0} {1}",parm.Key,parm.Value.Description) /* Adding parms */ #>
-<# } 
+<# } }
 #><#= (method.Value.Response != null) ? string.Format("* @return {0}</returns>",method.Value.Response.Ref__) : ""#>
 */
-function <#= method.Key #>($service<#= (method.Value.ParameterOrder != null) ? ", " + String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>)
+function <#= method.Key #>($service<#= (method.Value.ParameterOrder.Count() > 0) ? ", " + String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>)
 {
 	try
 	{
-		// Initial validation.
+		// Parameter validation.
 		if ($service == null)
-			throw new Exception("service");
-		if ($body == null)
-			throw new Exception("body");
-
-		// Make the request.
-		return $service-><#= method.Key #>(<#= (method.Value.ParameterOrder != null) ? String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>);
+			throw new Exception("service is required.");
+<# if(method.Value.Parameters != null) { #>
+<# foreach (var parm in method.Value.Parameters.Where(a => method.Value.ParameterOrder.Contains(a.Key)).Select(b => b).ToList()) { #>
+		if (<#= parm.Key #> == null)
+			throw new Exception("<#= parm.Key #> is required.");
+<# }} #>
+		// Make the request and return the results.
+		return $service-><#= method.Key #>(<#= (method.Value.ParameterOrder.Count() > 0) ? String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>);
 	}
 	catch (Exception $ex)
 	{

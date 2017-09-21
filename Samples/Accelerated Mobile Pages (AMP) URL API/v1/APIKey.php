@@ -26,7 +26,6 @@
 // This sample is designed to be used with the Google PHP client library. (https://github.com/google/google-api-php-client)
 // 
 // API Description: Retrieves the list of AMP URLs (and equivalent AMP Cache URLs) for a given list of public URL(s).
-
 // API Documentation Link https://developers.google.com/amp/cache/
 //
 // Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Acceleratedmobilepageurl/v1/rest

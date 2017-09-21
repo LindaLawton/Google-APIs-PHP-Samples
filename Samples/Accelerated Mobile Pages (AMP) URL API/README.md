@@ -6,7 +6,6 @@
 
 Retrieves the list of AMP URLs (and equivalent AMP Cache URLs) for a given list of public URL(s).
 
-
 [Offical Documentation](https://developers.google.com/amp/cache/)
 
 ## Sample Description
@@ -29,7 +28,7 @@ Check API version README for information on how to install it and use these samp
 
 These samples have been programmatically generated. Changes must be made in the T4 template files. Changes made in the samples themselves will be over written the next time the project is generated.
 
-Generated date: 09/21/2017 09:20:14 
+Generated date: 09/21/2017 19:35:30 
 
 See [Contributing](CONTRIBUTING.md)
 

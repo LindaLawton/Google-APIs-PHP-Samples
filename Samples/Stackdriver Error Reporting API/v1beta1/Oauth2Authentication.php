@@ -26,7 +26,6 @@
 // This sample is designed to be used with the Google PHP client library. (https://github.com/google/google-api-php-client)
 // 
 // API Description: Groups and counts similar errors from cloud services and applications, reports new errors, and provides access to error groups and their associated errors.
-
 // API Documentation Link https://cloud.google.com/error-reporting/
 //
 // Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Clouderrorreporting/v1beta1/rest

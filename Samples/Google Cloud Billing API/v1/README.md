@@ -4,8 +4,7 @@
 
 ## API Description
 
-Allows developers to manage billing for their Google Cloud Platform projects
-    programmatically.
+Allows developers to manage billing for their Google Cloud Platform projects    programmatically.
 
 [Official Documentation](https://cloud.google.com/billing/)
 

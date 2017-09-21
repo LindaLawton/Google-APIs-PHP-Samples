@@ -26,7 +26,6 @@
 // This sample is designed to be used with the Google PHP client library. (https://github.com/google/google-api-php-client)
 // 
 // API Description: Creates and manages rules that determine when a Firebase Rules-enabled service should permit a request.
-
 // API Documentation Link https://firebase.google.com/docs/storage/security
 //
 // Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Firebaserules/v1/rest

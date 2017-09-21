@@ -53,26 +53,33 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 session_start();
 
-print_r(BatchGet($service, $body));
+print_r(list($service, $accountId, $clientAccountId));
 
 /**
 * Lists all the client users invitations for a clientwith a given account ID.
 * @service Authenticated Analyticsreporting service.
+
 * @accountId Numerical account ID of the client's sponsor buyer. (required)
-* @clientAccountId Numerical account ID of the client buyer to list invitations for.(required)You must either specify a string representation of anumerical account identifier or the `-` characterto list all the invitations for all the clientsof a given sponsor buyer.
+* @clientAccountId Numerical account ID of the client buyer to list invitations for.
+(required)
+You must either specify a string representation of a
+numerical account identifier or the `-` character
+to list all the invitations for all the clients
+of a given sponsor buyer.
 * @return ListClientUserInvitationsResponse</returns>
 */
 function list($service, $accountId, $clientAccountId)
 {
 	try
 	{
-		// Initial validation.
+		// Parameter validation.
 		if ($service == null)
-			throw new Exception("service");
-		if ($body == null)
-			throw new Exception("body");
-
-		// Make the request.
+			throw new Exception("service is required.");
+		if (accountId == null)
+			throw new Exception("accountId is required.");
+		if (clientAccountId == null)
+			throw new Exception("clientAccountId is required.");
+		// Make the request and return the results.
 		return $service->list($accountId, $clientAccountId);
 	}
 	catch (Exception $ex)

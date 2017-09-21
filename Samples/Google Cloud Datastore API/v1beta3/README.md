@@ -6,7 +6,6 @@
 
 Accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.
 
-
 [Official Documentation](https://cloud.google.com/datastore/)
 
 ## Sample Description

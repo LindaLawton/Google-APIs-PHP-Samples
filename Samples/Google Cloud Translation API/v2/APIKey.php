@@ -25,8 +25,7 @@
 // Unofficial sample for the Translate v2 API for PHP. 
 // This sample is designed to be used with the Google PHP client library. (https://github.com/google/google-api-php-client)
 // 
-// API Description: The Google Cloud Translation API lets websites and programs integrate with
-    Google Translate programmatically.
+// API Description: The Google Cloud Translation API lets websites and programs integrate with    Google Translate programmatically.
 // API Documentation Link https://code.google.com/apis/language/translate/v2/getting_started.html
 //
 // Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Translate/v2/rest
