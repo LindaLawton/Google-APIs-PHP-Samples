@@ -10,7 +10,7 @@
 <#@ import namespace="System.Collections.Generic" #>
 <#@ parameter name="APIResponse" type="Google.Apis.Discovery.v1.Data.RestDescription" #>
 <#@ parameter name="Resource" type="System.Collections.Generic.KeyValuePair<string, Google.Apis.Discovery.v1.Data.RestResource>" #>
-<#@ parameter name="Method" type="System.Collections.Generic.KeyValuePair<string, Google.Apis.Discovery.v1.Data.RestMethod>" #>
+<#@ parameter name="method" type="System.Collections.Generic.KeyValuePair<string, Google.Apis.Discovery.v1.Data.RestMethod>" #>
 <#@ parameter name="Parent" type="System.String" #>
 <# string thisFile = "methodTemplate.tt"; 
 var CleanName = ((APIResponse.CanonicalName != null) ? APIResponse.CanonicalName : APIResponse.Name).Replace(" ",string.Empty); 
@@ -31,7 +31,15 @@ session_start();
 
 print_r(BatchGet($service, $body));
 
-function BatchGet($service, $body)
+/**
+* <#=  method.Value.Description #>
+* @service Authenticated Analyticsreporting service.
+<# foreach (var parm in method.Value.Parameters.Where(a => method.Value.ParameterOrder.Contains(a.Key)).Select(b => b).ToList()) { #>
+<#= string.Format("* @{0} {1}",parm.Key,parm.Value.Description) /* Adding parms */ #>
+<# } 
+#><#= (method.Value.Response != null) ? string.Format("* @return {0}</returns>",method.Value.Response.Ref__) : ""#>
+*/
+function <#= method.Key #>($service<#= (method.Value.ParameterOrder != null) ? ", " + String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>)
 {
 	try
 	{
@@ -42,12 +50,11 @@ function BatchGet($service, $body)
 			throw new Exception("body");
 
 		// Make the request.
-		return $service->reports->batchGet($body);
+		return $service-><#= method.Key #>(<#= (method.Value.ParameterOrder != null) ? String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>);
 	}
 	catch (Exception $ex)
 	{
-		throw new Exception("Request Reports.BatchGet failed.", $ex->getMessage());
+		print "An error occurred: " . $e->getMessage();
 	}
 }
-
 ?>
