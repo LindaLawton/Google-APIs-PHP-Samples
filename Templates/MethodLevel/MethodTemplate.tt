@@ -19,28 +19,30 @@ CleanName = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase
 <#@include file="InstallationHeader.tt" #>  
 // Load the Google API PHP Client Library.
 require_once __DIR__ . '/vendor/autoload.php';
+session_start();
+
 /***************************************************
 * Include this line for service account authencation.  Note: Not all APIs support service accounts.  
 //require_once __DIR__ . '/ServiceAccount.php';     
-* Include the following for Oauth2 authencation.
-//require_once __DIR__ . '/Oauth2Authentication.php';
-//$_SESSION['mainScript'] = basename($_SERVER['PHP_SELF']);   // Oauth2callback.php will return here.
+* Include the following four lines Oauth2 authencation.
+* require_once __DIR__ . '/Oauth2Authentication.php';
+* $_SESSION['mainScript'] = basename($_SERVER['PHP_SELF']);   // Oauth2callback.php will return here.
+* $client = getGoogleClient();
+* $service = new Google_Service_<#= CleanName.FirstCharToUpper() #>($client); 
 ****************************************************/
 
-session_start();
-
-print_r(<#= method.Key #>($service<#= (method.Value.ParameterOrder.Count() > 0) ? ", " + String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>));
+print_r(<#= string.Format("{0}{1}Example",Resource.Key, method.Key.FirstCharToUpper()) #>($service<#= (method.Value.ParameterOrder.Count() > 0) ? ", " + String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>));
 
 /**
 * <#=  method.Value.Description #>
-* @service Authenticated Analyticsreporting service.
+* @service Authenticated <#= CleanName.FirstCharToUpper() #> service.
 <# if(method.Value.Parameters != null) { #>
 <# foreach (var parm in method.Value.Parameters.Where(a => method.Value.ParameterOrder.Contains(a.Key)).Select(b => b).ToList()) { #>
 <#= string.Format("* @{0} {1}",parm.Key,parm.Value.Description) /* Adding parms */ #>
 <# } }
 #><#= (method.Value.Response != null) ? string.Format("* @return {0}</returns>",method.Value.Response.Ref__) : ""#>
 */
-function <#= method.Key #>($service<#= (method.Value.ParameterOrder.Count() > 0) ? ", " + String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>)
+function <#= string.Format("{0}{1}Example",Resource.Key, method.Key.FirstCharToUpper()) #>($service<#= (method.Value.ParameterOrder.Count() > 0) ? ", " + String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>)
 {
 	try
 	{
@@ -53,7 +55,7 @@ function <#= method.Key #>($service<#= (method.Value.ParameterOrder.Count() > 0)
 			throw new Exception("<#= parm.Key #> is required.");
 <# }} #>
 		// Make the request and return the results.
-		return $service-><#= method.Key #>(<#= (method.Value.ParameterOrder.Count() > 0) ? String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>);
+		return $service-><#= string.Format("{0}->{1}{2}",Resource.Key, method.Key.FirstCharToUpper(),Resource.Key.FirstCharToUpper()) #>(<#= (method.Value.ParameterOrder.Count() > 0) ? String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>);
 	}
 	catch (Exception $ex)
 	{
