@@ -73,7 +73,7 @@ function <#= string.Format("{0}{1}Example",Resource.Key, method.Key.FirstCharToU
 			throw new Exception("<#= parm.Key #> is required.");
 <# }} #>
 		// Make the request and return the results.
-		return $service-><#= string.Format("{0}->{1}{2}",Resource.Key, method.Key.FirstCharToUpper(),Resource.Key.FirstCharToUpper()) #>(<#= (method.Value.ParameterOrder.Count() > 0) ? String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) + ", " : ""#>$optParams);
+		<#= (method.Value.Response != null) ? "return" : ""#> $service-><#= string.Format("{0}->{1}{2}",Resource.Key, method.Key.FirstCharToUpper(),Resource.Key.FirstCharToUpper()) #>(<#= (method.Value.ParameterOrder.Count() > 0) ? String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) + ", " : ""#>$optParams);
 	}
 	catch (Exception $e)
 	{
