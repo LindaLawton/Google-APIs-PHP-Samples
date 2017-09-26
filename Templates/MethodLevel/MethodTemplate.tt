@@ -31,10 +31,14 @@ session_start();
 * $service = new Google_Service_<#= CleanName.FirstCharToUpper() #>($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+<# foreach (var parm in method.Value.Parameters.Where(a => !method.Value.ParameterOrder.Contains(a.Key)).Select(b => b).ToList()) { #>            
+<#= string.Format("  //'{0}' => '[YourValue]',  // {1}", parm.Key, parm.Value.Description.Replace("\n","")) #>
+<# } #>
   'fields' => '*'
 );
+// Single Request.
 $results = <#= string.Format("{0}{1}Example",Resource.Key, method.Key.FirstCharToUpper()) #>($service<#= (method.Value.ParameterOrder.Count() > 0) ? ", " + String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>, $optParams);
 
 <# if (method.Value.Parameters.Where(a => a.Key.ToLower().Contains("pagetoken")).Count() > 0) { #>
