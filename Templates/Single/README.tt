@@ -1,4 +1,4 @@
-﻿<#@ template language="C#" #>
+<#@ template language="C#" #>
 <#@ output extension=".md" #>
 <#@ assembly name="C:\Users\HP_User\Source\Repos\discoverysamplebuilder\Src\GoogleSampleBuilder\packages\Google.Apis.1.27.1\lib\net45\Google.Apis.dll" #>
 <#@ import namespace="System" #>
@@ -109,7 +109,6 @@ Include the following line in your script to include service account authencatio
 ```
 require_once __DIR__ . '/APIKey.php';
 ```
-
 
 
 

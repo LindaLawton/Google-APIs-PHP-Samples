@@ -1,4 +1,4 @@
-﻿// About 
+// About 
 // 
 // Unofficial sample for the <#= ((APIResponse.CanonicalName != null) ? APIResponse.CanonicalName : APIResponse.Name) #> <#= APIResponse.Version #> API for PHP. 
 // This sample is designed to be used with the Google PHP client library. (https://github.com/google/google-api-php-client)
@@ -6,7 +6,7 @@
 // API Description: <#= APIResponse.Description #>
 // API Documentation Link <#= (APIResponse.DocumentationLink != null)? APIResponse.DocumentationLink : "" #>
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/<#= CleanName #>/<#= APIResponse.Version.Replace(".","_") #>/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/<#= CleanName #>/<#= APIResponse.Version.Replace(".","_") #>/rest
 //
 //------------------------------------------------------------------------------
 // Installation

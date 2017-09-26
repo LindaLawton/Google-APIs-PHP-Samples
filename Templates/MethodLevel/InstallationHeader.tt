@@ -6,7 +6,7 @@
 // API Description: <#= APIResponse.Description #>
 // API Documentation Link <#= (APIResponse.DocumentationLink != null)? APIResponse.DocumentationLink : "" #>
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/<#= CleanName #>/<#= APIResponse.Version.Replace(".","_") #>/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/<#= CleanName #>/<#= APIResponse.Version.Replace(".","_") #>/rest
 //
 //------------------------------------------------------------------------------
 // Installation
