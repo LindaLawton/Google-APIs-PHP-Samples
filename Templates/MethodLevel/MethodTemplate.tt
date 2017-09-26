@@ -31,33 +31,51 @@ session_start();
 * $service = new Google_Service_<#= CleanName.FirstCharToUpper() #>($client); 
 ****************************************************/
 
-print_r(<#= string.Format("{0}{1}Example",Resource.Key, method.Key.FirstCharToUpper()) #>($service<#= (method.Value.ParameterOrder.Count() > 0) ? ", " + String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>));
+// Single Request.
+ $optParams = array(
+  'fields' => '*'
+);
+$results = <#= string.Format("{0}{1}Example",Resource.Key, method.Key.FirstCharToUpper()) #>($service<#= (method.Value.ParameterOrder.Count() > 0) ? ", " + String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>, $optParams);
+
+<# if (method.Value.Parameters.Where(a => a.Key.ToLower().Contains("pagetoken")).Count() > 0) { #>
+// Paginiation Example
+do {
+    if (!$results->getNextPageToken()) 
+		break;
+
+	$optParams['pageToken'] = $results->getNextPageToken();
+	$results = filesListExample($service<#= (method.Value.ParameterOrder.Count() > 0) ? ", " + String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>, $optParams);	
+} while($results->getNextPageToken());  
+<# } #>
 
 /**
 * <#=  method.Value.Description #>
 * @service Authenticated <#= CleanName.FirstCharToUpper() #> service.
+* @optParams Optional paramaters are not required by a request.
 <# if(method.Value.Parameters != null) { #>
 <# foreach (var parm in method.Value.Parameters.Where(a => method.Value.ParameterOrder.Contains(a.Key)).Select(b => b).ToList()) { #>
 <#= string.Format("* @{0} {1}",parm.Key,parm.Value.Description) /* Adding parms */ #>
 <# } }
-#><#= (method.Value.Response != null) ? string.Format("* @return {0}</returns>",method.Value.Response.Ref__) : ""#>
+#><#= (method.Value.Response != null) ? string.Format("* @return {0}",method.Value.Response.Ref__) : ""#>
 */
-function <#= string.Format("{0}{1}Example",Resource.Key, method.Key.FirstCharToUpper()) #>($service<#= (method.Value.ParameterOrder.Count() > 0) ? ", " + String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>)
+function <#= string.Format("{0}{1}Example",Resource.Key, method.Key.FirstCharToUpper()) #>($service<#= (method.Value.ParameterOrder.Count() > 0) ? ", " + String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>, $optParams)
 {
 	try
 	{
 		// Parameter validation.
 		if ($service == null)
 			throw new Exception("service is required.");
+		if ($optParams == null)
+			throw new Exception("optParams is required.");
 <# if(method.Value.Parameters != null) { #>
 <# foreach (var parm in method.Value.Parameters.Where(a => method.Value.ParameterOrder.Contains(a.Key)).Select(b => b).ToList()) { #>
 		if (<#= parm.Key #> == null)
 			throw new Exception("<#= parm.Key #> is required.");
 <# }} #>
 		// Make the request and return the results.
-		return $service-><#= string.Format("{0}->{1}{2}",Resource.Key, method.Key.FirstCharToUpper(),Resource.Key.FirstCharToUpper()) #>(<#= (method.Value.ParameterOrder.Count() > 0) ? String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) : ""#>);
+		return $service-><#= string.Format("{0}->{1}{2}",Resource.Key, method.Key.FirstCharToUpper(),Resource.Key.FirstCharToUpper()) #>(<#= (method.Value.ParameterOrder.Count() > 0) ? String.Join(", ", method.Value.ParameterOrder.Select(s => string.Format("${0}", s)).ToArray()) + ", " : ""#>$optParams);
 	}
-	catch (Exception $ex)
+	catch (Exception $e)
 	{
 		print "An error occurred: " . $e->getMessage();
 	}
