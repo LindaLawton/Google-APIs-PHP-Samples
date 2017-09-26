@@ -12,7 +12,7 @@
 ![<#= APIResponse.Title #>](<#= APIResponse.Icons.X32 #>)
 <# var CleanName = ((APIResponse.CanonicalName != null) ? APIResponse.CanonicalName : APIResponse.Name).Replace(" ",string.Empty); #>
 
-# Unoffical <#= APIResponse.Title #> Samples for .NET  
+# Unoffical <#= APIResponse.Title #> Samples for PHP
 
 ## API Description
 
