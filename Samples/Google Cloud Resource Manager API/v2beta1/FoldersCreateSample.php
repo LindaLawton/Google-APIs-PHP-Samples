@@ -28,7 +28,7 @@
 // API Description: The Google Cloud Resource Manager API provides methods for creating, reading, and updating project metadata.
 // API Documentation Link https://cloud.google.com/resource-manager
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudresourcemanager/v2beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudresourcemanager/v2beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Cloudresourcemanager($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'parent' => '[YourValue]',  //The resource name of the new Folder's parent.Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
   'fields' => '*'
 );
+// Single Request.
 $results = foldersCreateExample($service, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: Allows developers to manage billing for their Google Cloud Platform projects    programmatically.
 // API Documentation Link https://cloud.google.com/billing/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudbilling/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudbilling/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Cloudbilling($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageSize' => '[YourValue]',  //Requested page size. The maximum page size is 100; this is also thedefault.
+            
+  //'pageToken' => '[YourValue]',  //A token identifying a page of results to be returned. This should be a`next_page_token` value returned from a previous `ListProjectBillingInfo`call. If unspecified, the first page of results is returned.
   'fields' => '*'
 );
+// Single Request.
 $results = projectsListExample($service, $name, $optParams);
 
 // Paginiation Example

@@ -28,7 +28,7 @@
 // API Description: Retrieves your YouTube Analytics data.
 // API Documentation Link http://developers.google.com/youtube/analytics/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Youtubeanalytics/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/youtubeAnalytics/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

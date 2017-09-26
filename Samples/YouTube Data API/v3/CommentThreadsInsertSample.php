@@ -28,7 +28,7 @@
 // API Description: Supports core YouTube features, such as uploading videos, creating and managing playlists, searching for content, and much more.
 // API Documentation Link https://developers.google.com/youtube/v3
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Youtube/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Youtube($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = commentThreadsInsertExample($service, $part, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: The Android Management API provides remote enterprise management of Android devices and apps.
 // API Documentation Link https://developers.google.com/android/management
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Androidmanagement/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/androidmanagement/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Androidmanagement($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'callbackUrl' => '[YourValue]',  //The callback URL to which the admin will be redirected after successfully creating an enterprise. Before redirecting there the system will add a query parameter to this URL named enterpriseToken which will contain an opaque token to be used for the create enterprise request. The URL will be parsed then reformatted in order to add the enterpriseToken parameter, so there may be some minor formatting changes.
+            
+  //'projectId' => '[YourValue]',  //The id of the Google Cloud Platform project which will own the enterprise.
   'fields' => '*'
 );
+// Single Request.
 $results = signupUrlsCreateExample($service, $optParams);
 
 

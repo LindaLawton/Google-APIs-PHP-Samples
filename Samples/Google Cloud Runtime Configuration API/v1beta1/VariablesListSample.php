@@ -28,7 +28,7 @@
 // API Description: The Runtime Configurator allows you to dynamically configure and expose variables through Google Cloud Platform. In addition, you can also set Watchers and Waiters that will watch for changes to your data and return based on certain conditions.
 // API Documentation Link https://cloud.google.com/deployment-manager/runtime-configurator/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudruntimeconfig/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/runtimeconfig/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Cloudruntimeconfig($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageSize' => '[YourValue]',  //Specifies the number of results to return per page. If there are fewerelements than the specified number, returns all elements.
+            
+  //'filter' => '[YourValue]',  //Filters variables by matching the specified filter. For example:`projects/example-project/config/[CONFIG_NAME]/variables/example-variable`.
+            
+  //'returnValues' => '[YourValue]',  //The flag indicates whether the user wants to return values of variables.If true, then only those variables that user has IAM GetVariable permissionwill be returned along with their values.
+            
+  //'pageToken' => '[YourValue]',  //Specifies a page token to use. Set `pageToken` to a `nextPageToken`returned by a previous list request to get the next page of results.
   'fields' => '*'
 );
+// Single Request.
 $results = variablesListExample($service, $parent, $optParams);
 
 // Paginiation Example

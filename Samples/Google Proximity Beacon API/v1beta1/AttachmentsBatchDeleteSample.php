@@ -28,7 +28,7 @@
 // API Description: Registers, manages, indexes, and searches beacons.
 // API Documentation Link https://developers.google.com/beacons/proximity/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Proximitybeacon/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/proximitybeacon/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Proximitybeacon($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'projectId' => '[YourValue]',  //The project id to delete beacon attachments under. This field can beused when "*" is specified to mean all attachment namespaces. Projectsmay have multiple attachments with multiple namespaces. If "*" isspecified and the projectId string is empty, then the projectmaking the request is used.Optional.
+            
+  //'namespacedType' => '[YourValue]',  //Specifies the namespace and type of attachments to delete in`namespace/type` format. Accepts `*/*` to specify"all types in all namespaces".Optional.
   'fields' => '*'
 );
+// Single Request.
 $results = attachmentsBatchDeleteExample($service, $beaconName, $optParams);
 
 

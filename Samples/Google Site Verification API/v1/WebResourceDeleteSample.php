@@ -28,7 +28,7 @@
 // API Description: Verifies ownership of websites or domains with Google.
 // API Documentation Link https://developers.google.com/site-verification/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Siteverification/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/siteVerification/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Siteverification($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = webResourceDeleteExample($service, $id, $optParams);
 
 
@@ -81,7 +82,7 @@ function webResourceDeleteExample($service, $id, $optParams)
 		if (id == null)
 			throw new Exception("id is required.");
 		// Make the request and return the results.
-		return $service->webResource->DeleteWebResource($id, $optParams);
+		 $service->webResource->DeleteWebResource($id, $optParams);
 	}
 	catch (Exception $e)
 	{

@@ -28,7 +28,7 @@
 // API Description: Accesses the metadata for all families served by Google Fonts, providing a list of families currently available (including available styles and a list of supported script subsets).
 // API Documentation Link https://developers.google.com/fonts/docs/developer_api
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Webfonts/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/webfonts/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

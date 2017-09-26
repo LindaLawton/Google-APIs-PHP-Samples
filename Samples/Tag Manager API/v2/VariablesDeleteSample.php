@@ -28,7 +28,7 @@
 // API Description: Accesses Tag Manager accounts and containers.
 // API Documentation Link https://developers.google.com/tag-manager/api/v2/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Tagmanager/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/tagmanager/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Tagmanager($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = variablesDeleteExample($service, $path, $optParams);
 
 
@@ -81,7 +82,7 @@ function variablesDeleteExample($service, $path, $optParams)
 		if (path == null)
 			throw new Exception("path is required.");
 		// Make the request and return the results.
-		return $service->variables->DeleteVariables($path, $optParams);
+		 $service->variables->DeleteVariables($path, $optParams);
 	}
 	catch (Exception $e)
 	{

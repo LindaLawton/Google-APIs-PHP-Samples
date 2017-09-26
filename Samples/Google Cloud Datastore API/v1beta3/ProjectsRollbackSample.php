@@ -28,7 +28,7 @@
 // API Description: Accesses the schemaless NoSQL database to provide fully managed, robust, scalable storage for your application.
 // API Documentation Link https://cloud.google.com/datastore/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Datastore/v1beta3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/datastore/v1beta3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Datastore($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = projectsRollbackExample($service, $projectId, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: Writes log entries and manages your Stackdriver Logging configuration.
 // API Documentation Link https://cloud.google.com/logging/docs/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Logging/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/logging/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Logging($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'updateMask' => '[YourValue]',  //Required. A nonempty list of fields to change in the existing exclusion. New values for the fields are taken from the corresponding fields in the LogExclusion included in this request. Fields not mentioned in update_mask are not changed and are ignored in the request.For example, to change the filter and description of an exclusion, specify an update_mask of "filter,description".
   'fields' => '*'
 );
+// Single Request.
 $results = exclusionsPatchExample($service, $name, $optParams);
 
 

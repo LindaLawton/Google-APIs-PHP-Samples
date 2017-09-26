@@ -1,6 +1,6 @@
 ﻿![Google Cloud Translation API](https://www.google.com/images/icons/product/translate-32.png)
 
-# Unoffical Google Cloud Translation API Samples for .NET  
+# Unoffical Google Cloud Translation API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ The Google Cloud Translation API lets websites and programs integrate with    Go
 
 ## Sample Description
 
-These samples show how to access the [Google Cloud Translation API](https://code.google.com/apis/language/translate/v2/getting_started.html) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google Cloud Translation API](https://code.google.com/apis/language/translate/v2/getting_started.html) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

@@ -28,7 +28,7 @@
 // API Description: Stores and retrieves potentially large, immutable data objects.
 // API Documentation Link https://developers.google.com/storage/docs/json_api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Storage/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/storage/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,25 @@ session_start();
 * $service = new Google_Service_Storage($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'delimiter' => '[YourValue]',  //Returns results in a directory-like mode. items will contain only objects whose names, aside from the prefix, do not contain delimiter. Objects whose names, aside from the prefix, contain delimiter will have their name, truncated after the delimiter, returned in prefixes. Duplicate prefixes are omitted.
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of items plus prefixes to return in a single page of responses. As duplicate prefixes are omitted, fewer total results may be returned than requested. The service will use this parameter or 1,000 items, whichever is smaller.
+            
+  //'pageToken' => '[YourValue]',  //A previously-returned page token representing part of the larger set of results to view.
+            
+  //'prefix' => '[YourValue]',  //Filter results to objects whose names begin with this prefix.
+            
+  //'projection' => '[YourValue]',  //Set of properties to return. Defaults to noAcl.
+            
+  //'userProject' => '[YourValue]',  //The project to be billed for this request, for Requester Pays buckets.
+            
+  //'versions' => '[YourValue]',  //If true, lists all versions of an object as distinct results. The default is false. For more information, see Object Versioning.
   'fields' => '*'
 );
+// Single Request.
 $results = objectsListExample($service, $bucket, $optParams);
 
 // Paginiation Example

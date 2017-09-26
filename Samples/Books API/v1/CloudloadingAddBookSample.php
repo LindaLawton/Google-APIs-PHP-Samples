@@ -28,7 +28,7 @@
 // API Description: Searches for books and manages your Google Books library.
 // API Documentation Link https://developers.google.com/books/docs/v1/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Books/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/books/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Books($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'drive_document_id' => '[YourValue]',  //A drive document id. The upload_client_token must not be set.
+            
+  //'mime_type' => '[YourValue]',  //The document MIME type. It can be set only if the drive_document_id is set.
+            
+  //'name' => '[YourValue]',  //The document name. It can be set only if the drive_document_id is set.
+            
+  //'upload_client_token' => '[YourValue]',  //
   'fields' => '*'
 );
+// Single Request.
 $results = cloudloadingAddBookExample($service, $optParams);
 
 

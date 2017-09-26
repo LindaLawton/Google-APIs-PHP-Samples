@@ -28,7 +28,7 @@
 // API Description: Views and manages licenses for your domain.
 // API Documentation Link https://developers.google.com/google-apps/licensing/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Licensing/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/licensing/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

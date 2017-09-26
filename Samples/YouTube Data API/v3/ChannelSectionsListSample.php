@@ -28,7 +28,7 @@
 // API Description: Supports core YouTube features, such as uploading videos, creating and managing playlists, searching for content, and much more.
 // API Documentation Link https://developers.google.com/youtube/v3
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Youtube/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Youtube($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'channelId' => '[YourValue]',  //The channelId parameter specifies a YouTube channel ID. The API will only return that channel's channelSections.
+            
+  //'hl' => '[YourValue]',  //The hl parameter indicates that the snippet.localized property values in the returned channelSection resources should be in the specified language if localized values for that language are available. For example, if the API request specifies hl=de, the snippet.localized properties in the API response will contain German titles if German titles are available. Channel owners can provide localized channel section titles using either the channelSections.insert or channelSections.update method.
+            
+  //'id' => '[YourValue]',  //The id parameter specifies a comma-separated list of the YouTube channelSection ID(s) for the resource(s) that are being retrieved. In a channelSection resource, the id property specifies the YouTube channelSection ID.
+            
+  //'mine' => '[YourValue]',  //Set this parameter's value to true to retrieve a feed of the authenticated user's channelSections.
+            
+  //'onBehalfOfContentOwner' => '[YourValue]',  //Note: This parameter is intended exclusively for YouTube content partners.The onBehalfOfContentOwner parameter indicates that the request's authorization credentials identify a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value. This parameter is intended for YouTube content partners that own and manage many different YouTube channels. It allows content owners to authenticate once and get access to all their video and channel data, without having to provide authentication credentials for each individual channel. The CMS account that the user authenticates with must be linked to the specified YouTube content owner.
   'fields' => '*'
 );
+// Single Request.
 $results = channelSectionsListExample($service, $part, $optParams);
 
 

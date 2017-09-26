@@ -28,7 +28,7 @@
 // API Description: Manages classes, rosters, and invitations in Google Classroom.
 // API Documentation Link https://developers.google.com/classroom/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Classroom/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/classroom/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Classroom($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'courseId' => '[YourValue]',  //Restricts returned invitations to those for a course with the specifiedidentifier.
+            
+  //'pageToken' => '[YourValue]',  //nextPageTokenvalue returned from a previouslist call, indicatingthat the subsequent page of results should be returned.The list request must beotherwise identical to the one that resulted in this token.
+            
+  //'userId' => '[YourValue]',  //Restricts returned invitations to those for a specific user. The identifiercan be one of the following:* the numeric identifier for the user* the email address of the user* the string literal `"me"`, indicating the requesting user
+            
+  //'pageSize' => '[YourValue]',  //Maximum number of items to return. Zero means no maximum.The server may return fewer than the specified number of results.
   'fields' => '*'
 );
+// Single Request.
 $results = invitationsListExample($service, $optParams);
 
 // Paginiation Example

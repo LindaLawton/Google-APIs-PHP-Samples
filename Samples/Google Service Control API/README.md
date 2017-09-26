@@ -1,6 +1,6 @@
 ﻿![Google Service Control API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Google Service Control API Samples for .NET  
+# Unoffical Google Service Control API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Google Service Control provides control plane functionality to managed services,
 
 ## Sample Description
 
-These samples show how to access the [Google Service Control API](https://cloud.google.com/service-control/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google Service Control API](https://cloud.google.com/service-control/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

@@ -28,7 +28,7 @@
 // API Description: Lets you manage your tasks and task lists.
 // API Documentation Link https://developers.google.com/google-apps/tasks/firstapp
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Tasks/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/tasks/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Tasks($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = tasksClearExample($service, $tasklist, $optParams);
 
 
@@ -81,7 +82,7 @@ function tasksClearExample($service, $tasklist, $optParams)
 		if (tasklist == null)
 			throw new Exception("tasklist is required.");
 		// Make the request and return the results.
-		return $service->tasks->ClearTasks($tasklist, $optParams);
+		 $service->tasks->ClearTasks($tasklist, $optParams);
 	}
 	catch (Exception $e)
 	{

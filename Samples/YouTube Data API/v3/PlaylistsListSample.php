@@ -28,7 +28,7 @@
 // API Description: Supports core YouTube features, such as uploading videos, creating and managing playlists, searching for content, and much more.
 // API Documentation Link https://developers.google.com/youtube/v3
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Youtube/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,27 @@ session_start();
 * $service = new Google_Service_Youtube($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'channelId' => '[YourValue]',  //This value indicates that the API should only return the specified channel's playlists.
+            
+  //'hl' => '[YourValue]',  //The hl parameter should be used for filter out the properties that are not in the given language. Used for the snippet part.
+            
+  //'id' => '[YourValue]',  //The id parameter specifies a comma-separated list of the YouTube playlist ID(s) for the resource(s) that are being retrieved. In a playlist resource, the id property specifies the playlist's YouTube playlist ID.
+            
+  //'maxResults' => '[YourValue]',  //The maxResults parameter specifies the maximum number of items that should be returned in the result set.
+            
+  //'mine' => '[YourValue]',  //Set this parameter's value to true to instruct the API to only return playlists owned by the authenticated user.
+            
+  //'onBehalfOfContentOwner' => '[YourValue]',  //Note: This parameter is intended exclusively for YouTube content partners.The onBehalfOfContentOwner parameter indicates that the request's authorization credentials identify a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value. This parameter is intended for YouTube content partners that own and manage many different YouTube channels. It allows content owners to authenticate once and get access to all their video and channel data, without having to provide authentication credentials for each individual channel. The CMS account that the user authenticates with must be linked to the specified YouTube content owner.
+            
+  //'onBehalfOfContentOwnerChannel' => '[YourValue]',  //This parameter can only be used in a properly authorized request. Note: This parameter is intended exclusively for YouTube content partners.The onBehalfOfContentOwnerChannel parameter specifies the YouTube channel ID of the channel to which a video is being added. This parameter is required when a request specifies a value for the onBehalfOfContentOwner parameter, and it can only be used in conjunction with that parameter. In addition, the request must be authorized using a CMS account that is linked to the content owner that the onBehalfOfContentOwner parameter specifies. Finally, the channel that the onBehalfOfContentOwnerChannel parameter value specifies must be linked to the content owner that the onBehalfOfContentOwner parameter specifies.This parameter is intended for YouTube content partners that own and manage many different YouTube channels. It allows content owners to authenticate once and perform actions on behalf of the channel specified in the parameter value, without having to provide authentication credentials for each separate channel.
+            
+  //'pageToken' => '[YourValue]',  //The pageToken parameter identifies a specific page in the result set that should be returned. In an API response, the nextPageToken and prevPageToken properties identify other pages that could be retrieved.
   'fields' => '*'
 );
+// Single Request.
 $results = playlistsListExample($service, $part, $optParams);
 
 // Paginiation Example

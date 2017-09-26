@@ -1,6 +1,6 @@
 ﻿![Google Analytics Reporting API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Google Analytics Reporting API Samples for .NET  
+# Unoffical Google Analytics Reporting API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Accesses Analytics report data.
 
 ## Sample Description
 
-These samples show how to access the [Google Analytics Reporting API](https://developers.google.com/analytics/devguides/reporting/core/v4/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google Analytics Reporting API](https://developers.google.com/analytics/devguides/reporting/core/v4/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

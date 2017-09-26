@@ -28,7 +28,7 @@
 // API Description: Provides access to information about profiles and contacts.
 // API Documentation Link https://developers.google.com/people/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Peopleservice/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/people/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,25 @@ session_start();
 * $service = new Google_Service_Peopleservice($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'requestSyncToken' => '[YourValue]',  //Whether the response should include a sync token, which can be used to getall changes since the last request.
+            
+  //'pageToken' => '[YourValue]',  //The token of the page to be returned.
+            
+  //'pageSize' => '[YourValue]',  //The number of connections to include in the response. Valid values arebetween 1 and 2000, inclusive. Defaults to 100.
+            
+  //'requestMask.includeField' => '[YourValue]',  //**Required.** Comma-separated list of person fields to be included in theresponse. Each path should start with `person.`: for example,`person.names` or `person.photos`.
+            
+  //'syncToken' => '[YourValue]',  //A sync token, returned by a previous call to `people.connections.list`.Only resources changed since the sync token was created will be returned.
+            
+  //'personFields' => '[YourValue]',  //**Required.** A field mask to restrict which fields on each person arereturned. Valid values are:* addresses* ageRanges* biographies* birthdays* braggingRights* coverPhotos* emailAddresses* events* genders* imClients* interests* locales* memberships* metadata* names* nicknames* occupations* organizations* phoneNumbers* photos* relations* relationshipInterests* relationshipStatuses* residences* skills* taglines* urls
+            
+  //'sortOrder' => '[YourValue]',  //The order in which the connections should be sorted. Defaults to`LAST_MODIFIED_ASCENDING`.
   'fields' => '*'
 );
+// Single Request.
 $results = connectionsListExample($service, $resourceName, $optParams);
 
 // Paginiation Example

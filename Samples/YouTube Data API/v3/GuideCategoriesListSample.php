@@ -28,7 +28,7 @@
 // API Description: Supports core YouTube features, such as uploading videos, creating and managing playlists, searching for content, and much more.
 // API Documentation Link https://developers.google.com/youtube/v3
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Youtube/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Youtube($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'hl' => '[YourValue]',  //The hl parameter specifies the language that will be used for text values in the API response.
+            
+  //'id' => '[YourValue]',  //The id parameter specifies a comma-separated list of the YouTube channel category ID(s) for the resource(s) that are being retrieved. In a guideCategory resource, the id property specifies the YouTube channel category ID.
+            
+  //'regionCode' => '[YourValue]',  //The regionCode parameter instructs the API to return the list of guide categories available in the specified country. The parameter value is an ISO 3166-1 alpha-2 country code.
   'fields' => '*'
 );
+// Single Request.
 $results = guideCategoriesListExample($service, $part, $optParams);
 
 

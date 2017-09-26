@@ -28,7 +28,7 @@
 // API Description: Public API for managing Manufacturer Center related data.
 // API Documentation Link https://developers.google.com/manufacturers/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Manufacturercenter/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/manufacturers/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Manufacturercenter($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageToken' => '[YourValue]',  //The token returned by the previous request.
+            
+  //'pageSize' => '[YourValue]',  //Maximum number of product statuses to return in the response, used forpaging.
   'fields' => '*'
 );
+// Single Request.
 $results = productsListExample($service, $parent, $optParams);
 
 // Paginiation Example

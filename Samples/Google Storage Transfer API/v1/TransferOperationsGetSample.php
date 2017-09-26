@@ -28,7 +28,7 @@
 // API Description: Transfers data from external data sources to a Google Cloud Storage bucket or between Google Cloud Storage buckets.
 // API Documentation Link https://cloud.google.com/storage/transfer
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Storagetransfer/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/storagetransfer/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Storagetransfer($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = transferOperationsGetExample($service, $name, $optParams);
 
 

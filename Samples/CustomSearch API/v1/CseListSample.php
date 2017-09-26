@@ -28,7 +28,7 @@
 // API Description: Searches over a website or collection of websites
 // API Documentation Link https://developers.google.com/custom-search/v1/using_rest
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Customsearch/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/customsearch/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,71 @@ session_start();
 * $service = new Google_Service_Customsearch($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'c2coff' => '[YourValue]',  //Turns off the translation between zh-CN and zh-TW.
+            
+  //'cr' => '[YourValue]',  //Country restrict(s).
+            
+  //'cx' => '[YourValue]',  //The custom search engine ID to scope this search query
+            
+  //'dateRestrict' => '[YourValue]',  //Specifies all search results are from a time period
+            
+  //'exactTerms' => '[YourValue]',  //Identifies a phrase that all documents in the search results must contain
+            
+  //'excludeTerms' => '[YourValue]',  //Identifies a word or phrase that should not appear in any documents in the search results
+            
+  //'fileType' => '[YourValue]',  //Returns images of a specified type. Some of the allowed values are: bmp, gif, png, jpg, svg, pdf, ...
+            
+  //'filter' => '[YourValue]',  //Controls turning on or off the duplicate content filter.
+            
+  //'gl' => '[YourValue]',  //Geolocation of end user.
+            
+  //'googlehost' => '[YourValue]',  //The local Google domain to use to perform the search.
+            
+  //'highRange' => '[YourValue]',  //Creates a range in form as_nlo value..as_nhi value and attempts to append it to query
+            
+  //'hl' => '[YourValue]',  //Sets the user interface language.
+            
+  //'hq' => '[YourValue]',  //Appends the extra query terms to the query.
+            
+  //'imgColorType' => '[YourValue]',  //Returns black and white, grayscale, or color images: mono, gray, and color.
+            
+  //'imgDominantColor' => '[YourValue]',  //Returns images of a specific dominant color: yellow, green, teal, blue, purple, pink, white, gray, black and brown.
+            
+  //'imgSize' => '[YourValue]',  //Returns images of a specified size, where size can be one of: icon, small, medium, large, xlarge, xxlarge, and huge.
+            
+  //'imgType' => '[YourValue]',  //Returns images of a type, which can be one of: clipart, face, lineart, news, and photo.
+            
+  //'linkSite' => '[YourValue]',  //Specifies that all search results should contain a link to a particular URL
+            
+  //'lowRange' => '[YourValue]',  //Creates a range in form as_nlo value..as_nhi value and attempts to append it to query
+            
+  //'lr' => '[YourValue]',  //The language restriction for the search results
+            
+  //'num' => '[YourValue]',  //Number of search results to return
+            
+  //'orTerms' => '[YourValue]',  //Provides additional search terms to check for in a document, where each document in the search results must contain at least one of the additional search terms
+            
+  //'relatedSite' => '[YourValue]',  //Specifies that all search results should be pages that are related to the specified URL
+            
+  //'rights' => '[YourValue]',  //Filters based on licensing. Supported values include: cc_publicdomain, cc_attribute, cc_sharealike, cc_noncommercial, cc_nonderived and combinations of these.
+            
+  //'safe' => '[YourValue]',  //Search safety level
+            
+  //'searchType' => '[YourValue]',  //Specifies the search type: image.
+            
+  //'siteSearch' => '[YourValue]',  //Specifies all search results should be pages from a given site
+            
+  //'siteSearchFilter' => '[YourValue]',  //Controls whether to include or exclude results from the site named in the as_sitesearch parameter
+            
+  //'sort' => '[YourValue]',  //The sort expression to apply to the results
+            
+  //'start' => '[YourValue]',  //The index of the first result to return
   'fields' => '*'
 );
+// Single Request.
 $results = cseListExample($service, $q, $optParams);
 
 

@@ -1,6 +1,6 @@
 ﻿![Cloud User Accounts API](https://www.google.com/images/icons/product/compute_engine-32.png)
 
-# Unoffical Cloud User Accounts API Samples for .NET  
+# Unoffical Cloud User Accounts API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Creates and manages users and groups for accessing Google Compute Engine virtual
 
 ## Sample Description
 
-These samples show how to access the [Cloud User Accounts API](https://cloud.google.com/compute/docs/access/user-accounts/api/latest/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Cloud User Accounts API](https://cloud.google.com/compute/docs/access/user-accounts/api/latest/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

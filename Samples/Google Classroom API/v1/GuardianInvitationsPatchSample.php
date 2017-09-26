@@ -28,7 +28,7 @@
 // API Description: Manages classes, rosters, and invitations in Google Classroom.
 // API Documentation Link https://developers.google.com/classroom/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Classroom/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/classroom/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Classroom($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'updateMask' => '[YourValue]',  //Mask that identifies which fields on the course to update.This field is required to do an update. The update will fail if invalidfields are specified. The following fields are valid:* `state`When set in a query parameter, this field should be specified as`updateMask=<field1>,<field2>,...`
   'fields' => '*'
 );
+// Single Request.
 $results = guardianInvitationsPatchExample($service, $studentId, $invitationId, $optParams);
 
 

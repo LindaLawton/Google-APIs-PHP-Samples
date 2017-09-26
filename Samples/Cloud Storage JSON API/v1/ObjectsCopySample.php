@@ -28,7 +28,7 @@
 // API Description: Stores and retrieves potentially large, immutable data objects.
 // API Documentation Link https://developers.google.com/storage/docs/json_api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Storage/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/storage/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,35 @@ session_start();
 * $service = new Google_Service_Storage($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'destinationPredefinedAcl' => '[YourValue]',  //Apply a predefined set of access controls to the destination object.
+            
+  //'ifGenerationMatch' => '[YourValue]',  //Makes the operation conditional on whether the destination object's current generation matches the given value. Setting to 0 makes the operation succeed only if there are no live versions of the object.
+            
+  //'ifGenerationNotMatch' => '[YourValue]',  //Makes the operation conditional on whether the destination object's current generation does not match the given value. If no live object exists, the precondition fails. Setting to 0 makes the operation succeed only if there is a live version of the object.
+            
+  //'ifMetagenerationMatch' => '[YourValue]',  //Makes the operation conditional on whether the destination object's current metageneration matches the given value.
+            
+  //'ifMetagenerationNotMatch' => '[YourValue]',  //Makes the operation conditional on whether the destination object's current metageneration does not match the given value.
+            
+  //'ifSourceGenerationMatch' => '[YourValue]',  //Makes the operation conditional on whether the source object's current generation matches the given value.
+            
+  //'ifSourceGenerationNotMatch' => '[YourValue]',  //Makes the operation conditional on whether the source object's current generation does not match the given value.
+            
+  //'ifSourceMetagenerationMatch' => '[YourValue]',  //Makes the operation conditional on whether the source object's current metageneration matches the given value.
+            
+  //'ifSourceMetagenerationNotMatch' => '[YourValue]',  //Makes the operation conditional on whether the source object's current metageneration does not match the given value.
+            
+  //'projection' => '[YourValue]',  //Set of properties to return. Defaults to noAcl, unless the object resource specifies the acl property, when it defaults to full.
+            
+  //'sourceGeneration' => '[YourValue]',  //If present, selects a specific revision of the source object (as opposed to the latest version, the default).
+            
+  //'userProject' => '[YourValue]',  //The project to be billed for this request, for Requester Pays buckets.
   'fields' => '*'
 );
+// Single Request.
 $results = objectsCopyExample($service, $sourceBucket, $sourceObject, $destinationBucket, $destinationObject, $optParams);
 
 

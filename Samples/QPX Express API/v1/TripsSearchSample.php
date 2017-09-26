@@ -28,7 +28,7 @@
 // API Description: Finds the least expensive flights between an origin and a destination.
 // API Documentation Link http://developers.google.com/qpx-express
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Qpxexpress/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/qpxExpress/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Qpxexpress($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = tripsSearchExample($service, $optParams);
 
 

@@ -1,6 +1,6 @@
 ﻿![AdSense Management API](https://www.google.com/images/icons/product/adsense-32.png)
 
-# Unoffical AdSense Management API Samples for .NET  
+# Unoffical AdSense Management API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Accesses AdSense publishers' inventory and generates performance reports.
 
 ## Sample Description
 
-These samples show how to access the [AdSense Management API](https://developers.google.com/adsense/management/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [AdSense Management API](https://developers.google.com/adsense/management/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

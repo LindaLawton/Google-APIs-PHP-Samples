@@ -28,7 +28,7 @@
 // API Description: The Management API for Google Play Game Services.
 // API Documentation Link https://developers.google.com/games/services
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Gamesmanagement/v1management/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/gamesManagement/v1management/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Gamesmanagement($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = scoresResetForAllPlayersExample($service, $leaderboardId, $optParams);
 
 
@@ -81,7 +82,7 @@ function scoresResetForAllPlayersExample($service, $leaderboardId, $optParams)
 		if (leaderboardId == null)
 			throw new Exception("leaderboardId is required.");
 		// Make the request and return the results.
-		return $service->scores->ResetForAllPlayersScores($leaderboardId, $optParams);
+		 $service->scores->ResetForAllPlayersScores($leaderboardId, $optParams);
 	}
 	catch (Exception $e)
 	{

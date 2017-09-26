@@ -28,7 +28,7 @@
 // API Description: Accesses the latest features for managing Ad Exchange accounts, Real-Time Bidding configurations and auction metrics, and Marketplace programmatic deals.
 // API Documentation Link https://developers.google.com/ad-exchange/buyer-rest/reference/rest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adexchangebuyerii/v2beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adexchangebuyer2/v2beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Adexchangebuyerii($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageSize' => '[YourValue]',  //Requested page size. The server may return fewer results than requested.If unspecified, the server will pick an appropriate default.
+            
+  //'pageToken' => '[YourValue]',  //A token identifying a page of results the server should return.Typically, this is the value ofListBidResponsesWithoutBidsResponse.nextPageTokenreturned from the previous call to theaccounts.filterSets.bidResponsesWithoutBids.listmethod.
   'fields' => '*'
 );
+// Single Request.
 $results = bidResponsesWithoutBidsListExample($service, $accountId, $filterSetId, $optParams);
 
 // Paginiation Example

@@ -28,7 +28,7 @@
 // API Description: Accesses the inventory of Ad Exchange seller users and generates reports.
 // API Documentation Link https://developers.google.com/ad-exchange/seller-rest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adexchangeseller/v2_0/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adexchangeseller/v2_0/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Adexchangeseller($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of URL channels to include in the response, used for paging.
+            
+  //'pageToken' => '[YourValue]',  //A continuation token, used to page through URL channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
   'fields' => '*'
 );
+// Single Request.
 $results = urlchannelsListExample($service, $accountId, $adClientId, $optParams);
 
 // Paginiation Example

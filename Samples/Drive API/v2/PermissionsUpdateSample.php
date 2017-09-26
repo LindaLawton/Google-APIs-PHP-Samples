@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Drive($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'removeExpiration' => '[YourValue]',  //Whether to remove the expiration date.
+            
+  //'supportsTeamDrives' => '[YourValue]',  //Whether the requesting application supports Team Drives.
+            
+  //'transferOwnership' => '[YourValue]',  //Whether changing a role to 'owner' downgrades the current owners to writers. Does nothing if the specified role is not 'owner'.
   'fields' => '*'
 );
+// Single Request.
 $results = permissionsUpdateExample($service, $fileId, $permissionId, $optParams);
 
 

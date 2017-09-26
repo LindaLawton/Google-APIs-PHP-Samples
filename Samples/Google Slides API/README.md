@@ -1,6 +1,6 @@
 ﻿![Google Slides API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Google Slides API Samples for .NET  
+# Unoffical Google Slides API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ An API for creating and editing Google Slides presentations.
 
 ## Sample Description
 
-These samples show how to access the [Google Slides API](https://developers.google.com/slides/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google Slides API](https://developers.google.com/slides/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

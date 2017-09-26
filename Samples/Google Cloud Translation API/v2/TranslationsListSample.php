@@ -28,7 +28,7 @@
 // API Description: The Google Cloud Translation API lets websites and programs integrate with    Google Translate programmatically.
 // API Documentation Link https://code.google.com/apis/language/translate/v2/getting_started.html
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Translate/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/translate/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Translate($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'model' => '[YourValue]',  //The `model` type requested for this translation. Valid values arelisted in public documentation.
+            
+  //'source' => '[YourValue]',  //The language of the source text, set to one of the language codes listed inLanguage Support. If the source language is not specified, the API willattempt to identify the source language automatically and return it withinthe response.
+            
+  //'cid' => '[YourValue]',  //The customization id for translate
+            
+  //'format' => '[YourValue]',  //The format of the source text, in either HTML (default) or plain-text. Avalue of "html" indicates HTML and a value of "text" indicates plain-text.
   'fields' => '*'
 );
+// Single Request.
 $results = translationsListExample($service, $q, $target, $optParams);
 
 

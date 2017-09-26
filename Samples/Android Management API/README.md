@@ -1,6 +1,6 @@
 ﻿![Android Management API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Android Management API Samples for .NET  
+# Unoffical Android Management API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ The Android Management API provides remote enterprise management of Android devi
 
 ## Sample Description
 
-These samples show how to access the [Android Management API](https://developers.google.com/android/management) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Android Management API](https://developers.google.com/android/management) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

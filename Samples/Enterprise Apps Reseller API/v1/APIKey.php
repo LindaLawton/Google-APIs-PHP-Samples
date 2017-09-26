@@ -28,7 +28,7 @@
 // API Description: Creates and manages your customers and their subscriptions.
 // API Documentation Link https://developers.google.com/google-apps/reseller/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Reseller/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/reseller/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

@@ -1,6 +1,6 @@
 ﻿![Google Play EMM API](https://www.google.com/images/icons/product/android-32.png)
 
-# Unoffical Google Play EMM API Samples for .NET  
+# Unoffical Google Play EMM API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Manages the deployment of apps to Android for Work users.
 
 ## Sample Description
 
-These samples show how to access the [Google Play EMM API](https://developers.google.com/android/work/play/emm-api) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google Play EMM API](https://developers.google.com/android/work/play/emm-api) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

@@ -28,7 +28,7 @@
 // API Description: Provides a historical view of activity.
 // API Documentation Link https://developers.google.com/google-apps/activity/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Appsactivity/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/appsactivity/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

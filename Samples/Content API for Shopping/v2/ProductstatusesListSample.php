@@ -28,7 +28,7 @@
 // API Description: Manages product items, inventory, and Merchant Center accounts for Google Shopping.
 // API Documentation Link https://developers.google.com/shopping-content
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Shoppingcontent/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/content/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Shoppingcontent($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'includeAttributes' => '[YourValue]',  //Flag to include full product data in the results of the list request. The default value is false.
+            
+  //'includeInvalidInsertedItems' => '[YourValue]',  //Flag to include the invalid inserted items in the result of the list request. By default the invalid items are not shown (the default value is false).
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of product statuses to return in the response, used for paging.
+            
+  //'pageToken' => '[YourValue]',  //The token returned by the previous request.
   'fields' => '*'
 );
+// Single Request.
 $results = productstatusesListExample($service, $merchantId, $optParams);
 
 // Paginiation Example

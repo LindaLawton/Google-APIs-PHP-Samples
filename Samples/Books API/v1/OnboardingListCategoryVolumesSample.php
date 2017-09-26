@@ -28,7 +28,7 @@
 // API Description: Searches for books and manages your Google Books library.
 // API Documentation Link https://developers.google.com/books/docs/v1/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Books/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/books/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Books($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'categoryId' => '[YourValue]',  //List of category ids requested.
+            
+  //'locale' => '[YourValue]',  //ISO-639-1 language and ISO-3166-1 country code. Default is en-US if unset.
+            
+  //'maxAllowedMaturityRating' => '[YourValue]',  //The maximum allowed maturity rating of returned volumes. Books with a higher maturity rating are filtered out.
+            
+  //'pageSize' => '[YourValue]',  //Number of maximum results per page to be included in the response.
+            
+  //'pageToken' => '[YourValue]',  //The value of the nextToken from the previous page.
   'fields' => '*'
 );
+// Single Request.
 $results = onboardingListCategoryVolumesExample($service, $optParams);
 
 // Paginiation Example

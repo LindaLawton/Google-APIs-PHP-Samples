@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,33 @@ session_start();
 * $service = new Google_Service_Drive($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'corpora' => '[YourValue]',  //Comma-separated list of bodies of items (files/documents) to which the query applies. Supported bodies are 'default', 'domain', 'teamDrive' and 'allTeamDrives'. 'allTeamDrives' must be combined with 'default'; all other values must be used in isolation. Prefer 'default' or 'teamDrive' to 'allTeamDrives' for efficiency.
+            
+  //'corpus' => '[YourValue]',  //The body of items (files/documents) to which the query applies. Deprecated: use 'corpora' instead.
+            
+  //'includeTeamDriveItems' => '[YourValue]',  //Whether Team Drive items should be included in results.
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of files to return per page. Partial or empty result pages are possible even before the end of the files list has been reached.
+            
+  //'orderBy' => '[YourValue]',  //A comma-separated list of sort keys. Valid keys are 'createdDate', 'folder', 'lastViewedByMeDate', 'modifiedByMeDate', 'modifiedDate', 'quotaBytesUsed', 'recency', 'sharedWithMeDate', 'starred', 'title', and 'title_natural'. Each key sorts ascending by default, but may be reversed with the 'desc' modifier. Example usage: ?orderBy=folder,modifiedDate desc,title. Please note that there is a current limitation for users with approximately one million files in which the requested sort order is ignored.
+            
+  //'pageToken' => '[YourValue]',  //Page token for files.
+            
+  //'projection' => '[YourValue]',  //This parameter is deprecated and has no function.
+            
+  //'q' => '[YourValue]',  //Query string for searching files.
+            
+  //'spaces' => '[YourValue]',  //A comma-separated list of spaces to query. Supported values are 'drive', 'appDataFolder' and 'photos'.
+            
+  //'supportsTeamDrives' => '[YourValue]',  //Whether the requesting application supports Team Drives.
+            
+  //'teamDriveId' => '[YourValue]',  //ID of Team Drive to search.
   'fields' => '*'
 );
+// Single Request.
 $results = filesListExample($service, $optParams);
 
 // Paginiation Example

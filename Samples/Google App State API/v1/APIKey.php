@@ -28,7 +28,7 @@
 // API Description: The Google App State API.
 // API Documentation Link https://developers.google.com/games/services/web/api/states
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Appstate/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/appstate/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

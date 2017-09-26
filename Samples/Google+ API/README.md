@@ -1,6 +1,6 @@
 ﻿![Google+ API](http://www.google.com/images/icons/product/gplus-32.png)
 
-# Unoffical Google+ API Samples for .NET  
+# Unoffical Google+ API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Builds on top of the Google+ platform.
 
 ## Sample Description
 
-These samples show how to access the [Google+ API](https://developers.google.com/+/api/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google+ API](https://developers.google.com/+/api/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

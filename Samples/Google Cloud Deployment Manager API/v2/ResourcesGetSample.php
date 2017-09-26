@@ -28,7 +28,7 @@
 // API Description: Declares, configures, and deploys complex solutions on Google Cloud Platform.
 // API Documentation Link https://cloud.google.com/deployment-manager/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Deploymentmanager/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/deploymentmanager/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Deploymentmanager($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = resourcesGetExample($service, $project, $deployment, $resource, $optParams);
 
 

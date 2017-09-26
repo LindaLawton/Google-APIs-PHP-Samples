@@ -28,7 +28,7 @@
 // API Description: Converts audio to text by applying powerful neural network models.
 // API Documentation Link https://cloud.google.com/speech/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Speech/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/speech/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

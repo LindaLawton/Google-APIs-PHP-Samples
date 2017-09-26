@@ -28,7 +28,7 @@
 // API Description: The Publishing API for Google Play Game Services.
 // API Documentation Link https://developers.google.com/games/services
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Gamesconfiguration/v1configuration/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/gamesConfiguration/v1configuration/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Gamesconfiguration($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of resource configurations to return in the response, used for paging. For any response, the actual number of resources returned may be less than the specified maxResults.
+            
+  //'pageToken' => '[YourValue]',  //The token returned by the previous request.
   'fields' => '*'
 );
+// Single Request.
 $results = achievementConfigurationsListExample($service, $applicationId, $optParams);
 
 // Paginiation Example

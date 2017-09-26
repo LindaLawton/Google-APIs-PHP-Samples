@@ -28,7 +28,7 @@
 // API Description: Upload, process, query, and search Genomics data in the cloud.
 // API Documentation Link https://cloud.google.com/genomics
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Genomics/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/genomics/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,23 @@ session_start();
 * $service = new Google_Service_Genomics($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'end' => '[YourValue]',  //The end position of the range on the reference, 0-based exclusive. Ifspecified, `referenceName` must also be specified. If unset or 0, defaultsto the length of the reference.
+            
+  //'pageToken' => '[YourValue]',  //The continuation token, which is used to page through large result sets.To get the next page of results, set this parameter to the value of`nextPageToken` from the previous response.
+            
+  //'pageSize' => '[YourValue]',  //The maximum number of results to return in a single page. If unspecified,defaults to 1024. The maximum value is 2048.
+            
+  //'start' => '[YourValue]',  //The start position of the range on the reference, 0-based inclusive. Ifspecified, `referenceName` must also be specified. Defaults to 0.
+            
+  //'targetBucketWidth' => '[YourValue]',  //The desired width of each reported coverage bucket in base pairs. Thiswill be rounded down to the nearest precomputed bucket width; the valueof which is returned as `bucketWidth` in the response. Defaultsto infinity (each bucket spans an entire reference sequence) or the lengthof the target range, if specified. The smallest precomputed`bucketWidth` is currently 2048 base pairs; this is subject tochange.
+            
+  //'referenceName' => '[YourValue]',  //The name of the reference to query, within the reference set associatedwith this query. Optional.
   'fields' => '*'
 );
+// Single Request.
 $results = coveragebucketsListExample($service, $readGroupSetId, $optParams);
 
 // Paginiation Example

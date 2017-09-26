@@ -28,7 +28,7 @@
 // API Description: Lets you store and retrieve potentially-large, immutable data objects.
 // API Documentation Link https://developers.google.com/storage/docs/json_api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Storage/v1beta2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/storage/v1beta2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Storage($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'generation' => '[YourValue]',  //If present, selects a specific revision of this object (as opposed to the latest version, the default).
   'fields' => '*'
 );
+// Single Request.
 $results = objectAccessControlsUpdateExample($service, $bucket, $object, $entity, $optParams);
 
 

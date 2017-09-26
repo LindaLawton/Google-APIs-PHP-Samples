@@ -28,7 +28,7 @@
 // API Description: Obtains end-user authorization grants for use with other Google APIs.
 // API Documentation Link https://developers.google.com/accounts/docs/OAuth2
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Oauth2/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/oauth2/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Oauth2($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = meGetExample($service, $optParams);
 
 

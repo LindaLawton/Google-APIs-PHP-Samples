@@ -1,6 +1,6 @@
 ﻿![Accelerated Mobile Pages (AMP) URL API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Accelerated Mobile Pages (AMP) URL API Samples for .NET  
+# Unoffical Accelerated Mobile Pages (AMP) URL API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Retrieves the list of AMP URLs (and equivalent AMP Cache URLs) for a given list 
 
 ## Sample Description
 
-These samples show how to access the [Accelerated Mobile Pages (AMP) URL API](https://developers.google.com/amp/cache/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Accelerated Mobile Pages (AMP) URL API](https://developers.google.com/amp/cache/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

@@ -28,7 +28,7 @@
 // API Description: Lets Android application developers access their Google Play accounts.
 // API Documentation Link https://developers.google.com/android-publisher
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Androidpublisher/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/androidpublisher/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Androidpublisher($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = imagesDeleteExample($service, $packageName, $editId, $language, $imageType, $imageId, $optParams);
 
 
@@ -93,7 +94,7 @@ function imagesDeleteExample($service, $packageName, $editId, $language, $imageT
 		if (packageName == null)
 			throw new Exception("packageName is required.");
 		// Make the request and return the results.
-		return $service->images->DeleteImages($packageName, $editId, $language, $imageType, $imageId, $optParams);
+		 $service->images->DeleteImages($packageName, $editId, $language, $imageType, $imageId, $optParams);
 	}
 	catch (Exception $e)
 	{

@@ -1,6 +1,6 @@
 ﻿![APIs Discovery Service](http://www.google.com/images/icons/feature/filing_cabinet_search-g32.png)
 
-# Unoffical APIs Discovery Service Samples for .NET  
+# Unoffical APIs Discovery Service Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Provides information about other Google APIs, such as what APIs are available, t
 
 ## Sample Description
 
-These samples show how to access the [APIs Discovery Service](https://developers.google.com/discovery/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [APIs Discovery Service](https://developers.google.com/discovery/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

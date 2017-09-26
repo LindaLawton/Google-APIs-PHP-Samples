@@ -28,7 +28,7 @@
 // API Description: Accesses the inventory of Ad Exchange seller users and generates reports.
 // API Documentation Link https://developers.google.com/ad-exchange/seller-rest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adexchangeseller/v1_1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adexchangeseller/v1_1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Adexchangeseller($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = metricsListExample($service, $optParams);
 
 

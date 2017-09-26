@@ -28,7 +28,7 @@
 // API Description: Views and manages licenses for your domain.
 // API Documentation Link https://developers.google.com/google-apps/licensing/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Licensing/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/licensing/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Licensing($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of campaigns to return at one time. Must be positive. Optional. Default value is 100.
+            
+  //'pageToken' => '[YourValue]',  //Token to fetch the next page.Optional. By default server will return first page
   'fields' => '*'
 );
+// Single Request.
 $results = licenseAssignmentsListForProductExample($service, $productId, $customerId, $optParams);
 
 // Paginiation Example

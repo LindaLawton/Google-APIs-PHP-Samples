@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,23 @@ session_start();
 * $service = new Google_Service_Drive($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'addParents' => '[YourValue]',  //A comma-separated list of parent IDs to add.
+            
+  //'keepRevisionForever' => '[YourValue]',  //Whether to set the 'keepForever' field in the new head revision. This is only applicable to files with binary content in Drive.
+            
+  //'ocrLanguage' => '[YourValue]',  //A language hint for OCR processing during image import (ISO 639-1 code).
+            
+  //'removeParents' => '[YourValue]',  //A comma-separated list of parent IDs to remove.
+            
+  //'supportsTeamDrives' => '[YourValue]',  //Whether the requesting application supports Team Drives.
+            
+  //'useContentAsIndexableText' => '[YourValue]',  //Whether to use the uploaded content as indexable text.
   'fields' => '*'
 );
+// Single Request.
 $results = filesUpdateExample($service, $fileId, $optParams);
 
 

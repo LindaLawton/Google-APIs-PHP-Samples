@@ -28,7 +28,7 @@
 // API Description: View Google Search Console data for your verified sites.
 // API Documentation Link https://developers.google.com/webmaster-tools/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Webmasters/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/webmasters/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Webmasters($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = sitemapsDeleteExample($service, $siteUrl, $feedpath, $optParams);
 
 
@@ -84,7 +85,7 @@ function sitemapsDeleteExample($service, $siteUrl, $feedpath, $optParams)
 		if (siteUrl == null)
 			throw new Exception("siteUrl is required.");
 		// Make the request and return the results.
-		return $service->sitemaps->DeleteSitemaps($siteUrl, $feedpath, $optParams);
+		 $service->sitemaps->DeleteSitemaps($siteUrl, $feedpath, $optParams);
 	}
 	catch (Exception $e)
 	{

@@ -28,7 +28,7 @@
 // API Description: Accesses the latest features for managing Ad Exchange accounts, Real-Time Bidding configurations and auction metrics, and Marketplace programmatic deals.
 // API Documentation Link https://developers.google.com/ad-exchange/buyer-rest/reference/rest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adexchangebuyerii/v2beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adexchangebuyer2/v2beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

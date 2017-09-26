@@ -28,7 +28,7 @@
 // API Description: Generates performance reports, generates ad codes, and provides publisher management capabilities for AdSense Hosts.
 // API Documentation Link https://developers.google.com/adsense/host/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adsensehost/v4_1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adsensehost/v4_1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,25 @@ session_start();
 * $service = new Google_Service_Adsensehost($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'dimension' => '[YourValue]',  //Dimensions to base the report on.
+            
+  //'filter' => '[YourValue]',  //Filters to be run on the report.
+            
+  //'locale' => '[YourValue]',  //Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified.
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of rows of report data to return.
+            
+  //'metric' => '[YourValue]',  //Numeric columns to include in the report.
+            
+  //'sort' => '[YourValue]',  //The name of a dimension or metric to sort the resulting report on, optionally prefixed with "+" to sort ascending or "-" to sort descending. If no prefix is specified, the column is sorted ascending.
+            
+  //'startIndex' => '[YourValue]',  //Index of the first row of report data to return.
   'fields' => '*'
 );
+// Single Request.
 $results = reportsGenerateExample($service, $startDate, $endDate, $optParams);
 
 

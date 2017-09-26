@@ -28,7 +28,7 @@
 // API Description: Interacts with Glass users via the timeline.
 // API Documentation Link https://developers.google.com/glass
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Mirror/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/mirror/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Mirror($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = attachmentsDeleteExample($service, $itemId, $attachmentId, $optParams);
 
 
@@ -84,7 +85,7 @@ function attachmentsDeleteExample($service, $itemId, $attachmentId, $optParams)
 		if (itemId == null)
 			throw new Exception("itemId is required.");
 		// Make the request and return the results.
-		return $service->attachments->DeleteAttachments($itemId, $attachmentId, $optParams);
+		 $service->attachments->DeleteAttachments($itemId, $attachmentId, $optParams);
 	}
 	catch (Exception $e)
 	{

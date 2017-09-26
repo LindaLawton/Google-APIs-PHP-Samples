@@ -28,7 +28,7 @@
 // API Description: Cloud Spanner is a managed, mission-critical, globally consistent and scalable relational database service.
 // API Documentation Link https://cloud.google.com/spanner/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Spanner/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/spanner/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Spanner($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageSize' => '[YourValue]',  //Number of sessions to be returned in the response. If 0 or less, defaultsto the server's maximum allowed page size.
+            
+  //'filter' => '[YourValue]',  //An expression for filtering the results of the request. Filter rules arecase insensitive. The fields eligible for filtering are:  * labels.key where key is the name of a labelSome examples of using filters are:  * labels.env:* --> The session has the label "env".  * labels.env:dev --> The session has the label "env" and the value of                       the label contains the string "dev".
+            
+  //'pageToken' => '[YourValue]',  //If non-empty, `page_token` should contain anext_page_token from a previousListSessionsResponse.
   'fields' => '*'
 );
+// Single Request.
 $results = sessionsListExample($service, $database, $optParams);
 
 // Paginiation Example

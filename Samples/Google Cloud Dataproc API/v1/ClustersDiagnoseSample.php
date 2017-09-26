@@ -28,7 +28,7 @@
 // API Description: Manages Hadoop-based clusters and jobs on Google Cloud Platform.
 // API Documentation Link https://cloud.google.com/dataproc/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Dataproc/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/dataproc/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Dataproc($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = clustersDiagnoseExample($service, $projectId, $region, $clusterName, $optParams);
 
 

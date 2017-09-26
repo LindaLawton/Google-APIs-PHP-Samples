@@ -28,7 +28,7 @@
 // API Description: The Google Data Loss Prevention API provides methods for detection of privacy-sensitive fragments in text, images, and Google Cloud Platform storage repositories.
 // API Documentation Link https://cloud.google.com/dlp/docs/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Dlp/v2beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/dlp/v2beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Dlp($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageSize' => '[YourValue]',  //Maximum number of results to return.If 0, the implementation selects a reasonable value.
+            
+  //'filter' => '[YourValue]',  //Restricts findings to items that match. Supports info_type and likelihood.Examples:- info_type=EMAIL_ADDRESS- info_type=PHONE_NUMBER,EMAIL_ADDRESS- likelihood=VERY_LIKELY- likelihood=VERY_LIKELY,LIKELY- info_type=EMAIL_ADDRESS,likelihood=VERY_LIKELY,LIKELY
+            
+  //'pageToken' => '[YourValue]',  //The value returned by the last `ListInspectFindingsResponse`; indicatesthat this is a continuation of a prior `ListInspectFindings` call, and thatthe system should return the next page of data.
   'fields' => '*'
 );
+// Single Request.
 $results = findingsListExample($service, $name, $optParams);
 
 // Paginiation Example

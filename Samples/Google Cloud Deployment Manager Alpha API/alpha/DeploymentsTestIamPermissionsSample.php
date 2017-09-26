@@ -28,7 +28,7 @@
 // API Description: The Deployment Manager API allows users to declaratively configure, deploy and run complex solutions on the Google Cloud Platform.
 // API Documentation Link https://cloud.google.com/deployment-manager/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Deploymentmanageralpha/alpha/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/deploymentmanager/alpha/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Deploymentmanageralpha($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = deploymentsTestIamPermissionsExample($service, $project, $resource, $optParams);
 
 

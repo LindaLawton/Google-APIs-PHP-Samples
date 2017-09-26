@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,31 @@ session_start();
 * $service = new Google_Service_Drive($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'includeCorpusRemovals' => '[YourValue]',  //Whether changes should include the file resource if the file is still accessible by the user at the time of the request, even when a file was removed from the list of changes and there will be no further change entries for this file.
+            
+  //'includeDeleted' => '[YourValue]',  //Whether to include changes indicating that items have been removed from the list of changes, for example by deletion or loss of access.
+            
+  //'includeSubscribed' => '[YourValue]',  //Whether to include public files the user has opened and shared files. When set to false, the list only includes owned files plus any shared or public files the user has explicitly added to a folder they own.
+            
+  //'includeTeamDriveItems' => '[YourValue]',  //Whether Team Drive files or changes should be included in results.
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of changes to return.
+            
+  //'pageToken' => '[YourValue]',  //The token for continuing a previous list request on the next page. This should be set to the value of 'nextPageToken' from the previous response or to the response from the getStartPageToken method.
+            
+  //'spaces' => '[YourValue]',  //A comma-separated list of spaces to query. Supported values are 'drive', 'appDataFolder' and 'photos'.
+            
+  //'startChangeId' => '[YourValue]',  //Change ID to start listing changes from.
+            
+  //'supportsTeamDrives' => '[YourValue]',  //Whether the requesting application supports Team Drives.
+            
+  //'teamDriveId' => '[YourValue]',  //The Team Drive from which changes will be returned. If specified the change IDs will be reflective of the Team Drive; use the combined Team Drive ID and change ID as an identifier.
   'fields' => '*'
 );
+// Single Request.
 $results = changesListExample($service, $optParams);
 
 // Paginiation Example

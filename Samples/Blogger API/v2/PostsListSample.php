@@ -28,7 +28,7 @@
 // API Description: API for access to the data within Blogger.
 // API Documentation Link https://developers.google.com/blogger/docs/2.0/json/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Blogger/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/blogger/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Blogger($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'fetchBodies' => '[YourValue]',  //Whether the body content of posts is included.
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of posts to fetch.
+            
+  //'pageToken' => '[YourValue]',  //Continuation token if the request is paged.
+            
+  //'startDate' => '[YourValue]',  //Earliest post date to fetch, a date-time with RFC 3339 formatting.
   'fields' => '*'
 );
+// Single Request.
 $results = postsListExample($service, $blogId, $optParams);
 
 // Paginiation Example

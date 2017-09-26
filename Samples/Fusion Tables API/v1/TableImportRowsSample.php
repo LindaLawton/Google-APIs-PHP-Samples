@@ -28,7 +28,7 @@
 // API Description: API for working with Fusion Tables data.
 // API Documentation Link https://developers.google.com/fusiontables
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Fusiontables/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/fusiontables/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Fusiontables($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'delimiter' => '[YourValue]',  //The delimiter used to separate cell values. This can only consist of a single character. Default is ','.
+            
+  //'encoding' => '[YourValue]',  //The encoding of the content. Default is UTF-8. Use 'auto-detect' if you are unsure of the encoding.
+            
+  //'endLine' => '[YourValue]',  //The index of the last line from which to start importing, exclusive. Thus, the number of imported lines is endLine - startLine. If this parameter is not provided, the file will be imported until the last line of the file. If endLine is negative, then the imported content will exclude the last endLine lines. That is, if endline is negative, no line will be imported whose index is greater than N + endLine where N is the number of lines in the file, and the number of imported lines will be N + endLine - startLine.
+            
+  //'isStrict' => '[YourValue]',  //Whether the CSV must have the same number of values for each row. If false, rows with fewer values will be padded with empty values. Default is true.
+            
+  //'startLine' => '[YourValue]',  //The index of the first line from which to start importing, inclusive. Default is 0.
   'fields' => '*'
 );
+// Single Request.
 $results = tableImportRowsExample($service, $tableId, $optParams);
 
 

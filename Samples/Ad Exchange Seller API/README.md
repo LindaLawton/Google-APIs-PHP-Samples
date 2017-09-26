@@ -1,6 +1,6 @@
 ﻿![Ad Exchange Seller API](https://www.google.com/images/icons/product/doubleclick-32.gif)
 
-# Unoffical Ad Exchange Seller API Samples for .NET  
+# Unoffical Ad Exchange Seller API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Accesses the inventory of Ad Exchange seller users and generates reports.
 
 ## Sample Description
 
-These samples show how to access the [Ad Exchange Seller API](https://developers.google.com/ad-exchange/seller-rest/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Ad Exchange Seller API](https://developers.google.com/ad-exchange/seller-rest/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

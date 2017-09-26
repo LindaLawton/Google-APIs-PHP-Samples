@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Drive($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'emailMessage' => '[YourValue]',  //A custom message to include in notification emails.
+            
+  //'sendNotificationEmails' => '[YourValue]',  //Whether to send notification emails when sharing to users or groups. This parameter is ignored and an email is sent if the role is owner.
+            
+  //'supportsTeamDrives' => '[YourValue]',  //Whether the requesting application supports Team Drives.
   'fields' => '*'
 );
+// Single Request.
 $results = permissionsInsertExample($service, $fileId, $optParams);
 
 

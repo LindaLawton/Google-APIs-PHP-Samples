@@ -28,7 +28,7 @@
 // API Description: Configures and serves authoritative DNS records.
 // API Documentation Link https://developers.google.com/cloud-dns
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Dns/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/dns/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Dns($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = managedZonesGetExample($service, $project, $managedZone, $optParams);
 
 

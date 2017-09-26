@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Drive($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'includeDeleted' => '[YourValue]',  //If set, all replies, including deleted replies (with content stripped) will be returned.
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of replies to include in the response, used for paging.
+            
+  //'pageToken' => '[YourValue]',  //The continuation token, used to page through large result sets. To get the next page of results, set this parameter to the value of "nextPageToken" from the previous response.
   'fields' => '*'
 );
+// Single Request.
 $results = repliesListExample($service, $fileId, $commentId, $optParams);
 
 // Paginiation Example

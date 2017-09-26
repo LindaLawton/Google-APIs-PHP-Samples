@@ -28,7 +28,7 @@
 // API Description: The Resource View API allows users to create and manage logical sets of Google Compute Engine instances.
 // API Documentation Link https://developers.google.com/compute/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Resourceviews/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/resourceviews/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

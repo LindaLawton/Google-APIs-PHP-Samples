@@ -28,7 +28,7 @@
 // API Description: Searches for books and manages your Google Books library.
 // API Documentation Link https://developers.google.com/books/docs/v1/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Books/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/books/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,27 @@ session_start();
 * $service = new Google_Service_Books($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'androidId' => '[YourValue]',  //device android_id
+            
+  //'device' => '[YourValue]',  //device device
+            
+  //'manufacturer' => '[YourValue]',  //device manufacturer
+            
+  //'model' => '[YourValue]',  //device model
+            
+  //'offerId' => '[YourValue]',  //
+            
+  //'product' => '[YourValue]',  //device product
+            
+  //'serial' => '[YourValue]',  //device serial
+            
+  //'volumeId' => '[YourValue]',  //Volume id to exercise the offer
   'fields' => '*'
 );
+// Single Request.
 $results = promoofferAcceptExample($service, $optParams);
 
 
@@ -78,7 +95,7 @@ function promoofferAcceptExample($service, $optParams)
 		if ($optParams == null)
 			throw new Exception("optParams is required.");
 		// Make the request and return the results.
-		return $service->promooffer->AcceptPromooffer($optParams);
+		 $service->promooffer->AcceptPromooffer($optParams);
 	}
 	catch (Exception $e)
 	{

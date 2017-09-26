@@ -28,7 +28,7 @@
 // API Description: Reads and publishes results from Firebase Test Lab.
 // API Documentation Link https://firebase.google.com/docs/test-lab/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Toolresults/v1beta3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/toolresults/v1beta3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Toolresults($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageSize' => '[YourValue]',  //The default page size is 500 samples, and the maximum size is 5000. If the page_size is greater than 5000, the effective page size will be 5000
+            
+  //'pageToken' => '[YourValue]',  //Optional, the next_page_token returned in the previous response
   'fields' => '*'
 );
+// Single Request.
 $results = samplesListExample($service, $projectId, $historyId, $executionId, $stepId, $sampleSeriesId, $optParams);
 
 // Paginiation Example

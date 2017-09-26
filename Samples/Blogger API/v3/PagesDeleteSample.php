@@ -28,7 +28,7 @@
 // API Description: API for access to the data within Blogger.
 // API Documentation Link https://developers.google.com/blogger/docs/3.0/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Blogger/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/blogger/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Blogger($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = pagesDeleteExample($service, $blogId, $pageId, $optParams);
 
 
@@ -84,7 +85,7 @@ function pagesDeleteExample($service, $blogId, $pageId, $optParams)
 		if (pageId == null)
 			throw new Exception("pageId is required.");
 		// Make the request and return the results.
-		return $service->pages->DeletePages($blogId, $pageId, $optParams);
+		 $service->pages->DeletePages($blogId, $pageId, $optParams);
 	}
 	catch (Exception $e)
 	{

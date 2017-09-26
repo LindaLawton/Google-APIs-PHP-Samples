@@ -28,7 +28,7 @@
 // API Description: API for access to the data within Blogger.
 // API Documentation Link https://developers.google.com/blogger/docs/2.0/json/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Blogger/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/blogger/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation

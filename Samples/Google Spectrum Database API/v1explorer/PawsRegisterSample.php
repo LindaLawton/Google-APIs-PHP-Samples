@@ -28,7 +28,7 @@
 // API Description: API for spectrum-management functions.
 // API Documentation Link http://developers.google.com/spectrum
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Spectrum/v1explorer/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/spectrum/v1explorer/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Spectrum($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = pawsRegisterExample($service, $optParams);
 
 

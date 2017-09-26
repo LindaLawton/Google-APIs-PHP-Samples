@@ -28,7 +28,7 @@
 // API Description: Upload, process, query, and search Genomics data in the cloud.
 // API Documentation Link https://cloud.google.com/genomics
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Genomics/v1alpha2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/genomics/v1alpha2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Genomics($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'filter' => '[YourValue]',  //A string for filtering Operations.The following filter fields are supported&#58;* projectId&#58; Required. Corresponds to  OperationMetadata.projectId.* createTime&#58; The time this job was created, in seconds from the  [epoch](http://en.wikipedia.org/wiki/Unix_time). Can use `>=` and/or `<=`  operators.* status&#58; Can be `RUNNING`, `SUCCESS`, `FAILURE`, or `CANCELED`. Only  one status may be specified.* labels.key where key is a label key.Examples&#58;* `projectId = my-project AND createTime >= 1432140000`* `projectId = my-project AND createTime >= 1432140000 AND createTime <= 1432150000 AND status = RUNNING`* `projectId = my-project AND labels.color = *`* `projectId = my-project AND labels.color = red`
+            
+  //'pageToken' => '[YourValue]',  //The standard list page token.
+            
+  //'pageSize' => '[YourValue]',  //The maximum number of results to return. If unspecified, defaults to256. The maximum value is 2048.
   'fields' => '*'
 );
+// Single Request.
 $results = operationsListExample($service, $name, $optParams);
 
 // Paginiation Example

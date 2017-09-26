@@ -28,7 +28,7 @@
 // API Description: Searches for books and manages your Google Books library.
 // API Documentation Link https://developers.google.com/books/docs/v1/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Books/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/books/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Books($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'locale' => '[YourValue]',  //ISO-639-1, ISO-3166-1 codes for message localization, i.e. en_US.
+            
+  //'source' => '[YourValue]',  //String to identify the originator of this request.
   'fields' => '*'
 );
+// Single Request.
 $results = myconfigReleaseDownloadAccessExample($service, $volumeIds, $cpksver, $optParams);
 
 

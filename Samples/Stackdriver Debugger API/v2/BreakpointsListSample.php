@@ -28,7 +28,7 @@
 // API Description: Examines the call stack and variables of a running application without stopping or slowing it down.
 // API Documentation Link http://cloud.google.com/debugger
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Clouddebugger/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/clouddebugger/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Clouddebugger($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'successOnTimeout' => '[YourValue]',  //If set to `true` (recommended), returns `google.rpc.Code.OK` status andsets the `wait_expired` response field to `true` when the server-selectedtimeout has expired.If set to `false` (deprecated), returns `google.rpc.Code.ABORTED` statuswhen the server-selected timeout has expired.
+            
+  //'waitToken' => '[YourValue]',  //A token that, if specified, blocks the method call until the listof active breakpoints has changed, or a server-selected timeout hasexpired. The value should be set from the `next_wait_token` field inthe last response. The initial value should be set to `"init"`.
   'fields' => '*'
 );
+// Single Request.
 $results = breakpointsListExample($service, $debuggeeId, $optParams);
 
 

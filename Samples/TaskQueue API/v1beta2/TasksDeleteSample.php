@@ -28,7 +28,7 @@
 // API Description: Accesses a Google App Engine Pull Task Queue over REST.
 // API Documentation Link https://developers.google.com/appengine/docs/python/taskqueue/rest
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Taskqueue/v1beta2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/taskqueue/v1beta2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Taskqueue($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = tasksDeleteExample($service, $project, $taskqueue, $task, $optParams);
 
 
@@ -87,7 +88,7 @@ function tasksDeleteExample($service, $project, $taskqueue, $task, $optParams)
 		if (taskqueue == null)
 			throw new Exception("taskqueue is required.");
 		// Make the request and return the results.
-		return $service->tasks->DeleteTasks($project, $taskqueue, $task, $optParams);
+		 $service->tasks->DeleteTasks($project, $taskqueue, $task, $optParams);
 	}
 	catch (Exception $e)
 	{

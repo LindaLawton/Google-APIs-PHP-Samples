@@ -28,7 +28,7 @@
 // API Description: Creates and manages rules that determine when a Firebase Rules-enabled service should permit a request.
 // API Documentation Link https://firebase.google.com/docs/storage/security
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Firebaserules/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/firebaserules/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Firebaserules($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageToken' => '[YourValue]',  //Next page token for the next batch of `Release` instances.
+            
+  //'pageSize' => '[YourValue]',  //Page size to load. Maximum of 100. Defaults to 10.Note: `page_size` is just a hint and the service may choose to load fewerthan `page_size` results due to the size of the output. To traverse all ofthe releases, the caller should iterate until the `page_token` on theresponse is empty.
+            
+  //'filter' => '[YourValue]',  //`Release` filter. The list method supports filters with restrictions on the`Release.name`, `Release.ruleset_name`, and `Release.test_suite_name`.Example 1: A filter of 'name=prod*' might return `Release`s with nameswithin 'projects/foo' prefixed with 'prod':Name                          | Ruleset Name------------------------------|-------------projects/foo/releases/prod    | projects/foo/rulesets/uuid1234projects/foo/releases/prod/v1 | projects/foo/rulesets/uuid1234projects/foo/releases/prod/v2 | projects/foo/rulesets/uuid8888Example 2: A filter of `name=prod* ruleset_name=uuid1234` would return only`Release` instances for 'projects/foo' with names prefixed with 'prod'referring to the same `Ruleset` name of 'uuid1234':Name                          | Ruleset Name------------------------------|-------------projects/foo/releases/prod    | projects/foo/rulesets/1234projects/foo/releases/prod/v1 | projects/foo/rulesets/1234In the examples, the filter parameters refer to the search filters arerelative to the project. Fully qualified prefixed may also be used. e.g.`test_suite_name=projects/foo/testsuites/uuid1`
   'fields' => '*'
 );
+// Single Request.
 $results = releasesListExample($service, $name, $optParams);
 
 // Paginiation Example

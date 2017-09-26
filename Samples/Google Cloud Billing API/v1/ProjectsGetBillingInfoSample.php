@@ -28,7 +28,7 @@
 // API Description: Allows developers to manage billing for their Google Cloud Platform projects    programmatically.
 // API Documentation Link https://cloud.google.com/billing/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudbilling/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudbilling/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Cloudbilling($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = projectsGetBillingInfoExample($service, $name, $optParams);
 
 

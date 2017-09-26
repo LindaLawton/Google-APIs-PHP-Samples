@@ -28,7 +28,7 @@
 // API Description: Gets the delivery status of titles for Google Play Movies Partners.
 // API Documentation Link https://developers.google.com/playmoviespartner/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Playmovies/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/playmoviespartner/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

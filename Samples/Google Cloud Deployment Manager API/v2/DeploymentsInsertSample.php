@@ -28,7 +28,7 @@
 // API Description: Declares, configures, and deploys complex solutions on Google Cloud Platform.
 // API Documentation Link https://cloud.google.com/deployment-manager/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Deploymentmanager/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/deploymentmanager/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Deploymentmanager($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'preview' => '[YourValue]',  //If set to true, creates a deployment and creates "shell" resources but does not actually instantiate these resources. This allows you to preview what your deployment looks like. After previewing a deployment, you can deploy your resources by making a request with the update() method or you can use the cancelPreview() method to cancel the preview altogether. Note that the deployment will still exist after you cancel the preview and you must separately delete this deployment if you want to remove it.
   'fields' => '*'
 );
+// Single Request.
 $results = deploymentsInsertExample($service, $project, $optParams);
 
 

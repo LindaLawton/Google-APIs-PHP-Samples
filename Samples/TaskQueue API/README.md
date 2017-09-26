@@ -1,6 +1,6 @@
 ﻿![TaskQueue API](https://www.google.com/images/icons/product/app_engine-32.png)
 
-# Unoffical TaskQueue API Samples for .NET  
+# Unoffical TaskQueue API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Accesses a Google App Engine Pull Task Queue over REST.
 
 ## Sample Description
 
-These samples show how to access the [TaskQueue API](https://developers.google.com/appengine/docs/python/taskqueue/rest) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [TaskQueue API](https://developers.google.com/appengine/docs/python/taskqueue/rest) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

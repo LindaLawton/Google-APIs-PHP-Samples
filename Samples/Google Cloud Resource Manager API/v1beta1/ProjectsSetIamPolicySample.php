@@ -28,7 +28,7 @@
 // API Description: The Google Cloud Resource Manager API provides methods for creating, reading, and updating project metadata.
 // API Documentation Link https://cloud.google.com/resource-manager
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudresourcemanager/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudresourcemanager/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Cloudresourcemanager($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = projectsSetIamPolicyExample($service, $resource, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: Lets you manage your tasks and task lists.
 // API Documentation Link https://developers.google.com/google-apps/tasks/firstapp
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Tasks/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/tasks/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

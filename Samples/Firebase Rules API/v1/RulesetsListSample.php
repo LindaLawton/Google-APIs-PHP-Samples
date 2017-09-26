@@ -28,7 +28,7 @@
 // API Description: Creates and manages rules that determine when a Firebase Rules-enabled service should permit a request.
 // API Documentation Link https://firebase.google.com/docs/storage/security
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Firebaserules/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/firebaserules/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Firebaserules($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'filter' => '[YourValue]',  //`Ruleset` filter. The list method supports filters with restrictions on`Ruleset.name`.Filters on `Ruleset.create_time` should use the `date` function whichparses strings that conform to the RFC 3339 date/time specifications.Example: `create_time > date("2017-01-01") AND name=UUID-*`
+            
+  //'pageToken' => '[YourValue]',  //Next page token for loading the next batch of `Ruleset` instances.
+            
+  //'pageSize' => '[YourValue]',  //Page size to load. Maximum of 100. Defaults to 10.Note: `page_size` is just a hint and the service may choose to load lessthan `page_size` due to the size of the output. To traverse all of thereleases, caller should iterate until the `page_token` is empty.
   'fields' => '*'
 );
+// Single Request.
 $results = rulesetsListExample($service, $name, $optParams);
 
 // Paginiation Example

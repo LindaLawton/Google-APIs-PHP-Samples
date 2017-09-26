@@ -28,7 +28,7 @@
 // API Description: Transfers data from partner SaaS applications to Google BigQuery on a scheduled, managed basis.
 // API Documentation Link https://cloud.google.com/bigquery/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Bigquerydatatransfer/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/bigquerydatatransfer/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Bigquerydatatransfer($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = dataSourcesCheckValidCredsExample($service, $name, $optParams);
 
 

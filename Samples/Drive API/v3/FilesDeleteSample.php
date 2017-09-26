@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Drive($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'supportsTeamDrives' => '[YourValue]',  //Whether the requesting application supports Team Drives.
   'fields' => '*'
 );
+// Single Request.
 $results = filesDeleteExample($service, $fileId, $optParams);
 
 
@@ -81,7 +84,7 @@ function filesDeleteExample($service, $fileId, $optParams)
 		if (fileId == null)
 			throw new Exception("fileId is required.");
 		// Make the request and return the results.
-		return $service->files->DeleteFiles($fileId, $optParams);
+		 $service->files->DeleteFiles($fileId, $optParams);
 	}
 	catch (Exception $e)
 	{

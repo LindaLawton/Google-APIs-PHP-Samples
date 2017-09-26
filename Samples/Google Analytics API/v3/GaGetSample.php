@@ -28,7 +28,7 @@
 // API Description: Views and manages your Google Analytics data.
 // API Documentation Link https://developers.google.com/analytics/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Analytics/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/analytics/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,29 @@ session_start();
 * $service = new Google_Service_Analytics($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'dimensions' => '[YourValue]',  //A comma-separated list of Analytics dimensions. E.g., 'ga:browser,ga:city'.
+            
+  //'filters' => '[YourValue]',  //A comma-separated list of dimension or metric filters to be applied to Analytics data.
+            
+  //'include-empty-rows' => '[YourValue]',  //The response will include empty rows if this parameter is set to true, the default is true
+            
+  //'max-results' => '[YourValue]',  //The maximum number of entries to include in this feed.
+            
+  //'output' => '[YourValue]',  //The selected format for the response. Default format is JSON.
+            
+  //'samplingLevel' => '[YourValue]',  //The desired sampling level.
+            
+  //'segment' => '[YourValue]',  //An Analytics segment to be applied to data.
+            
+  //'sort' => '[YourValue]',  //A comma-separated list of dimensions or metrics that determine the sort order for Analytics data.
+            
+  //'start-index' => '[YourValue]',  //An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.
   'fields' => '*'
 );
+// Single Request.
 $results = gaGetExample($service, $ids, $start-date, $end-date, $metrics, $optParams);
 
 

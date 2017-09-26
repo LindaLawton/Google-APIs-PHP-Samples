@@ -28,7 +28,7 @@
 // API Description: Help the third party sites to implement federated login.
 // API Documentation Link https://developers.google.com/identity-toolkit/v3/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Identitytoolkit/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/identitytoolkit/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Identitytoolkit($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = relyingpartyVerifyPhoneNumberExample($service, $optParams);
 
 

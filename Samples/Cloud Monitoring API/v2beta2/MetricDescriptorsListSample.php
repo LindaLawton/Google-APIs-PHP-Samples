@@ -28,7 +28,7 @@
 // API Description: Accesses Google Cloud Monitoring data.
 // API Documentation Link https://cloud.google.com/monitoring/v2beta2/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudmonitoring/v2beta2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudmonitoring/v2beta2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Cloudmonitoring($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'count' => '[YourValue]',  //Maximum number of metric descriptors per page. Used for pagination. If not specified, count = 100.
+            
+  //'pageToken' => '[YourValue]',  //The pagination token, which is used to page through large result sets. Set this value to the value of the nextPageToken to retrieve the next page of results.
+            
+  //'query' => '[YourValue]',  //The query used to search against existing metrics. Separate keywords with a space; the service joins all keywords with AND, meaning that all keywords must match for a metric to be returned. If this field is omitted, all metrics are returned. If an empty string is passed with this field, no metrics are returned.
   'fields' => '*'
 );
+// Single Request.
 $results = metricDescriptorsListExample($service, $project, $optParams);
 
 // Paginiation Example

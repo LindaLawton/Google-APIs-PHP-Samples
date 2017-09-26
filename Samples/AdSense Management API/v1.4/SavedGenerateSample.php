@@ -28,7 +28,7 @@
 // API Description: Accesses AdSense publishers' inventory and generates performance reports.
 // API Documentation Link https://developers.google.com/adsense/management/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adsense/v1_4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adsense/v1_4/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Adsense($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'locale' => '[YourValue]',  //Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified.
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of rows of report data to return.
+            
+  //'startIndex' => '[YourValue]',  //Index of the first row of report data to return.
   'fields' => '*'
 );
+// Single Request.
 $results = savedGenerateExample($service, $savedReportId, $optParams);
 
 

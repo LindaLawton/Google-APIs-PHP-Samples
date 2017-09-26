@@ -28,7 +28,7 @@
 // API Description: Creates and manages users and groups for accessing Google Compute Engine virtual machines.
 // API Documentation Link https://cloud.google.com/compute/docs/access/user-accounts/api/latest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Clouduseraccounts/alpha/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/clouduseraccounts/alpha/rest
 //
 //------------------------------------------------------------------------------
 // Installation

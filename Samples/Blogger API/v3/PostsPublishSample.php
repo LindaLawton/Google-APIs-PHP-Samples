@@ -28,7 +28,7 @@
 // API Description: API for access to the data within Blogger.
 // API Documentation Link https://developers.google.com/blogger/docs/3.0/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Blogger/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/blogger/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Blogger($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'publishDate' => '[YourValue]',  //Optional date and time to schedule the publishing of the Blog. If no publishDate parameter is given, the post is either published at the a previously saved schedule date (if present), or the current time. If a future date is given, the post will be scheduled to be published.
   'fields' => '*'
 );
+// Single Request.
 $results = postsPublishExample($service, $blogId, $postId, $optParams);
 
 

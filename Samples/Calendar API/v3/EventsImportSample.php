@@ -28,7 +28,7 @@
 // API Description: Manipulates events and other calendar data.
 // API Documentation Link https://developers.google.com/google-apps/calendar/firstapp
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Calendar/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Calendar($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'supportsAttachments' => '[YourValue]',  //Whether API client performing operation supports event attachments. Optional. The default is False.
   'fields' => '*'
 );
+// Single Request.
 $results = eventsImportExample($service, $calendarId, $optParams);
 
 

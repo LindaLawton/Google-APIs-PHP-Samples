@@ -28,7 +28,7 @@
 // API Description: Allows developers to run automated tests for their mobile applications on Google infrastructure.
 // API Documentation Link https://developers.google.com/cloud-test-lab/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Testing/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/testing/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Testing($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'requestId' => '[YourValue]',  //A string id used to detect duplicated requests.Ids are automatically scoped to a project, sousers should ensure the ID is unique per-project.A UUID is recommended.Optional, but strongly recommended.
   'fields' => '*'
 );
+// Single Request.
 $results = testMatricesCreateExample($service, $projectId, $optParams);
 
 

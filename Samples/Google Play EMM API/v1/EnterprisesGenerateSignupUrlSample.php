@@ -28,7 +28,7 @@
 // API Description: Manages the deployment of apps to Android for Work users.
 // API Documentation Link https://developers.google.com/android/work/play/emm-api
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Androidenterprise/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/androidenterprise/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Androidenterprise($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'callbackUrl' => '[YourValue]',  //The callback URL to which the Admin will be redirected after successfully creating an enterprise. Before redirecting there the system will add a single query parameter to this URL named "enterpriseToken" which will contain an opaque token to be used for the CompleteSignup request.Beware that this means that the URL will be parsed, the parameter added and then a new URL formatted, i.e. there may be some minor formatting changes and, more importantly, the URL must be well-formed so that it can be parsed.
   'fields' => '*'
 );
+// Single Request.
 $results = enterprisesGenerateSignupUrlExample($service, $optParams);
 
 

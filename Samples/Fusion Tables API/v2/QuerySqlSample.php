@@ -28,7 +28,7 @@
 // API Description: API for working with Fusion Tables data.
 // API Documentation Link https://developers.google.com/fusiontables
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Fusiontables/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/fusiontables/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Fusiontables($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'hdrs' => '[YourValue]',  //Whether column names are included in the first row. Default is true.
+            
+  //'typed' => '[YourValue]',  //Whether typed values are returned in the (JSON) response: numbers for numeric values and parsed geometries for KML values. Default is true.
   'fields' => '*'
 );
+// Single Request.
 $results = querySqlExample($service, $sql, $optParams);
 
 

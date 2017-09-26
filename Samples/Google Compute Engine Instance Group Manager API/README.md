@@ -1,6 +1,6 @@
 ﻿![Google Compute Engine Instance Group Manager API](https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png)
 
-# Unoffical Google Compute Engine Instance Group Manager API Samples for .NET  
+# Unoffical Google Compute Engine Instance Group Manager API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@
 
 ## Sample Description
 
-These samples show how to access the [Google Compute Engine Instance Group Manager API](https://developers.google.com/compute/docs/instance-groups/manager/v1beta2) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google Compute Engine Instance Group Manager API](https://developers.google.com/compute/docs/instance-groups/manager/v1beta2) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

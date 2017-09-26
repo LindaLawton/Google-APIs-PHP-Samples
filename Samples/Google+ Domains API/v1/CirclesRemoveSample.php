@@ -28,7 +28,7 @@
 // API Description: Builds on top of the Google+ platform for Google Apps Domains.
 // API Documentation Link https://developers.google.com/+/domains/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Plusdomains/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/plusDomains/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Plusdomains($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = circlesRemoveExample($service, $circleId, $optParams);
 
 
@@ -81,7 +82,7 @@ function circlesRemoveExample($service, $circleId, $optParams)
 		if (circleId == null)
 			throw new Exception("circleId is required.");
 		// Make the request and return the results.
-		return $service->circles->RemoveCircles($circleId, $optParams);
+		 $service->circles->RemoveCircles($circleId, $optParams);
 	}
 	catch (Exception $e)
 	{

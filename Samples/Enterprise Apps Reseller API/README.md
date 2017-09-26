@@ -1,6 +1,6 @@
 ﻿![Enterprise Apps Reseller API](https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png)
 
-# Unoffical Enterprise Apps Reseller API Samples for .NET  
+# Unoffical Enterprise Apps Reseller API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Creates and manages your customers and their subscriptions.
 
 ## Sample Description
 
-These samples show how to access the [Enterprise Apps Reseller API](https://developers.google.com/google-apps/reseller/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Enterprise Apps Reseller API](https://developers.google.com/google-apps/reseller/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

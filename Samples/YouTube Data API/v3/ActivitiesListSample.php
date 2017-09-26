@@ -28,7 +28,7 @@
 // API Description: Supports core YouTube features, such as uploading videos, creating and managing playlists, searching for content, and much more.
 // API Documentation Link https://developers.google.com/youtube/v3
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Youtube/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,27 @@ session_start();
 * $service = new Google_Service_Youtube($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'channelId' => '[YourValue]',  //The channelId parameter specifies a unique YouTube channel ID. The API will then return a list of that channel's activities.
+            
+  //'home' => '[YourValue]',  //Set this parameter's value to true to retrieve the activity feed that displays on the YouTube home page for the currently authenticated user.
+            
+  //'maxResults' => '[YourValue]',  //The maxResults parameter specifies the maximum number of items that should be returned in the result set.
+            
+  //'mine' => '[YourValue]',  //Set this parameter's value to true to retrieve a feed of the authenticated user's activities.
+            
+  //'pageToken' => '[YourValue]',  //The pageToken parameter identifies a specific page in the result set that should be returned. In an API response, the nextPageToken and prevPageToken properties identify other pages that could be retrieved.
+            
+  //'publishedAfter' => '[YourValue]',  //The publishedAfter parameter specifies the earliest date and time that an activity could have occurred for that activity to be included in the API response. If the parameter value specifies a day, but not a time, then any activities that occurred that day will be included in the result set. The value is specified in ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ) format.
+            
+  //'publishedBefore' => '[YourValue]',  //The publishedBefore parameter specifies the date and time before which an activity must have occurred for that activity to be included in the API response. If the parameter value specifies a day, but not a time, then any activities that occurred that day will be excluded from the result set. The value is specified in ISO 8601 (YYYY-MM-DDThh:mm:ss.sZ) format.
+            
+  //'regionCode' => '[YourValue]',  //The regionCode parameter instructs the API to return results for the specified country. The parameter value is an ISO 3166-1 alpha-2 country code. YouTube uses this value when the authorized user's previous activity on YouTube does not provide enough information to generate the activity feed.
   'fields' => '*'
 );
+// Single Request.
 $results = activitiesListExample($service, $part, $optParams);
 
 // Paginiation Example

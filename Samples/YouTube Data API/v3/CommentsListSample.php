@@ -28,7 +28,7 @@
 // API Description: Supports core YouTube features, such as uploading videos, creating and managing playlists, searching for content, and much more.
 // API Documentation Link https://developers.google.com/youtube/v3
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Youtube/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Youtube($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'id' => '[YourValue]',  //The id parameter specifies a comma-separated list of comment IDs for the resources that are being retrieved. In a comment resource, the id property specifies the comment's ID.
+            
+  //'maxResults' => '[YourValue]',  //The maxResults parameter specifies the maximum number of items that should be returned in the result set.Note: This parameter is not supported for use in conjunction with the id parameter.
+            
+  //'pageToken' => '[YourValue]',  //The pageToken parameter identifies a specific page in the result set that should be returned. In an API response, the nextPageToken property identifies the next page of the result that can be retrieved.Note: This parameter is not supported for use in conjunction with the id parameter.
+            
+  //'parentId' => '[YourValue]',  //The parentId parameter specifies the ID of the comment for which replies should be retrieved.Note: YouTube currently supports replies only for top-level comments. However, replies to replies may be supported in the future.
+            
+  //'textFormat' => '[YourValue]',  //This parameter indicates whether the API should return comments formatted as HTML or as plain text.
   'fields' => '*'
 );
+// Single Request.
 $results = commentsListExample($service, $part, $optParams);
 
 // Paginiation Example

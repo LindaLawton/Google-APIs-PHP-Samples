@@ -28,7 +28,7 @@
 // API Description: Manages your Stackdriver Monitoring data and configurations. Most projects must be associated with a Stackdriver account, with a few exceptions as noted on the individual method pages.
 // API Documentation Link https://cloud.google.com/monitoring/api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Monitoring/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/monitoring/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Monitoring($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = metricDescriptorsDeleteExample($service, $name, $optParams);
 
 

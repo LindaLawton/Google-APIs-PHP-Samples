@@ -1,6 +1,6 @@
 ﻿![Prediction API](https://www.google.com/images/icons/feature/predictionapi-32.png)
 
-# Unoffical Prediction API Samples for .NET  
+# Unoffical Prediction API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Lets you access a cloud hosted machine learning service that makes it easy to bu
 
 ## Sample Description
 
-These samples show how to access the [Prediction API](https://developers.google.com/prediction/docs/developer-guide) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Prediction API](https://developers.google.com/prediction/docs/developer-guide) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

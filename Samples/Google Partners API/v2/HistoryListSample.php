@@ -28,7 +28,7 @@
 // API Description: Searches certified companies and creates contact leads with them, and also audits the usage of clients.
 // API Documentation Link https://developers.google.com/partners/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Partners/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/partners/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,33 @@ session_start();
 * $service = new Google_Service_Partners($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'requestMetadata.trafficSource.trafficSubId' => '[YourValue]',  //Second level identifier to indicate where the traffic comes from.An identifier has multiple letters created by a team which redirected thetraffic to us.
+            
+  //'orderBy' => '[YourValue]',  //Comma-separated list of fields to order by, e.g.: "foo,bar,baz".Use "foo desc" to sort descending.List of valid field names is: name, offer_code, expiration_time, status,    last_modified_time, sender_name, creation_time, country_code,    offer_type.
+            
+  //'requestMetadata.partnersSessionId' => '[YourValue]',  //Google Partners session ID.
+            
+  //'requestMetadata.userOverrides.userId' => '[YourValue]',  //Logged-in user ID to impersonate instead of the user's ID.
+            
+  //'pageToken' => '[YourValue]',  //Token to retrieve a specific page.
+            
+  //'pageSize' => '[YourValue]',  //Maximum number of rows to return per page.
+            
+  //'requestMetadata.trafficSource.trafficSourceId' => '[YourValue]',  //Identifier to indicate where the traffic comes from.An identifier has multiple letters created by a team which redirected thetraffic to us.
+            
+  //'requestMetadata.locale' => '[YourValue]',  //Locale to use for the current request.
+            
+  //'requestMetadata.userOverrides.ipAddress' => '[YourValue]',  //IP address to use instead of the user's geo-located IP address.
+            
+  //'entireCompany' => '[YourValue]',  //if true, show history for the entire company.  Requires user to be admin.
+            
+  //'requestMetadata.experimentIds' => '[YourValue]',  //Experiment IDs the current request belongs to.
   'fields' => '*'
 );
+// Single Request.
 $results = historyListExample($service, $optParams);
 
 // Paginiation Example

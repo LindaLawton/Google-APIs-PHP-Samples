@@ -28,7 +28,7 @@
 // API Description: The Resource View API allows users to create and manage logical sets of Google Compute Engine instances.
 // API Documentation Link https://developers.google.com/compute/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Resourceviews/v1beta2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/resourceviews/v1beta2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Resourceviews($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'resourceName' => '[YourValue]',  //The name of the resource if user wants to get the service information of the resource.
   'fields' => '*'
 );
+// Single Request.
 $results = zoneViewsGetServiceExample($service, $project, $zone, $resourceView, $optParams);
 
 

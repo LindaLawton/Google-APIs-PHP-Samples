@@ -28,7 +28,7 @@
 // API Description: The Google Cloud Resource Manager API provides methods for creating, reading, and updating project metadata.
 // API Documentation Link https://cloud.google.com/resource-manager
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudresourcemanager/v2beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudresourcemanager/v2beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Cloudresourcemanager($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageToken' => '[YourValue]',  //A pagination token returned from a previous call to `ListFolders`that indicates where this listing should continue from.This field is optional.
+            
+  //'pageSize' => '[YourValue]',  //The maximum number of Folders to return in the response.This field is optional.
+            
+  //'parent' => '[YourValue]',  //The resource name of the Organization or Folder whose Folders arebeing listed.Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.Access to this method is controlled by checking the`resourcemanager.folders.list` permission on the `parent`.
+            
+  //'showDeleted' => '[YourValue]',  //Controls whether Folders in the [DELETE_REQUESTED} state shouldbe returned.
   'fields' => '*'
 );
+// Single Request.
 $results = foldersListExample($service, $optParams);
 
 // Paginiation Example

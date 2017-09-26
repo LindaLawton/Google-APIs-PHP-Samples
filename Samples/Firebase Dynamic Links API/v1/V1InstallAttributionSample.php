@@ -28,7 +28,7 @@
 // API Description: Programmatically creates and manages Firebase Dynamic Links.
 // API Documentation Link https://firebase.google.com/docs/dynamic-links/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Firebasedynamiclinks/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/firebasedynamiclinks/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Firebasedynamiclinks($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = v1InstallAttributionExample($service, $optParams);
 
 

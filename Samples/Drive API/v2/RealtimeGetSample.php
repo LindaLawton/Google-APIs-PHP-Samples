@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Drive($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'revision' => '[YourValue]',  //The revision of the Realtime API data model to export. Revisions start at 1 (the initial empty data model) and are incremented with each change. If this parameter is excluded, the most recent data model will be returned.
   'fields' => '*'
 );
+// Single Request.
 $results = realtimeGetExample($service, $fileId, $optParams);
 
 
@@ -81,7 +84,7 @@ function realtimeGetExample($service, $fileId, $optParams)
 		if (fileId == null)
 			throw new Exception("fileId is required.");
 		// Make the request and return the results.
-		return $service->realtime->GetRealtime($fileId, $optParams);
+		 $service->realtime->GetRealtime($fileId, $optParams);
 	}
 	catch (Exception $e)
 	{

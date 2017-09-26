@@ -28,7 +28,7 @@
 // API Description: Stores and accesses user data in the fitness store from apps on any platform.
 // API Documentation Link https://developers.google.com/fit/rest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Fitness/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/fitness/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Fitness($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'limit' => '[YourValue]',  //If specified, no more than this many data points will be included in the dataset. If there are more data points in the dataset, nextPageToken will be set in the dataset response.
+            
+  //'pageToken' => '[YourValue]',  //The continuation token, which is used to page through large datasets. To get the next page of a dataset, set this parameter to the value of nextPageToken from the previous response. Each subsequent call will yield a partial dataset with data point end timestamps that are strictly smaller than those in the previous partial response.
   'fields' => '*'
 );
+// Single Request.
 $results = datasetsGetExample($service, $userId, $dataSourceId, $datasetId, $optParams);
 
 // Paginiation Example

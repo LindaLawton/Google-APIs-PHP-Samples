@@ -28,7 +28,7 @@
 // API Description: Views and manages your Google Analytics data.
 // API Documentation Link https://developers.google.com/analytics/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Analytics/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/analytics/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Analytics($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'dimensions' => '[YourValue]',  //A comma-separated list of real time dimensions. E.g., 'rt:medium,rt:city'.
+            
+  //'filters' => '[YourValue]',  //A comma-separated list of dimension or metric filters to be applied to real time data.
+            
+  //'max-results' => '[YourValue]',  //The maximum number of entries to include in this feed.
+            
+  //'sort' => '[YourValue]',  //A comma-separated list of dimensions or metrics that determine the sort order for real time data.
   'fields' => '*'
 );
+// Single Request.
 $results = realtimeGetExample($service, $ids, $metrics, $optParams);
 
 

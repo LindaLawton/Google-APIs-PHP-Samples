@@ -28,7 +28,7 @@
 // API Description: Converts audio to text by applying powerful neural network models.
 // API Documentation Link https://cloud.google.com/speech/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Speech/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/speech/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Speech($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageToken' => '[YourValue]',  //The standard list page token.
+            
+  //'name' => '[YourValue]',  //The name of the operation's parent resource.
+            
+  //'pageSize' => '[YourValue]',  //The standard list page size.
+            
+  //'filter' => '[YourValue]',  //The standard list filter.
   'fields' => '*'
 );
+// Single Request.
 $results = operationsListExample($service, $optParams);
 
 // Paginiation Example

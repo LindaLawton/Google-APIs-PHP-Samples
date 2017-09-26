@@ -1,6 +1,6 @@
 ﻿![Surveys API](https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png)
 
-# Unoffical Surveys API Samples for .NET  
+# Unoffical Surveys API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Creates and conducts surveys, lists the surveys that an authenticated user owns,
 
 ## Sample Description
 
-These samples show how to access the [Surveys API](https://www.google.com/search?q=Surveys) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Surveys API](https://www.google.com/search?q=Surveys) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

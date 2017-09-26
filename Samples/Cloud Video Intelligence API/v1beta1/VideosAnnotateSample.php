@@ -28,7 +28,7 @@
 // API Description: Cloud Video Intelligence API.
 // API Documentation Link https://cloud.google.com/video-intelligence/docs/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudvideointelligence/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/videointelligence/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Cloudvideointelligence($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = videosAnnotateExample($service, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: Verifies ownership of websites or domains with Google.
 // API Documentation Link https://developers.google.com/site-verification/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Siteverification/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/siteVerification/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

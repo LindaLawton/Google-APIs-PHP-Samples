@@ -28,7 +28,7 @@
 // API Description: API for spectrum-management functions.
 // API Documentation Link http://developers.google.com/spectrum
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Spectrum/v1explorer/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/spectrum/v1explorer/rest
 //
 //------------------------------------------------------------------------------
 // Installation

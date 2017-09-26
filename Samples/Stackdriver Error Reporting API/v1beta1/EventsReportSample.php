@@ -28,7 +28,7 @@
 // API Description: Groups and counts similar errors from cloud services and applications, reports new errors, and provides access to error groups and their associated errors.
 // API Documentation Link https://cloud.google.com/error-reporting/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Clouderrorreporting/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/clouderrorreporting/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Clouderrorreporting($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = eventsReportExample($service, $projectName, $optParams);
 
 

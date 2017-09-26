@@ -28,7 +28,7 @@
 // API Description: A data platform for customers to create, manage, share and query data.
 // API Documentation Link https://cloud.google.com/bigquery/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Bigquery/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/bigquery/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Bigquery($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'all' => '[YourValue]',  //Whether to list all datasets, including hidden ones
+            
+  //'filter' => '[YourValue]',  //An expression for filtering the results of the request by label. The syntax is "labels.<name>[:<value>]". Multiple filters can be ANDed together by connecting with a space. Example: "labels.department:receiving labels.active". See Filtering datasets using labels for details.
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of results to return
+            
+  //'pageToken' => '[YourValue]',  //Page token, returned by a previous call, to request the next page of results
   'fields' => '*'
 );
+// Single Request.
 $results = datasetsListExample($service, $projectId, $optParams);
 
 // Paginiation Example

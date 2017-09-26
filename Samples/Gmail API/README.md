@@ -1,6 +1,6 @@
 ﻿![Gmail API](https://www.google.com/images/icons/product/googlemail-32.png)
 
-# Unoffical Gmail API Samples for .NET  
+# Unoffical Gmail API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Access Gmail mailboxes including sending user email.
 
 ## Sample Description
 
-These samples show how to access the [Gmail API](https://developers.google.com/gmail/api/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Gmail API](https://developers.google.com/gmail/api/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

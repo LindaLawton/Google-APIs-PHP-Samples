@@ -28,7 +28,7 @@
 // API Description: Accesses your bidding-account information, submits creatives for validation, finds available direct deals, and retrieves performance reports.
 // API Documentation Link https://developers.google.com/ad-exchange/buyer-rest
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adexchangebuyer/v1_4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adexchangebuyer/v1_4/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Adexchangebuyer($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of entries returned on one result page. If not set, the default is 100. Optional.
+            
+  //'pageToken' => '[YourValue]',  //A continuation token, used to page through performance reports. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response. Optional.
   'fields' => '*'
 );
+// Single Request.
 $results = performanceReportListExample($service, $accountId, $endDateTime, $startDateTime, $optParams);
 
 // Paginiation Example

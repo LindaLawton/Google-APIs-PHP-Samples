@@ -28,7 +28,7 @@
 // API Description: Transfers data from external data sources to a Google Cloud Storage bucket or between Google Cloud Storage buckets.
 // API Documentation Link https://cloud.google.com/storage/transfer
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Storagetransfer/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/storagetransfer/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Storagetransfer($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'filter' => '[YourValue]',  //A list of query parameters specified as JSON text in the form of {\"project_id\" : \"my_project_id\", \"job_names\" : [\"jobid1\", \"jobid2\",...], \"operation_names\" : [\"opid1\", \"opid2\",...], \"transfer_statuses\":[\"status1\", \"status2\",...]}. Since `job_names`, `operation_names`, and `transfer_statuses` support multiple values, they must be specified with array notation. `job_names`, `operation_names`, and `transfer_statuses` are optional.
+            
+  //'pageToken' => '[YourValue]',  //The list page token.
+            
+  //'pageSize' => '[YourValue]',  //The list page size. The max allowed value is 256.
   'fields' => '*'
 );
+// Single Request.
 $results = transferOperationsListExample($service, $name, $optParams);
 
 // Paginiation Example

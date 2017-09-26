@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Drive($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = childrenDeleteExample($service, $folderId, $childId, $optParams);
 
 
@@ -84,7 +85,7 @@ function childrenDeleteExample($service, $folderId, $childId, $optParams)
 		if (folderId == null)
 			throw new Exception("folderId is required.");
 		// Make the request and return the results.
-		return $service->children->DeleteChildren($folderId, $childId, $optParams);
+		 $service->children->DeleteChildren($folderId, $childId, $optParams);
 	}
 	catch (Exception $e)
 	{

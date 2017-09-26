@@ -28,7 +28,7 @@
 // API Description: The API for Google Play Game Services.
 // API Documentation Link https://developers.google.com/games/services/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Games/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/games/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,23 @@ session_start();
 * $service = new Google_Service_Games($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'consistencyToken' => '[YourValue]',  //The last-seen mutation timestamp.
+            
+  //'includeMatchData' => '[YourValue]',  //True if match data should be returned in the response. Note that not all data will necessarily be returned if include_match_data is true; the server may decide to only return data for some of the matches to limit download size for the client. The remainder of the data for these matches will be retrievable on request.
+            
+  //'language' => '[YourValue]',  //The preferred language to use for strings returned by this method.
+            
+  //'maxCompletedMatches' => '[YourValue]',  //The maximum number of completed or canceled matches to return in the response. If not set, all matches returned could be completed or canceled.
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of matches to return in the response, used for paging. For any response, the actual number of matches to return may be less than the specified maxResults.
+            
+  //'pageToken' => '[YourValue]',  //The token returned by the previous request.
   'fields' => '*'
 );
+// Single Request.
 $results = turnBasedMatchesListExample($service, $optParams);
 
 // Paginiation Example

@@ -28,7 +28,7 @@
 // API Description: The Admin SDK Directory API lets you view and manage enterprise resources such as users and groups, administrative notifications, security features, and more.
 // API Documentation Link https://developers.google.com/admin-sdk/directory/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Directory/directory_v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/admin/directory_v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,25 @@ session_start();
 * $service = new Google_Service_Directory($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of results to return. Default is 100
+            
+  //'orderBy' => '[YourValue]',  //Column to use for sorting results
+            
+  //'orgUnitPath' => '[YourValue]',  //Full path of the organization unit or its Id
+            
+  //'pageToken' => '[YourValue]',  //Token to specify next page in the list
+            
+  //'projection' => '[YourValue]',  //Restrict information returned to a set of selected fields.
+            
+  //'query' => '[YourValue]',  //Search string in the format given at http://support.google.com/chromeos/a/bin/answer.py?hl=en&answer=1698333
+            
+  //'sortOrder' => '[YourValue]',  //Whether to return results in ascending or descending order. Only of use when orderBy is also used
   'fields' => '*'
 );
+// Single Request.
 $results = chromeosdevicesListExample($service, $customerId, $optParams);
 
 // Paginiation Example

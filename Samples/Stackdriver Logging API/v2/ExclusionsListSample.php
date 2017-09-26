@@ -28,7 +28,7 @@
 // API Description: Writes log entries and manages your Stackdriver Logging configuration.
 // API Documentation Link https://cloud.google.com/logging/docs/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Logging/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/logging/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Logging($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageSize' => '[YourValue]',  //Optional. The maximum number of results to return from this request. Non-positive values are ignored. The presence of nextPageToken in the response indicates that more results might be available.
+            
+  //'pageToken' => '[YourValue]',  //Optional. If present, then retrieve the next batch of results from the preceding call to this method. pageToken must be the value of nextPageToken from the previous response. The values of other method parameters should be identical to those in the previous call.
   'fields' => '*'
 );
+// Single Request.
 $results = exclusionsListExample($service, $parent, $optParams);
 
 // Paginiation Example

@@ -28,7 +28,7 @@
 // API Description: Publishes 360 photos to Google Maps, along with position, orientation, and connectivity metadata. Apps can offer an interface for positioning, connecting, and uploading user-generated Street View images.
 // API Documentation Link https://developers.google.com/streetview/publish/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Streetviewpublish/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/streetviewpublish/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Streetviewpublish($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'updateMask' => '[YourValue]',  //Mask that identifies fields on the photo metadata to update.If not present, the old Photometadata will be entirely replaced with thenew Photo metadata in this request.The update fails if invalid fields are specified. Multiple fields can bespecified in a comma-delimited list.The following fields are valid:* `pose.heading`* `pose.latLngPair`* `pose.pitch`* `pose.roll`* `pose.level`* `pose.altitude`* `connections`* `places`<aside class="note"><b>Note:</b> Repeated fields inupdateMaskmean the entire set of repeated values will be replaced with the newcontents. For example, ifupdateMaskcontains `connections` and `UpdatePhotoRequest.photo.connections` is empty,all connections will be removed.</aside>
   'fields' => '*'
 );
+// Single Request.
 $results = photoUpdateExample($service, $id, $optParams);
 
 

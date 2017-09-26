@@ -1,6 +1,6 @@
 ﻿![Admin Reports API](https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png)
 
-# Unoffical Admin Reports API Samples for .NET  
+# Unoffical Admin Reports API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Fetches reports for the administrators of G Suite customers about the usage, col
 
 ## Sample Description
 
-These samples show how to access the [Admin Reports API](https://developers.google.com/admin-sdk/reports/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Admin Reports API](https://developers.google.com/admin-sdk/reports/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

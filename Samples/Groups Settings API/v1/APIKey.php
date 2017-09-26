@@ -28,7 +28,7 @@
 // API Description: Lets you manage permission levels and related settings of a group.
 // API Documentation Link https://developers.google.com/google-apps/groups-settings/get_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Groupssettings/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/groupssettings/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

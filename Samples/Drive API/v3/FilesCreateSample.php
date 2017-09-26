@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Drive($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'ignoreDefaultVisibility' => '[YourValue]',  //Whether to ignore the domain's default visibility settings for the created file. Domain administrators can choose to make all uploaded files visible to the domain by default; this parameter bypasses that behavior for the request. Permissions are still inherited from parent folders.
+            
+  //'keepRevisionForever' => '[YourValue]',  //Whether to set the 'keepForever' field in the new head revision. This is only applicable to files with binary content in Drive.
+            
+  //'ocrLanguage' => '[YourValue]',  //A language hint for OCR processing during image import (ISO 639-1 code).
+            
+  //'supportsTeamDrives' => '[YourValue]',  //Whether the requesting application supports Team Drives.
+            
+  //'useContentAsIndexableText' => '[YourValue]',  //Whether to use the uploaded content as indexable text.
   'fields' => '*'
 );
+// Single Request.
 $results = filesCreateExample($service, $optParams);
 
 

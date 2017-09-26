@@ -28,7 +28,7 @@
 // API Description: Enables client applications to check web resources (most commonly URLs) against Google-generated lists of unsafe web resources.
 // API Documentation Link https://developers.google.com/safe-browsing/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Safebrowsing/v4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/safebrowsing/v4/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Safebrowsing($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'clientId' => '[YourValue]',  //A client ID that (hopefully) uniquely identifies the client implementationof the Safe Browsing API.
+            
+  //'clientVersion' => '[YourValue]',  //The version of the client implementation.
   'fields' => '*'
 );
+// Single Request.
 $results = encodedFullHashesGetExample($service, $encodedRequest, $optParams);
 
 

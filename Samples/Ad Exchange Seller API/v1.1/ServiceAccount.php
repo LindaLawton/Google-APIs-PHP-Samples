@@ -28,7 +28,7 @@
 // API Description: Accesses the inventory of Ad Exchange seller users and generates reports.
 // API Documentation Link https://developers.google.com/ad-exchange/seller-rest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adexchangeseller/v1_1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adexchangeseller/v1_1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

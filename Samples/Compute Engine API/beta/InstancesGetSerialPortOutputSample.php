@@ -28,7 +28,7 @@
 // API Description: Creates and runs virtual machines on Google Cloud Platform.
 // API Documentation Link https://developers.google.com/compute/docs/reference/latest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Compute/beta/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/compute/beta/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Compute($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'port' => '[YourValue]',  //Specifies which COM or serial port to retrieve data from.
+            
+  //'start' => '[YourValue]',  //Returns output starting from a specific byte position. Use this to page through output when the output is too large to return in a single request. For the initial request, leave this field unspecified. For subsequent calls, this field should be set to the next value returned in the previous call.
   'fields' => '*'
 );
+// Single Request.
 $results = instancesGetSerialPortOutputExample($service, $project, $zone, $instance, $optParams);
 
 

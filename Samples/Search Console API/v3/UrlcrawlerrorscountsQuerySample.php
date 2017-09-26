@@ -28,7 +28,7 @@
 // API Description: View Google Search Console data for your verified sites.
 // API Documentation Link https://developers.google.com/webmaster-tools/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Webmasters/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/webmasters/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Webmasters($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'category' => '[YourValue]',  //The crawl error category. For example: serverError. If not specified, returns results for all categories.
+            
+  //'latestCountsOnly' => '[YourValue]',  //If true, returns only the latest crawl error counts.
+            
+  //'platform' => '[YourValue]',  //The user agent type (platform) that made the request. For example: web. If not specified, returns results for all platforms.
   'fields' => '*'
 );
+// Single Request.
 $results = urlcrawlerrorscountsQueryExample($service, $siteUrl, $optParams);
 
 

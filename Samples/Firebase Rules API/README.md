@@ -1,6 +1,6 @@
 ﻿![Firebase Rules API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Firebase Rules API Samples for .NET  
+# Unoffical Firebase Rules API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Creates and manages rules that determine when a Firebase Rules-enabled service s
 
 ## Sample Description
 
-These samples show how to access the [Firebase Rules API](https://firebase.google.com/docs/storage/security) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Firebase Rules API](https://firebase.google.com/docs/storage/security) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

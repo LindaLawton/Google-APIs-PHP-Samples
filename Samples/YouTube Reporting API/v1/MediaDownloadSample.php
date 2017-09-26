@@ -28,7 +28,7 @@
 // API Description: Schedules reporting jobs containing your YouTube Analytics data and downloads the resulting bulk data reports in the form of CSV files.
 // API Documentation Link https://developers.google.com/youtube/reporting/v1/reports/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Youtubereporting/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/youtubereporting/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Youtubereporting($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = mediaDownloadExample($service, $resourceName, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: Manages your Stackdriver Monitoring data and configurations. Most projects must be associated with a Stackdriver account, with a few exceptions as noted on the individual method pages.
 // API Documentation Link https://cloud.google.com/monitoring/api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Monitoring/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/monitoring/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Monitoring($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageSize' => '[YourValue]',  //A positive number that is the maximum number of results to return.
+            
+  //'interval.startTime' => '[YourValue]',  //Optional. The beginning of the time interval. The default value for the start time is the end time. The start time must not be later than the end time.
+            
+  //'interval.endTime' => '[YourValue]',  //Required. The end of the time interval.
+            
+  //'filter' => '[YourValue]',  //An optional list filter describing the members to be returned. The filter may reference the type, labels, and metadata of monitored resources that comprise the group. For example, to return only resources representing Compute Engine VM instances, use this filter:resource.type = "gce_instance"
+            
+  //'pageToken' => '[YourValue]',  //If this field is not empty then it must contain the nextPageToken value returned by a previous call to this method. Using this field causes the method to return additional results from the previous method call.
   'fields' => '*'
 );
+// Single Request.
 $results = membersListExample($service, $name, $optParams);
 
 // Paginiation Example

@@ -28,7 +28,7 @@
 // API Description: Enables services that service consumers want to use on Google Cloud Platform, lists the available or enabled services, or disables services that service consumers no longer use.
 // API Documentation Link https://cloud.google.com/service-management/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Serviceuser/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/serviceuser/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Serviceuser($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = servicesEnableExample($service, $name, $optParams);
 
 

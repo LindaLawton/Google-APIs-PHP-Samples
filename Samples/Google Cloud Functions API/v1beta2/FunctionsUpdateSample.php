@@ -28,7 +28,7 @@
 // API Description: API for managing lightweight user-provided functions executed in response to events.
 // API Documentation Link https://cloud.google.com/functions
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudfunctions/v1beta2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudfunctions/v1beta2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Cloudfunctions($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = functionsUpdateExample($service, $name, $optParams);
 
 

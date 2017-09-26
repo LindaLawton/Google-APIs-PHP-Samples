@@ -28,7 +28,7 @@
 // API Description: Accesses the inventory of Ad Exchange seller users and generates reports.
 // API Documentation Link https://developers.google.com/ad-exchange/seller-rest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adexchangeseller/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adexchangeseller/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Adexchangeseller($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'locale' => '[YourValue]',  //Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified.
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of rows of report data to return.
+            
+  //'startIndex' => '[YourValue]',  //Index of the first row of report data to return.
   'fields' => '*'
 );
+// Single Request.
 $results = savedGenerateExample($service, $savedReportId, $optParams);
 
 

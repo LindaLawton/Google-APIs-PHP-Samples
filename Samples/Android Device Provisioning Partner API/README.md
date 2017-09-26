@@ -1,6 +1,6 @@
 ﻿![Android Device Provisioning Partner API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Android Device Provisioning Partner API Samples for .NET  
+# Unoffical Android Device Provisioning Partner API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Automates reseller integration into zero-touch enrollment by assigning devices t
 
 ## Sample Description
 
-These samples show how to access the [Android Device Provisioning Partner API](https://developers.google.com/zero-touch/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Android Device Provisioning Partner API](https://developers.google.com/zero-touch/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

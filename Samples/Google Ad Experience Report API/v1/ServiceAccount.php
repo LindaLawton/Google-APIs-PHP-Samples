@@ -28,7 +28,7 @@
 // API Description: View Ad Experience Report data, and get a list of sites that have a significant number of annoying ads.
 // API Documentation Link https://developers.google.com/ad-experience-report/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adexperiencereport/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adexperiencereport/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

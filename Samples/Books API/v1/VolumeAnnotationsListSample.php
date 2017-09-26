@@ -28,7 +28,7 @@
 // API Description: Searches for books and manages your Google Books library.
 // API Documentation Link https://developers.google.com/books/docs/v1/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Books/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/books/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,35 @@ session_start();
 * $service = new Google_Service_Books($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'endOffset' => '[YourValue]',  //The end offset to end retrieving data from.
+            
+  //'endPosition' => '[YourValue]',  //The end position to end retrieving data from.
+            
+  //'locale' => '[YourValue]',  //The locale information for the data. ISO-639-1 language and ISO-3166-1 country code. Ex: 'en_US'.
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of results to return
+            
+  //'pageToken' => '[YourValue]',  //The value of the nextToken from the previous page.
+            
+  //'showDeleted' => '[YourValue]',  //Set to true to return deleted annotations. updatedMin must be in the request to use this. Defaults to false.
+            
+  //'source' => '[YourValue]',  //String to identify the originator of this request.
+            
+  //'startOffset' => '[YourValue]',  //The start offset to start retrieving data from.
+            
+  //'startPosition' => '[YourValue]',  //The start position to start retrieving data from.
+            
+  //'updatedMax' => '[YourValue]',  //RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive).
+            
+  //'updatedMin' => '[YourValue]',  //RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive).
+            
+  //'volumeAnnotationsVersion' => '[YourValue]',  //The version of the volume annotations that you are requesting.
   'fields' => '*'
 );
+// Single Request.
 $results = volumeAnnotationsListExample($service, $volumeId, $layerId, $contentVersion, $optParams);
 
 // Paginiation Example

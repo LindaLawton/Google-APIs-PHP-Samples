@@ -28,7 +28,7 @@
 // API Description: The Runtime Configurator allows you to dynamically configure and expose variables through Google Cloud Platform. In addition, you can also set Watchers and Waiters that will watch for changes to your data and return based on certain conditions.
 // API Documentation Link https://cloud.google.com/deployment-manager/runtime-configurator/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudruntimeconfig/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/runtimeconfig/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Cloudruntimeconfig($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'requestId' => '[YourValue]',  //An optional but recommended unique `request_id`. If the serverreceives two `create()` requests  with the same`request_id`, then the second request will be ignored and thefirst resource created and stored in the backend is returned.Empty `request_id` fields are ignored.It is responsibility of the client to ensure uniqueness of the`request_id` strings.`request_id` strings are limited to 64 characters.
   'fields' => '*'
 );
+// Single Request.
 $results = variablesCreateExample($service, $parent, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation

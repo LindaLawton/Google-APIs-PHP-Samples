@@ -28,7 +28,7 @@
 // API Description: Creates and manages your customers and their subscriptions.
 // API Documentation Link https://developers.google.com/google-apps/reseller/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Reseller/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/reseller/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Reseller($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'customerAuthToken' => '[YourValue]',  //The customerAuthToken query string is required when creating a resold account that transfers a direct customer's subscription or transfers another reseller customer's subscription to your reseller management. This is a hexadecimal authentication token needed to complete the subscription transfer. For more information, see the administrator help center.
   'fields' => '*'
 );
+// Single Request.
 $results = customersInsertExample($service, $optParams);
 
 

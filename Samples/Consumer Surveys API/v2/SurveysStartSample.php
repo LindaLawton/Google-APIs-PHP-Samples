@@ -28,7 +28,7 @@
 // API Description: Creates and conducts surveys, lists the surveys that an authenticated user owns, and retrieves survey results and information about specified surveys.
 // API Documentation Link https://www.google.com/search?q=Consumer+Surveys
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Consumersurveys/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/consumersurveys/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Consumersurveys($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = surveysStartExample($service, $resourceId, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: Stores and retrieves potentially large, immutable data objects.
 // API Documentation Link https://developers.google.com/storage/docs/json_api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Storage/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/storage/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Storage($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'ifMetagenerationMatch' => '[YourValue]',  //If set, only deletes the bucket if its metageneration matches this value.
+            
+  //'ifMetagenerationNotMatch' => '[YourValue]',  //If set, only deletes the bucket if its metageneration does not match this value.
+            
+  //'userProject' => '[YourValue]',  //The project to be billed for this request, for Requester Pays buckets.
   'fields' => '*'
 );
+// Single Request.
 $results = bucketsDeleteExample($service, $bucket, $optParams);
 
 
@@ -81,7 +88,7 @@ function bucketsDeleteExample($service, $bucket, $optParams)
 		if (bucket == null)
 			throw new Exception("bucket is required.");
 		// Make the request and return the results.
-		return $service->buckets->DeleteBuckets($bucket, $optParams);
+		 $service->buckets->DeleteBuckets($bucket, $optParams);
 	}
 	catch (Exception $e)
 	{

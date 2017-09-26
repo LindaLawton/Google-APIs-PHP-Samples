@@ -1,6 +1,6 @@
 ﻿![Google Service User API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Google Service User API Samples for .NET  
+# Unoffical Google Service User API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Enables services that service consumers want to use on Google Cloud Platform, li
 
 ## Sample Description
 
-These samples show how to access the [Google Service User API](https://cloud.google.com/service-management/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google Service User API](https://cloud.google.com/service-management/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

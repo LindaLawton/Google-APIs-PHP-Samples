@@ -28,7 +28,7 @@
 // API Description: Views and manages your Google Analytics data.
 // API Documentation Link https://developers.google.com/analytics/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Analytics/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/analytics/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Analytics($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = profilesDeleteExample($service, $accountId, $webPropertyId, $profileId, $optParams);
 
 
@@ -87,7 +88,7 @@ function profilesDeleteExample($service, $accountId, $webPropertyId, $profileId,
 		if (webPropertyId == null)
 			throw new Exception("webPropertyId is required.");
 		// Make the request and return the results.
-		return $service->profiles->DeleteProfiles($accountId, $webPropertyId, $profileId, $optParams);
+		 $service->profiles->DeleteProfiles($accountId, $webPropertyId, $profileId, $optParams);
 	}
 	catch (Exception $e)
 	{

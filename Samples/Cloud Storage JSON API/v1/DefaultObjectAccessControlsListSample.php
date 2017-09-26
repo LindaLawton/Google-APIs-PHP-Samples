@@ -28,7 +28,7 @@
 // API Description: Stores and retrieves potentially large, immutable data objects.
 // API Documentation Link https://developers.google.com/storage/docs/json_api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Storage/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/storage/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Storage($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'ifMetagenerationMatch' => '[YourValue]',  //If present, only return default ACL listing if the bucket's current metageneration matches this value.
+            
+  //'ifMetagenerationNotMatch' => '[YourValue]',  //If present, only return default ACL listing if the bucket's current metageneration does not match the given value.
+            
+  //'userProject' => '[YourValue]',  //The project to be billed for this request, for Requester Pays buckets.
   'fields' => '*'
 );
+// Single Request.
 $results = defaultObjectAccessControlsListExample($service, $bucket, $optParams);
 
 

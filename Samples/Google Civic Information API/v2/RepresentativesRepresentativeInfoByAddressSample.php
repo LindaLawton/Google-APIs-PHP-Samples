@@ -28,7 +28,7 @@
 // API Description: Provides polling places, early vote locations, contest data, election officials, and government representatives for U.S. residential addresses.
 // API Documentation Link https://developers.google.com/civic-information
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Civicinfo/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/civicinfo/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Civicinfo($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'address' => '[YourValue]',  //The address to look up. May only be specified if the field ocdId is not given in the URL.
+            
+  //'includeOffices' => '[YourValue]',  //Whether to return information about offices and officials. If false, only the top-level district information will be returned.
+            
+  //'levels' => '[YourValue]',  //A list of office levels to filter by. Only offices that serve at least one of these levels will be returned. Divisions that don't contain a matching office will not be returned.
+            
+  //'roles' => '[YourValue]',  //A list of office roles to filter by. Only offices fulfilling one of these roles will be returned. Divisions that don't contain a matching office will not be returned.
   'fields' => '*'
 );
+// Single Request.
 $results = representativesRepresentativeInfoByAddressExample($service, $optParams);
 
 

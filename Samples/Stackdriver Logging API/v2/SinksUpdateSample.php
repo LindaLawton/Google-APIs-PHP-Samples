@@ -28,7 +28,7 @@
 // API Description: Writes log entries and manages your Stackdriver Logging configuration.
 // API Documentation Link https://cloud.google.com/logging/docs/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Logging/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/logging/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Logging($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'updateMask' => '[YourValue]',  //Optional. Field mask that specifies the fields in sink that need an update. A sink field will be overwritten if, and only if, it is in the update mask. name and output only fields cannot be updated.An empty updateMask is temporarily treated as using the following mask for backwards compatibility purposes:  destination,filter,includeChildren At some point in the future, behavior will be removed and specifying an empty updateMask will be an error.For a detailed FieldMask definition, see https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmaskExample: updateMask=filter.
+            
+  //'uniqueWriterIdentity' => '[YourValue]',  //Optional. See sinks.create for a description of this field. When updating a sink, the effect of this field on the value of writer_identity in the updated sink depends on both the old and new values of this field:If the old and new values of this field are both false or both true, then there is no change to the sink's writer_identity.If the old value is false and the new value is true, then writer_identity is changed to a unique service account.It is an error if the old value is true and the new value is set to false or defaulted to false.
   'fields' => '*'
 );
+// Single Request.
 $results = sinksUpdateExample($service, $sinkName, $optParams);
 
 

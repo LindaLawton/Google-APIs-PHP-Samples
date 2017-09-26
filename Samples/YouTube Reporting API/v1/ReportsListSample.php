@@ -28,7 +28,7 @@
 // API Description: Schedules reporting jobs containing your YouTube Analytics data and downloads the resulting bulk data reports in the form of CSV files.
 // API Documentation Link https://developers.google.com/youtube/reporting/v1/reports/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Youtubereporting/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/youtubereporting/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,23 @@ session_start();
 * $service = new Google_Service_Youtubereporting($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'onBehalfOfContentOwner' => '[YourValue]',  //The content owner's external ID on which behalf the user is acting on. Ifnot set, the user is acting for himself (his own channel).
+            
+  //'startTimeBefore' => '[YourValue]',  //If set, only reports whose start time is smaller than the specifieddate/time are returned.
+            
+  //'createdAfter' => '[YourValue]',  //If set, only reports created after the specified date/time are returned.
+            
+  //'startTimeAtOrAfter' => '[YourValue]',  //If set, only reports whose start time is greater than or equal thespecified date/time are returned.
+            
+  //'pageToken' => '[YourValue]',  //A token identifying a page of results the server should return. Typically,this is the value ofListReportsResponse.next_page_tokenreturned in response to the previous call to the `ListReports` method.
+            
+  //'pageSize' => '[YourValue]',  //Requested page size. Server may return fewer report types than requested.If unspecified, server will pick an appropriate default.
   'fields' => '*'
 );
+// Single Request.
 $results = reportsListExample($service, $jobId, $optParams);
 
 // Paginiation Example

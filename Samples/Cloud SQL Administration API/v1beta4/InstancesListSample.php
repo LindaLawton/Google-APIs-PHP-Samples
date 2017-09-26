@@ -28,7 +28,7 @@
 // API Description: Creates and configures Cloud SQL instances, which provide fully-managed MySQL databases.
 // API Documentation Link https://cloud.google.com/sql/docs/reference/latest
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Sqladmin/v1beta4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/sqladmin/v1beta4/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Sqladmin($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'filter' => '[YourValue]',  //An expression for filtering the results of the request, such as by name or label.
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of results to return per response.
+            
+  //'pageToken' => '[YourValue]',  //A previously-returned page token representing part of the larger set of results to view.
   'fields' => '*'
 );
+// Single Request.
 $results = instancesListExample($service, $project, $optParams);
 
 // Paginiation Example

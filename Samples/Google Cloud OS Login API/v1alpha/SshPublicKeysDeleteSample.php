@@ -28,7 +28,7 @@
 // API Description: Manages OS login configuration for Directory API users.
 // API Documentation Link https://cloud.google.com/compute/docs/oslogin/rest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudoslogin/v1alpha/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/oslogin/v1alpha/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Cloudoslogin($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = sshPublicKeysDeleteExample($service, $name, $optParams);
 
 

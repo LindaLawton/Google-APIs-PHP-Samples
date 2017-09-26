@@ -28,7 +28,7 @@
 // API Description: Reads and publishes results from Firebase Test Lab.
 // API Documentation Link https://firebase.google.com/docs/test-lab/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Toolresults/v1beta3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/toolresults/v1beta3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Toolresults($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = clustersGetExample($service, $projectId, $historyId, $executionId, $clusterId, $optParams);
 
 

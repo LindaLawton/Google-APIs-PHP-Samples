@@ -28,7 +28,7 @@
 // API Description: Upload, process, query, and search Genomics data in the cloud.
 // API Documentation Link https://cloud.google.com/genomics
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Genomics/v1alpha2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/genomics/v1alpha2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Genomics($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = pipelinesCreateExample($service, $optParams);
 
 

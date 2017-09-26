@@ -28,7 +28,7 @@
 // API Description: Builds on top of the Google+ platform for Google Apps Domains.
 // API Documentation Link https://developers.google.com/+/domains/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Plusdomains/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/plusDomains/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Plusdomains($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'preview' => '[YourValue]',  //If "true", extract the potential media attachments for a URL. The response will include all possible attachments for a URL, including video, photos, and articles based on the content of the page.
   'fields' => '*'
 );
+// Single Request.
 $results = activitiesInsertExample($service, $userId, $optParams);
 
 

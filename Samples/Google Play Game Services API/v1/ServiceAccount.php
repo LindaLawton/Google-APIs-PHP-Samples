@@ -28,7 +28,7 @@
 // API Description: The API for Google Play Game Services.
 // API Documentation Link https://developers.google.com/games/services/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Games/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/games/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

@@ -28,7 +28,7 @@
 // API Description: Reads and writes Google Sheets.
 // API Documentation Link https://developers.google.com/sheets/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Sheets/v4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/sheets/v4/rest
 //
 //------------------------------------------------------------------------------
 // Installation

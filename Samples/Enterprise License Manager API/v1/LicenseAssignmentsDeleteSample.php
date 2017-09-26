@@ -28,7 +28,7 @@
 // API Description: Views and manages licenses for your domain.
 // API Documentation Link https://developers.google.com/google-apps/licensing/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Licensing/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/licensing/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Licensing($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = licenseAssignmentsDeleteExample($service, $productId, $skuId, $userId, $optParams);
 
 
@@ -87,7 +88,7 @@ function licenseAssignmentsDeleteExample($service, $productId, $skuId, $userId, 
 		if (userId == null)
 			throw new Exception("userId is required.");
 		// Make the request and return the results.
-		return $service->licenseAssignments->DeleteLicenseAssignments($productId, $skuId, $userId, $optParams);
+		 $service->licenseAssignments->DeleteLicenseAssignments($productId, $skuId, $userId, $optParams);
 	}
 	catch (Exception $e)
 	{

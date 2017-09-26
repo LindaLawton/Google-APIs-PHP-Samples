@@ -1,6 +1,6 @@
 ﻿![Street View Publish API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Street View Publish API Samples for .NET  
+# Unoffical Street View Publish API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Publishes 360 photos to Google Maps, along with position, orientation, and conne
 
 ## Sample Description
 
-These samples show how to access the [Street View Publish API](https://developers.google.com/streetview/publish/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Street View Publish API](https://developers.google.com/streetview/publish/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

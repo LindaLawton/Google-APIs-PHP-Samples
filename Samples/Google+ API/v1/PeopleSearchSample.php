@@ -28,7 +28,7 @@
 // API Description: Builds on top of the Google+ platform.
 // API Documentation Link https://developers.google.com/+/api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Plus/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/plus/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Plus($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'language' => '[YourValue]',  //Specify the preferred language to search with. See search language codes for available values.
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of people to include in the response, which is used for paging. For any response, the actual number returned might be less than the specified maxResults.
+            
+  //'pageToken' => '[YourValue]',  //The continuation token, which is used to page through large result sets. To get the next page of results, set this parameter to the value of "nextPageToken" from the previous response. This token can be of any length.
   'fields' => '*'
 );
+// Single Request.
 $results = peopleSearchExample($service, $query, $optParams);
 
 // Paginiation Example

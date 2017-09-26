@@ -28,7 +28,7 @@
 // API Description: The Management API for Google Play Game Services.
 // API Documentation Link https://developers.google.com/games/services
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Gamesmanagement/v1management/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/gamesManagement/v1management/rest
 //
 //------------------------------------------------------------------------------
 // Installation

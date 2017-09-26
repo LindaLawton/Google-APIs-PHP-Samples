@@ -28,7 +28,7 @@
 // API Description: Examines the call stack and variables of a running application without stopping or slowing it down.
 // API Documentation Link http://cloud.google.com/debugger
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Clouddebugger/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/clouddebugger/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Clouddebugger($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = breakpointsUpdateExample($service, $debuggeeId, $id, $optParams);
 
 

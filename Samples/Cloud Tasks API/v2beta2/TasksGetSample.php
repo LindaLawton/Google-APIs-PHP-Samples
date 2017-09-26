@@ -28,7 +28,7 @@
 // API Description: Manages the execution of large numbers of distributed requests. Cloud Tasks is in Alpha.
 // API Documentation Link https://cloud.google.com/cloud-tasks/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudtasks/v2beta2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudtasks/v2beta2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Cloudtasks($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'responseView' => '[YourValue]',  //The response_view specifies which subset of the Task will bereturned.By default response_view is Task.View.BASIC; not allinformation is retrieved by default because some data, such aspayloads, might be desirable to return only when needed becauseof its large size or because of the sensitivity of data that itcontains.Authorization for Task.View.FULL requires `cloudtasks.tasks.fullView`[Google IAM](/iam/) permission on theTask.name resource.
   'fields' => '*'
 );
+// Single Request.
 $results = tasksGetExample($service, $name, $optParams);
 
 

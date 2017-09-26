@@ -28,7 +28,7 @@
 // API Description: Supports core YouTube features, such as uploading videos, creating and managing playlists, searching for content, and much more.
 // API Documentation Link https://developers.google.com/youtube/v3
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Youtube/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,31 @@ session_start();
 * $service = new Google_Service_Youtube($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'allThreadsRelatedToChannelId' => '[YourValue]',  //The allThreadsRelatedToChannelId parameter instructs the API to return all comment threads associated with the specified channel. The response can include comments about the channel or about the channel's videos.
+            
+  //'channelId' => '[YourValue]',  //The channelId parameter instructs the API to return comment threads containing comments about the specified channel. (The response will not include comments left on videos that the channel uploaded.)
+            
+  //'id' => '[YourValue]',  //The id parameter specifies a comma-separated list of comment thread IDs for the resources that should be retrieved.
+            
+  //'maxResults' => '[YourValue]',  //The maxResults parameter specifies the maximum number of items that should be returned in the result set.Note: This parameter is not supported for use in conjunction with the id parameter.
+            
+  //'moderationStatus' => '[YourValue]',  //Set this parameter to limit the returned comment threads to a particular moderation state.Note: This parameter is not supported for use in conjunction with the id parameter.
+            
+  //'order' => '[YourValue]',  //The order parameter specifies the order in which the API response should list comment threads. Valid values are: - time - Comment threads are ordered by time. This is the default behavior.- relevance - Comment threads are ordered by relevance.Note: This parameter is not supported for use in conjunction with the id parameter.
+            
+  //'pageToken' => '[YourValue]',  //The pageToken parameter identifies a specific page in the result set that should be returned. In an API response, the nextPageToken property identifies the next page of the result that can be retrieved.Note: This parameter is not supported for use in conjunction with the id parameter.
+            
+  //'searchTerms' => '[YourValue]',  //The searchTerms parameter instructs the API to limit the API response to only contain comments that contain the specified search terms.Note: This parameter is not supported for use in conjunction with the id parameter.
+            
+  //'textFormat' => '[YourValue]',  //Set this parameter's value to html or plainText to instruct the API to return the comments left by users in html formatted or in plain text.
+            
+  //'videoId' => '[YourValue]',  //The videoId parameter instructs the API to return comment threads associated with the specified video ID.
   'fields' => '*'
 );
+// Single Request.
 $results = commentThreadsListExample($service, $part, $optParams);
 
 // Paginiation Example

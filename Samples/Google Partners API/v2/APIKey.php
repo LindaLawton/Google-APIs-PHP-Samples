@@ -28,7 +28,7 @@
 // API Description: Searches certified companies and creates contact leads with them, and also audits the usage of clients.
 // API Documentation Link https://developers.google.com/partners/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Partners/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/partners/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation

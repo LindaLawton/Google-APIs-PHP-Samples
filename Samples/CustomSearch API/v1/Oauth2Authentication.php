@@ -28,7 +28,7 @@
 // API Description: Searches over a website or collection of websites
 // API Documentation Link https://developers.google.com/custom-search/v1/using_rest
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Customsearch/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/customsearch/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

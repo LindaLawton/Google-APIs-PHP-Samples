@@ -28,7 +28,7 @@
 // API Description: Creates and manages users and groups for accessing Google Compute Engine virtual machines.
 // API Documentation Link https://cloud.google.com/compute/docs/access/user-accounts/api/latest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Clouduseraccounts/alpha/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/clouduseraccounts/alpha/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Clouduseraccounts($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'login' => '[YourValue]',  //Whether the view was requested as part of a user-initiated login.
   'fields' => '*'
 );
+// Single Request.
 $results = linuxGetAuthorizedKeysViewExample($service, $project, $zone, $user, $instance, $optParams);
 
 

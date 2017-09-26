@@ -28,7 +28,7 @@
 // API Description: Builds on top of the Google+ platform.
 // API Documentation Link https://developers.google.com/+/api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Plus/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/plus/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

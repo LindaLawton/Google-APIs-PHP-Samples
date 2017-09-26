@@ -28,7 +28,7 @@
 // API Description: Manages Google Cloud Dataflow projects on Google Cloud Platform.
 // API Documentation Link https://cloud.google.com/dataflow
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Dataflow/v1b3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/dataflow/v1b3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Dataflow($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'location' => '[YourValue]',  //The location to which to direct the request.
+            
+  //'validateOnly' => '[YourValue]',  //If true, the request is validated but not actually executed.Defaults to false.
+            
+  //'gcsPath' => '[YourValue]',  //Required. A Cloud Storage path to the template from which to createthe job.Must be valid Cloud Storage URL, beginning with 'gs://'.
   'fields' => '*'
 );
+// Single Request.
 $results = templatesLaunchExample($service, $projectId, $optParams);
 
 

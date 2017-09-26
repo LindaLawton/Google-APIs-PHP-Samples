@@ -28,7 +28,7 @@
 // API Description: Stores and retrieves potentially large, immutable data objects.
 // API Documentation Link https://developers.google.com/storage/docs/json_api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Storage/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/storage/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,31 @@ session_start();
 * $service = new Google_Service_Storage($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'contentEncoding' => '[YourValue]',  //If set, sets the contentEncoding property of the final object to this value. Setting this parameter is equivalent to setting the contentEncoding metadata property. This can be useful when uploading an object with uploadType=media to indicate the encoding of the content being uploaded.
+            
+  //'ifGenerationMatch' => '[YourValue]',  //Makes the operation conditional on whether the object's current generation matches the given value. Setting to 0 makes the operation succeed only if there are no live versions of the object.
+            
+  //'ifGenerationNotMatch' => '[YourValue]',  //Makes the operation conditional on whether the object's current generation does not match the given value. If no live object exists, the precondition fails. Setting to 0 makes the operation succeed only if there is a live version of the object.
+            
+  //'ifMetagenerationMatch' => '[YourValue]',  //Makes the operation conditional on whether the object's current metageneration matches the given value.
+            
+  //'ifMetagenerationNotMatch' => '[YourValue]',  //Makes the operation conditional on whether the object's current metageneration does not match the given value.
+            
+  //'kmsKeyName' => '[YourValue]',  //Resource name of the Cloud KMS key, of the form projects/my-project/locations/global/keyRings/my-kr/cryptoKeys/my-key, that will be used to encrypt the object. Overrides the object metadata's kms_key_name value, if any.
+            
+  //'name' => '[YourValue]',  //Name of the object. Required when the object metadata is not otherwise provided. Overrides the object metadata's name value, if any. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
+            
+  //'predefinedAcl' => '[YourValue]',  //Apply a predefined set of access controls to this object.
+            
+  //'projection' => '[YourValue]',  //Set of properties to return. Defaults to noAcl, unless the object resource specifies the acl property, when it defaults to full.
+            
+  //'userProject' => '[YourValue]',  //The project to be billed for this request, for Requester Pays buckets.
   'fields' => '*'
 );
+// Single Request.
 $results = objectsInsertExample($service, $bucket, $optParams);
 
 

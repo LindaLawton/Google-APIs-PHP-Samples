@@ -28,7 +28,7 @@
 // API Description: Manipulates events and other calendar data.
 // API Documentation Link https://developers.google.com/google-apps/calendar/firstapp
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Calendar/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Calendar($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'colorRgbFormat' => '[YourValue]',  //Whether to use the foregroundColor and backgroundColor fields to write the calendar colors (RGB). If this feature is used, the index-based colorId field will be set to the best matching option automatically. Optional. The default is False.
   'fields' => '*'
 );
+// Single Request.
 $results = calendarListInsertExample($service, $optParams);
 
 

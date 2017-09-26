@@ -28,7 +28,7 @@
 // API Description: Manages Hadoop-based clusters and jobs on Google Cloud Platform.
 // API Documentation Link https://cloud.google.com/dataproc/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Dataproc/v1beta2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/dataproc/v1beta2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Dataproc($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'filter' => '[YourValue]',  //Optional. A filter constraining the clusters to list. Filters are case-sensitive and have the following syntax:field = value AND field = value ...where field is one of status.state, clusterName, or labels.[KEY], and [KEY] is a label key. value can be * to match all values. status.state can be one of the following: ACTIVE, INACTIVE, CREATING, RUNNING, ERROR, DELETING, or UPDATING. ACTIVE contains the CREATING, UPDATING, and RUNNING states. INACTIVE contains the DELETING and ERROR states. clusterName is the name of the cluster provided at creation time. Only the logical AND operator is supported; space-separated items are treated as having an implicit AND operator.Example filter:status.state = ACTIVE AND clusterName = mycluster AND labels.env = staging AND labels.starred = *
+            
+  //'pageToken' => '[YourValue]',  //Optional. The standard List page token.
+            
+  //'pageSize' => '[YourValue]',  //Optional. The standard List page size.
   'fields' => '*'
 );
+// Single Request.
 $results = clustersListExample($service, $projectId, $region, $optParams);
 
 // Paginiation Example

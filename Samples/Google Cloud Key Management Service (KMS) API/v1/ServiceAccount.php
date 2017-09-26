@@ -28,7 +28,7 @@
 // API Description: Manages encryption for your cloud services the same way you do on-premises. You can generate, use, rotate, and destroy AES256 encryption keys.
 // API Documentation Link https://cloud.google.com/kms/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudkms/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudkms/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

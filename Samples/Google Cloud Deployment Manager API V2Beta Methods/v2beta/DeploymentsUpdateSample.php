@@ -28,7 +28,7 @@
 // API Description: The Deployment Manager API allows users to declaratively configure, deploy and run complex solutions on the Google Cloud Platform.
 // API Documentation Link https://developers.google.com/deployment-manager/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Deploymentmanagerv2beta/v2beta/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/deploymentmanager/v2beta/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Deploymentmanagerv2beta($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'createPolicy' => '[YourValue]',  //Sets the policy to use for creating new resources.
+            
+  //'deletePolicy' => '[YourValue]',  //Sets the policy to use for deleting resources.
+            
+  //'preview' => '[YourValue]',  //If set to true, updates the deployment and creates and updates the "shell" resources but does not actually alter or instantiate these resources. This allows you to preview what your deployment will look like. You can use this intent to preview how an update would affect your deployment. You must provide a target.config with a configuration if this is set to true. After previewing a deployment, you can deploy your resources by making a request with the update() or you can cancelPreview() to remove the preview altogether. Note that the deployment will still exist after you cancel the preview and you must separately delete this deployment if you want to remove it.
   'fields' => '*'
 );
+// Single Request.
 $results = deploymentsUpdateExample($service, $project, $deployment, $optParams);
 
 

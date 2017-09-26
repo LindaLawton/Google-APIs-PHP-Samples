@@ -28,7 +28,7 @@
 // API Description: [Deprecated. Please use compute.instanceGroupManagers.update method. replicapoolupdater API will be disabled after December 30th, 2016] Updates groups of Compute Engine instances.
 // API Documentation Link https://cloud.google.com/compute/docs/instance-groups/manager/#applying_rolling_updates_using_the_updater_service
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Replicapoolupdater/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/replicapoolupdater/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Replicapoolupdater($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = rollingUpdatesInsertExample($service, $project, $zone, $optParams);
 
 

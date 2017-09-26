@@ -28,7 +28,7 @@
 // API Description: Access Gmail mailboxes including sending user email.
 // API Documentation Link https://developers.google.com/gmail/api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Gmail/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Gmail($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'includeSpamTrash' => '[YourValue]',  //Include drafts from SPAM and TRASH in the results.
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of drafts to return.
+            
+  //'pageToken' => '[YourValue]',  //Page token to retrieve a specific page of results in the list.
+            
+  //'q' => '[YourValue]',  //Only return draft messages matching the specified query. Supports the same query format as the Gmail search box. For example, "from:someuser@example.com rfc822msgid: is:unread".
   'fields' => '*'
 );
+// Single Request.
 $results = draftsListExample($service, $userId, $optParams);
 
 // Paginiation Example

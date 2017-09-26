@@ -28,7 +28,7 @@
 // API Description: Allows developers to run automated tests for their mobile applications on Google infrastructure.
 // API Documentation Link https://developers.google.com/cloud-test-lab/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Testing/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/testing/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

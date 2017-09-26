@@ -28,7 +28,7 @@
 // API Description: Searches for books and manages your Google Books library.
 // API Documentation Link https://developers.google.com/books/docs/v1/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Books/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/books/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,25 @@ session_start();
 * $service = new Google_Service_Books($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'country' => '[YourValue]',  //ISO-3166-1 code to override the IP-based location.
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of results to return
+            
+  //'projection' => '[YourValue]',  //Restrict information returned to a set of selected fields.
+            
+  //'q' => '[YourValue]',  //Full-text search query string in this bookshelf.
+            
+  //'showPreorders' => '[YourValue]',  //Set to true to show pre-ordered books. Defaults to false.
+            
+  //'source' => '[YourValue]',  //String to identify the originator of this request.
+            
+  //'startIndex' => '[YourValue]',  //Index of the first element to return (starts at 0)
   'fields' => '*'
 );
+// Single Request.
 $results = volumesListExample($service, $shelf, $optParams);
 
 

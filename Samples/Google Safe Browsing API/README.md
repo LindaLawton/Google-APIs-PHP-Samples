@@ -1,6 +1,6 @@
 ﻿![Google Safe Browsing API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Google Safe Browsing API Samples for .NET  
+# Unoffical Google Safe Browsing API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Enables client applications to check web resources (most commonly URLs) against 
 
 ## Sample Description
 
-These samples show how to access the [Google Safe Browsing API](https://developers.google.com/safe-browsing/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google Safe Browsing API](https://developers.google.com/safe-browsing/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

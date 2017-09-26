@@ -28,7 +28,7 @@
 // API Description: Writes log entries and manages your Stackdriver Logging configuration.
 // API Documentation Link https://cloud.google.com/logging/docs/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Logging/v2beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/logging/v2beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Logging($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = sinksGetExample($service, $sinkName, $optParams);
 
 

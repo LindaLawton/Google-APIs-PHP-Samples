@@ -28,7 +28,7 @@
 // API Description: Manages classes, rosters, and invitations in Google Classroom.
 // API Documentation Link https://developers.google.com/classroom/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Classroom/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/classroom/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Classroom($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageToken' => '[YourValue]',  //nextPageTokenvalue returned from a previouslist call,indicating that the subsequent page of results should be returned.The list requestmust be otherwise identical to the one that resulted in this token.
+            
+  //'pageSize' => '[YourValue]',  //Maximum number of items to return. Zero or unspecified indicates that theserver may assign a maximum.The server may return fewer than the specified number of results.
+            
+  //'states' => '[YourValue]',  //Requested submission states. If specified, returned student submissionsmatch one of the specified submission states.
+            
+  //'userId' => '[YourValue]',  //Optional argument to restrict returned student work to those owned by thestudent with the specified identifier. The identifier can be one of thefollowing:* the numeric identifier for the user* the email address of the user* the string literal `"me"`, indicating the requesting user
+            
+  //'late' => '[YourValue]',  //Requested lateness value. If specified, returned student submissions arerestricted by the requested value.If unspecified, submissions are returned regardless of `late` value.
   'fields' => '*'
 );
+// Single Request.
 $results = studentSubmissionsListExample($service, $courseId, $courseWorkId, $optParams);
 
 // Paginiation Example

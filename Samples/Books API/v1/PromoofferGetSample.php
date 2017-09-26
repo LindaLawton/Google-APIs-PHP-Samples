@@ -28,7 +28,7 @@
 // API Description: Searches for books and manages your Google Books library.
 // API Documentation Link https://developers.google.com/books/docs/v1/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Books/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/books/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,23 @@ session_start();
 * $service = new Google_Service_Books($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'androidId' => '[YourValue]',  //device android_id
+            
+  //'device' => '[YourValue]',  //device device
+            
+  //'manufacturer' => '[YourValue]',  //device manufacturer
+            
+  //'model' => '[YourValue]',  //device model
+            
+  //'product' => '[YourValue]',  //device product
+            
+  //'serial' => '[YourValue]',  //device serial
   'fields' => '*'
 );
+// Single Request.
 $results = promoofferGetExample($service, $optParams);
 
 

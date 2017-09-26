@@ -28,7 +28,7 @@
 // API Description: Searches for books and manages your Google Books library.
 // API Documentation Link https://developers.google.com/books/docs/v1/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Books/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/books/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,31 @@ session_start();
 * $service = new Google_Service_Books($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'contentVersion' => '[YourValue]',  //The content version for the requested volume.
+            
+  //'layerId' => '[YourValue]',  //The layer ID to limit annotation by.
+            
+  //'layerIds' => '[YourValue]',  //The layer ID(s) to limit annotation by.
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of results to return
+            
+  //'pageToken' => '[YourValue]',  //The value of the nextToken from the previous page.
+            
+  //'showDeleted' => '[YourValue]',  //Set to true to return deleted annotations. updatedMin must be in the request to use this. Defaults to false.
+            
+  //'source' => '[YourValue]',  //String to identify the originator of this request.
+            
+  //'updatedMax' => '[YourValue]',  //RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive).
+            
+  //'updatedMin' => '[YourValue]',  //RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive).
+            
+  //'volumeId' => '[YourValue]',  //The volume to restrict annotations to.
   'fields' => '*'
 );
+// Single Request.
 $results = annotationsListExample($service, $optParams);
 
 // Paginiation Example

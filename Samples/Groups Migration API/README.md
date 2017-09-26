@@ -1,6 +1,6 @@
 ﻿![Groups Migration API](https://www.google.com/images/icons/product/discussions-32.gif)
 
-# Unoffical Groups Migration API Samples for .NET  
+# Unoffical Groups Migration API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Groups Migration Api.
 
 ## Sample Description
 
-These samples show how to access the [Groups Migration API](https://developers.google.com/google-apps/groups-migration/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Groups Migration API](https://developers.google.com/google-apps/groups-migration/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

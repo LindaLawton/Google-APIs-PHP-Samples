@@ -28,7 +28,7 @@
 // API Description: Google Service Management allows service producers to publish their services on Google Cloud Platform so that they can be discovered and used by service consumers.
 // API Documentation Link https://cloud.google.com/service-management/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Servicemanagement/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/servicemanagement/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Servicemanagement($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageToken' => '[YourValue]',  //The token of the page to retrieve.
+            
+  //'pageSize' => '[YourValue]',  //The max number of items to include in the response list.
+            
+  //'filter' => '[YourValue]',  //Use `filter` to return subset of rollouts.The following filters are supported:  -- To limit the results to only those in     [status](google.api.servicemanagement.v1.RolloutStatus) 'SUCCESS',     use filter='status=SUCCESS'  -- To limit the results to those in     [status](google.api.servicemanagement.v1.RolloutStatus) 'CANCELLED'     or 'FAILED', use filter='status=CANCELLED OR status=FAILED'
   'fields' => '*'
 );
+// Single Request.
 $results = rolloutsListExample($service, $serviceName, $optParams);
 
 // Paginiation Example

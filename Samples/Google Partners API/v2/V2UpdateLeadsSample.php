@@ -28,7 +28,7 @@
 // API Description: Searches certified companies and creates contact leads with them, and also audits the usage of clients.
 // API Documentation Link https://developers.google.com/partners/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Partners/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/partners/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,27 @@ session_start();
 * $service = new Google_Service_Partners($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'requestMetadata.trafficSource.trafficSourceId' => '[YourValue]',  //Identifier to indicate where the traffic comes from.An identifier has multiple letters created by a team which redirected thetraffic to us.
+            
+  //'requestMetadata.locale' => '[YourValue]',  //Locale to use for the current request.
+            
+  //'requestMetadata.userOverrides.ipAddress' => '[YourValue]',  //IP address to use instead of the user's geo-located IP address.
+            
+  //'updateMask' => '[YourValue]',  //Standard field mask for the set of fields to be updated.Required with at least 1 value in FieldMask's paths.Only `state` and `adwords_customer_id` are currently supported.
+            
+  //'requestMetadata.experimentIds' => '[YourValue]',  //Experiment IDs the current request belongs to.
+            
+  //'requestMetadata.trafficSource.trafficSubId' => '[YourValue]',  //Second level identifier to indicate where the traffic comes from.An identifier has multiple letters created by a team which redirected thetraffic to us.
+            
+  //'requestMetadata.userOverrides.userId' => '[YourValue]',  //Logged-in user ID to impersonate instead of the user's ID.
+            
+  //'requestMetadata.partnersSessionId' => '[YourValue]',  //Google Partners session ID.
   'fields' => '*'
 );
+// Single Request.
 $results = v2UpdateLeadsExample($service, $optParams);
 
 

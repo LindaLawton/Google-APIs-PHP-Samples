@@ -1,6 +1,6 @@
 ﻿![Fusion Tables API](https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png)
 
-# Unoffical Fusion Tables API Samples for .NET  
+# Unoffical Fusion Tables API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ API for working with Fusion Tables data.
 
 ## Sample Description
 
-These samples show how to access the [Fusion Tables API](https://developers.google.com/fusiontables) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Fusion Tables API](https://developers.google.com/fusiontables) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

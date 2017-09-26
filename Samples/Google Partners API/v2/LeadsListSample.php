@@ -28,7 +28,7 @@
 // API Description: Searches certified companies and creates contact leads with them, and also audits the usage of clients.
 // API Documentation Link https://developers.google.com/partners/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Partners/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/partners/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,31 @@ session_start();
 * $service = new Google_Service_Partners($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'requestMetadata.userOverrides.userId' => '[YourValue]',  //Logged-in user ID to impersonate instead of the user's ID.
+            
+  //'requestMetadata.partnersSessionId' => '[YourValue]',  //Google Partners session ID.
+            
+  //'pageToken' => '[YourValue]',  //A token identifying a page of results that the server returns.Typically, this is the value of `ListLeadsResponse.next_page_token`returned from the previous call toListLeads.
+            
+  //'pageSize' => '[YourValue]',  //Requested page size. Server may return fewer leads than requested.If unspecified, server picks an appropriate default.
+            
+  //'requestMetadata.trafficSource.trafficSourceId' => '[YourValue]',  //Identifier to indicate where the traffic comes from.An identifier has multiple letters created by a team which redirected thetraffic to us.
+            
+  //'requestMetadata.locale' => '[YourValue]',  //Locale to use for the current request.
+            
+  //'requestMetadata.userOverrides.ipAddress' => '[YourValue]',  //IP address to use instead of the user's geo-located IP address.
+            
+  //'requestMetadata.experimentIds' => '[YourValue]',  //Experiment IDs the current request belongs to.
+            
+  //'orderBy' => '[YourValue]',  //How to order Leads. Currently, only `create_time`and `create_time desc` are supported
+            
+  //'requestMetadata.trafficSource.trafficSubId' => '[YourValue]',  //Second level identifier to indicate where the traffic comes from.An identifier has multiple letters created by a team which redirected thetraffic to us.
   'fields' => '*'
 );
+// Single Request.
 $results = leadsListExample($service, $optParams);
 
 // Paginiation Example

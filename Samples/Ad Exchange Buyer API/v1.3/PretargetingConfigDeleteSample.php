@@ -28,7 +28,7 @@
 // API Description: Accesses your bidding-account information, submits creatives for validation, finds available direct deals, and retrieves performance reports.
 // API Documentation Link https://developers.google.com/ad-exchange/buyer-rest
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adexchangebuyer/v1_3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adexchangebuyer/v1_3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Adexchangebuyer($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = pretargetingConfigDeleteExample($service, $accountId, $configId, $optParams);
 
 
@@ -84,7 +85,7 @@ function pretargetingConfigDeleteExample($service, $accountId, $configId, $optPa
 		if (configId == null)
 			throw new Exception("configId is required.");
 		// Make the request and return the results.
-		return $service->pretargetingConfig->DeletePretargetingConfig($accountId, $configId, $optParams);
+		 $service->pretargetingConfig->DeletePretargetingConfig($accountId, $configId, $optParams);
 	}
 	catch (Exception $e)
 	{

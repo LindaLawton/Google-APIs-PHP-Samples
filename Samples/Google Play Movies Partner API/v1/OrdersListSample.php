@@ -28,7 +28,7 @@
 // API Description: Gets the delivery status of titles for Google Play Movies Partners.
 // API Documentation Link https://developers.google.com/playmoviespartner/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Playmovies/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/playmoviespartner/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,27 @@ session_start();
 * $service = new Google_Service_Playmovies($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'status' => '[YourValue]',  //Filter Orders that match one of the given status.
+            
+  //'name' => '[YourValue]',  //Filter that matches Orders with a `name`, `show`, `season` or `episode`that contains the given case-insensitive name.
+            
+  //'studioNames' => '[YourValue]',  //See _List methods rules_ for info about this field.
+            
+  //'videoIds' => '[YourValue]',  //Filter Orders that match any of the given `video_id`s.
+            
+  //'customId' => '[YourValue]',  //Filter Orders that match a case-insensitive, partner-specific custom id.
+            
+  //'pageToken' => '[YourValue]',  //See _List methods rules_ for info about this field.
+            
+  //'pageSize' => '[YourValue]',  //See _List methods rules_ for info about this field.
+            
+  //'pphNames' => '[YourValue]',  //See _List methods rules_ for info about this field.
   'fields' => '*'
 );
+// Single Request.
 $results = ordersListExample($service, $accountId, $optParams);
 
 // Paginiation Example

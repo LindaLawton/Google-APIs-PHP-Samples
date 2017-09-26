@@ -28,7 +28,7 @@
 // API Description: Lets you create, inspect, and manage goo.gl short URLs
 // API Documentation Link https://developers.google.com/url-shortener/v1/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Urlshortener/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/urlshortener/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Urlshortener($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = urlInsertExample($service, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: Fetches reports for the administrators of G Suite customers about the usage, collaboration, security, and risk for their users.
 // API Documentation Link https://developers.google.com/admin-sdk/reports/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Reports/reports_v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/admin/reports_v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Reports($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = channelsStopExample($service, $optParams);
 
 
@@ -78,7 +79,7 @@ function channelsStopExample($service, $optParams)
 		if ($optParams == null)
 			throw new Exception("optParams is required.");
 		// Make the request and return the results.
-		return $service->channels->StopChannels($optParams);
+		 $service->channels->StopChannels($optParams);
 	}
 	catch (Exception $e)
 	{

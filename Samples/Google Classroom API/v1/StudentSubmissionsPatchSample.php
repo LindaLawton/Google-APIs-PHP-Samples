@@ -28,7 +28,7 @@
 // API Description: Manages classes, rosters, and invitations in Google Classroom.
 // API Documentation Link https://developers.google.com/classroom/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Classroom/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/classroom/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Classroom($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'updateMask' => '[YourValue]',  //Mask that identifies which fields on the student submission to update.This field is required to do an update. The update fails if invalidfields are specified.The following fields may be specified by teachers:* `draft_grade`* `assigned_grade`
   'fields' => '*'
 );
+// Single Request.
 $results = studentSubmissionsPatchExample($service, $courseId, $courseWorkId, $id, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: Views and manages your Google Analytics data.
 // API Documentation Link https://developers.google.com/analytics/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Analytics/v2_4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/analytics/v2_4/rest
 //
 //------------------------------------------------------------------------------
 // Installation

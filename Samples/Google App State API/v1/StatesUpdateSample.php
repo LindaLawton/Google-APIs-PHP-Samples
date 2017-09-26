@@ -28,7 +28,7 @@
 // API Description: The Google App State API.
 // API Documentation Link https://developers.google.com/games/services/web/api/states
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Appstate/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/appstate/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Appstate($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'currentStateVersion' => '[YourValue]',  //The version of the app state your application is attempting to update. If this does not match the current version, this method will return a conflict error. If there is no data stored on the server for this key, the update will succeed irrespective of the value of this parameter.
   'fields' => '*'
 );
+// Single Request.
 $results = statesUpdateExample($service, $stateKey, $optParams);
 
 

@@ -1,6 +1,6 @@
 ﻿![PageSpeed Insights API](https://www.google.com/images/icons/product/pagespeed-32.png)
 
-# Unoffical PageSpeed Insights API Samples for .NET  
+# Unoffical PageSpeed Insights API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Analyzes the performance of a web page and provides tailored suggestions to make
 
 ## Sample Description
 
-These samples show how to access the [PageSpeed Insights API](https://developers.google.com/speed/docs/insights/v2/getting-started) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [PageSpeed Insights API](https://developers.google.com/speed/docs/insights/v2/getting-started) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

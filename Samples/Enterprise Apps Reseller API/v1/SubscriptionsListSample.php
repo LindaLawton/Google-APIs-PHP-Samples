@@ -28,7 +28,7 @@
 // API Description: Creates and manages your customers and their subscriptions.
 // API Documentation Link https://developers.google.com/google-apps/reseller/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Reseller/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/reseller/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Reseller($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'customerAuthToken' => '[YourValue]',  //The customerAuthToken query string is required when creating a resold account that transfers a direct customer's subscription or transfers another reseller customer's subscription to your reseller management. This is a hexadecimal authentication token needed to complete the subscription transfer. For more information, see the administrator help center.
+            
+  //'customerId' => '[YourValue]',  //Either the customer's primary domain name or the customer's unique identifier. If using the domain name, we do not recommend using a customerId as a key for persistent data. If the domain name for a customerId is changed, the Google system automatically updates.
+            
+  //'customerNamePrefix' => '[YourValue]',  //When retrieving all of your subscriptions and filtering for specific customers, you can enter a prefix for a customer name. Using an example customer group that includes exam.com, example20.com and example.com:  - exa -- Returns all customer names that start with 'exa' which could include exam.com, example20.com, and example.com. A name prefix is similar to using a regular expression's asterisk, exa*. - example -- Returns example20.com and example.com.
+            
+  //'maxResults' => '[YourValue]',  //When retrieving a large list, the maxResults is the maximum number of results per page. The nextPageToken value takes you to the next page. The default is 20.
+            
+  //'pageToken' => '[YourValue]',  //Token to specify next page in the list
   'fields' => '*'
 );
+// Single Request.
 $results = subscriptionsListExample($service, $optParams);
 
 // Paginiation Example

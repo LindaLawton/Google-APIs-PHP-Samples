@@ -28,7 +28,7 @@
 // API Description: Access Gmail mailboxes including sending user email.
 // API Documentation Link https://developers.google.com/gmail/api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Gmail/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Gmail($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = forwardingAddressesCreateExample($service, $userId, $optParams);
 
 

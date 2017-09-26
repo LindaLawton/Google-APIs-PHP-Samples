@@ -28,7 +28,7 @@
 // API Description: Accesses the metadata for all families served by Google Fonts, providing a list of families currently available (including available styles and a list of supported script subsets).
 // API Documentation Link https://developers.google.com/fonts/docs/developer_api
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Webfonts/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/webfonts/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Webfonts($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'sort' => '[YourValue]',  //Enables sorting of the list
   'fields' => '*'
 );
+// Single Request.
 $results = webfontsListExample($service, $optParams);
 
 

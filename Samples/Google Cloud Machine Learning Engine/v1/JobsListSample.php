@@ -28,7 +28,7 @@
 // API Description: An API to enable creating and using machine learning models.
 // API Documentation Link https://cloud.google.com/ml/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudmachinelearningengine/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/ml/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Cloudmachinelearningengine($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageToken' => '[YourValue]',  //Optional. A page token to request the next page of results.You get the token from the `next_page_token` field of the response fromthe previous call.
+            
+  //'pageSize' => '[YourValue]',  //Optional. The number of jobs to retrieve per "page" of results. If thereare more remaining results than this number, the response message willcontain a valid value in the `next_page_token` field.The default value is 20, and the maximum page size is 100.
+            
+  //'filter' => '[YourValue]',  //Optional. Specifies the subset of jobs to retrieve.
   'fields' => '*'
 );
+// Single Request.
 $results = jobsListExample($service, $parent, $optParams);
 
 // Paginiation Example

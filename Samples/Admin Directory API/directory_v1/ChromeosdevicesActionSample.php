@@ -28,7 +28,7 @@
 // API Description: The Admin SDK Directory API lets you view and manage enterprise resources such as users and groups, administrative notifications, security features, and more.
 // API Documentation Link https://developers.google.com/admin-sdk/directory/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Directory/directory_v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/admin/directory_v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Directory($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = chromeosdevicesActionExample($service, $customerId, $resourceId, $optParams);
 
 
@@ -84,7 +85,7 @@ function chromeosdevicesActionExample($service, $customerId, $resourceId, $optPa
 		if (resourceId == null)
 			throw new Exception("resourceId is required.");
 		// Make the request and return the results.
-		return $service->chromeosdevices->ActionChromeosdevices($customerId, $resourceId, $optParams);
+		 $service->chromeosdevices->ActionChromeosdevices($customerId, $resourceId, $optParams);
 	}
 	catch (Exception $e)
 	{

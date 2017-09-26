@@ -28,7 +28,7 @@
 // API Description: Access source code repositories hosted by Google.
 // API Documentation Link https://cloud.google.com/source-repositories/docs/apis
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudsourcerepositories/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/sourcerepo/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Cloudsourcerepositories($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = reposSetIamPolicyExample($service, $resource, $optParams);
 
 

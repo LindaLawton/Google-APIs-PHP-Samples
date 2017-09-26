@@ -28,7 +28,7 @@
 // API Description: Manages Google Cloud Dataflow projects on Google Cloud Platform.
 // API Documentation Link https://cloud.google.com/dataflow
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Dataflow/v1b3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/dataflow/v1b3/rest
 //
 //------------------------------------------------------------------------------
 // Installation

@@ -28,7 +28,7 @@
 // API Description: The Admin SDK Directory API lets you view and manage enterprise resources such as users and groups, administrative notifications, security features, and more.
 // API Documentation Link https://developers.google.com/admin-sdk/directory/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Directory/directory_v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/admin/directory_v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Directory($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = verificationCodesGenerateExample($service, $userKey, $optParams);
 
 
@@ -81,7 +82,7 @@ function verificationCodesGenerateExample($service, $userKey, $optParams)
 		if (userKey == null)
 			throw new Exception("userKey is required.");
 		// Make the request and return the results.
-		return $service->verificationCodes->GenerateVerificationCodes($userKey, $optParams);
+		 $service->verificationCodes->GenerateVerificationCodes($userKey, $optParams);
 	}
 	catch (Exception $e)
 	{

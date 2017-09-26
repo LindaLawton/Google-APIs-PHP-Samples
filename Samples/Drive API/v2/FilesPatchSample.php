@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,39 @@ session_start();
 * $service = new Google_Service_Drive($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'addParents' => '[YourValue]',  //Comma-separated list of parent IDs to add.
+            
+  //'convert' => '[YourValue]',  //This parameter is deprecated and has no function.
+            
+  //'modifiedDateBehavior' => '[YourValue]',  //Determines the behavior in which modifiedDate is updated. This overrides setModifiedDate.
+            
+  //'newRevision' => '[YourValue]',  //Whether a blob upload should create a new revision. If false, the blob data in the current head revision is replaced. If true or not set, a new blob is created as head revision, and previous unpinned revisions are preserved for a short period of time. Pinned revisions are stored indefinitely, using additional storage quota, up to a maximum of 200 revisions. For details on how revisions are retained, see the Drive Help Center.
+            
+  //'ocr' => '[YourValue]',  //Whether to attempt OCR on .jpg, .png, .gif, or .pdf uploads.
+            
+  //'ocrLanguage' => '[YourValue]',  //If ocr is true, hints at the language to use. Valid values are BCP 47 codes.
+            
+  //'pinned' => '[YourValue]',  //Whether to pin the new revision. A file can have a maximum of 200 pinned revisions.
+            
+  //'removeParents' => '[YourValue]',  //Comma-separated list of parent IDs to remove.
+            
+  //'setModifiedDate' => '[YourValue]',  //Whether to set the modified date with the supplied modified date.
+            
+  //'supportsTeamDrives' => '[YourValue]',  //Whether the requesting application supports Team Drives.
+            
+  //'timedTextLanguage' => '[YourValue]',  //The language of the timed text.
+            
+  //'timedTextTrackName' => '[YourValue]',  //The timed text track name.
+            
+  //'updateViewedDate' => '[YourValue]',  //Whether to update the view date after successfully updating the file.
+            
+  //'useContentAsIndexableText' => '[YourValue]',  //Whether to use the content as indexable text.
   'fields' => '*'
 );
+// Single Request.
 $results = filesPatchExample($service, $fileId, $optParams);
 
 

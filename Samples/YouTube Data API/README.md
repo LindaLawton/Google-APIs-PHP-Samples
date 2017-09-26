@@ -1,6 +1,6 @@
 ﻿![YouTube Data API](https://www.google.com/images/icons/product/youtube-32.png)
 
-# Unoffical YouTube Data API Samples for .NET  
+# Unoffical YouTube Data API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Supports core YouTube features, such as uploading videos, creating and managing 
 
 ## Sample Description
 
-These samples show how to access the [YouTube Data API](https://developers.google.com/youtube/v3) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [YouTube Data API](https://developers.google.com/youtube/v3) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

@@ -28,7 +28,7 @@
 // API Description: The Replica Pool API allows users to declaratively provision and manage groups of Google Compute Engine instances based on a common template.
 // API Documentation Link https://developers.google.com/compute/docs/replica-pool/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Replicapool/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/replicapool/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Replicapool($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'maxResults' => '[YourValue]',  //Maximum count of results to be returned. Acceptable values are 0 to 100, inclusive. (Default: 50)
+            
+  //'pageToken' => '[YourValue]',  //Set this to the nextPageToken value returned by a previous list request to obtain the next page of results from the previous list request.
   'fields' => '*'
 );
+// Single Request.
 $results = poolsListExample($service, $projectName, $zone, $optParams);
 
 // Paginiation Example

@@ -28,7 +28,7 @@
 // API Description: Declares, configures, and deploys complex solutions on Google Cloud Platform.
 // API Documentation Link https://cloud.google.com/deployment-manager/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Deploymentmanager/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/deploymentmanager/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation

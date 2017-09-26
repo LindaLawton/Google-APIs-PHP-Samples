@@ -28,7 +28,7 @@
 // API Description: Allows developers to manage billing for their Google Cloud Platform projects    programmatically.
 // API Documentation Link https://cloud.google.com/billing/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudbilling/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudbilling/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Cloudbilling($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'currencyCode' => '[YourValue]',  //The ISO 4217 currency code for the pricing info in the response proto.Will use the conversion rate as of start_time.Optional. If not specified USD will be used.
+            
+  //'endTime' => '[YourValue]',  //Optional exclusive end time of the time range for which the pricingversions will be returned. Timestamps in the future are not allowed.Maximum allowable time range is 1 month (31 days). Time range as a wholeis optional. If not specified, the latest pricing will be returned (up to12 hours old at most).
+            
+  //'pageSize' => '[YourValue]',  //Requested page size. Defaults to 5000.
+            
+  //'startTime' => '[YourValue]',  //Optional inclusive start time of the time range for which the pricingversions will be returned. Timestamps in the future are not allowed.Maximum allowable time range is 1 month (31 days). Time range as a wholeis optional. If not specified, the latest pricing will be returned (up to12 hours old at most).
+            
+  //'pageToken' => '[YourValue]',  //A token identifying a page of results to return. This should be a`next_page_token` value returned from a previous `ListSkus`call. If unspecified, the first page of results is returned.
   'fields' => '*'
 );
+// Single Request.
 $results = skusListExample($service, $parent, $optParams);
 
 // Paginiation Example

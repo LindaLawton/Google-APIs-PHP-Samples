@@ -28,7 +28,7 @@
 // API Description: Registers, manages, indexes, and searches beacons.
 // API Documentation Link https://developers.google.com/beacons/proximity/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Proximitybeacon/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/proximitybeacon/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

@@ -28,7 +28,7 @@
 // API Description: Accesses AdSense publishers' inventory and generates performance reports.
 // API Documentation Link https://developers.google.com/adsense/management/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adsense/v1_4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adsense/v1_4/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Adsense($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'includeInactive' => '[YourValue]',  //Whether to include inactive ad units. Default: true.
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of ad units to include in the response, used for paging.
+            
+  //'pageToken' => '[YourValue]',  //A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
   'fields' => '*'
 );
+// Single Request.
 $results = adunitsListExample($service, $adClientId, $customChannelId, $optParams);
 
 // Paginiation Example

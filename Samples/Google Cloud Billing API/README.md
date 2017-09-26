@@ -1,6 +1,6 @@
 ﻿![Google Cloud Billing API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Google Cloud Billing API Samples for .NET  
+# Unoffical Google Cloud Billing API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Allows developers to manage billing for their Google Cloud Platform projects    
 
 ## Sample Description
 
-These samples show how to access the [Google Cloud Billing API](https://cloud.google.com/billing/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google Cloud Billing API](https://cloud.google.com/billing/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

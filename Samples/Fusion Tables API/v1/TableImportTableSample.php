@@ -28,7 +28,7 @@
 // API Description: API for working with Fusion Tables data.
 // API Documentation Link https://developers.google.com/fusiontables
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Fusiontables/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/fusiontables/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Fusiontables($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'delimiter' => '[YourValue]',  //The delimiter used to separate cell values. This can only consist of a single character. Default is ','.
+            
+  //'encoding' => '[YourValue]',  //The encoding of the content. Default is UTF-8. Use 'auto-detect' if you are unsure of the encoding.
   'fields' => '*'
 );
+// Single Request.
 $results = tableImportTableExample($service, $name, $optParams);
 
 

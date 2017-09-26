@@ -28,7 +28,7 @@
 // API Description: Access Gmail mailboxes including sending user email.
 // API Documentation Link https://developers.google.com/gmail/api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Gmail/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/gmail/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Gmail($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = filtersDeleteExample($service, $userId, $id, $optParams);
 
 
@@ -84,7 +85,7 @@ function filtersDeleteExample($service, $userId, $id, $optParams)
 		if (userId == null)
 			throw new Exception("userId is required.");
 		// Make the request and return the results.
-		return $service->filters->DeleteFilters($userId, $id, $optParams);
+		 $service->filters->DeleteFilters($userId, $id, $optParams);
 	}
 	catch (Exception $e)
 	{

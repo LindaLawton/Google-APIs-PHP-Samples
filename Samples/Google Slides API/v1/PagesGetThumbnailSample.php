@@ -28,7 +28,7 @@
 // API Description: An API for creating and editing Google Slides presentations.
 // API Documentation Link https://developers.google.com/slides/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Slides/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/slides/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Slides($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'thumbnailProperties.thumbnailSize' => '[YourValue]',  //The optional thumbnail image size.If you don't specify the size, the server chooses a default size of theimage.
+            
+  //'thumbnailProperties.mimeType' => '[YourValue]',  //The optional mime type of the thumbnail image.If you don't specify the mime type, the default mime type will be PNG.
   'fields' => '*'
 );
+// Single Request.
 $results = pagesGetThumbnailExample($service, $presentationId, $pageObjectId, $optParams);
 
 

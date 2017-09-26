@@ -28,7 +28,7 @@
 // API Description: Manages product items, inventory, and Merchant Center accounts for Google Shopping.
 // API Documentation Link https://developers.google.com/shopping-content
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Shoppingcontent/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/content/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Shoppingcontent($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = accounttaxGetExample($service, $merchantId, $accountId, $optParams);
 
 

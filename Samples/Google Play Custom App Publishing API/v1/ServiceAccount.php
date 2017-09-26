@@ -28,7 +28,7 @@
 // API Description: An API to publish custom Android apps.
 // API Documentation Link https://developers.google.com/android/work/play/custom-app-api
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Playcustomapp/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/playcustomapp/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

@@ -28,7 +28,7 @@
 // API Description: Accesses your bidding-account information, submits creatives for validation, finds available direct deals, and retrieves performance reports.
 // API Documentation Link https://developers.google.com/ad-exchange/buyer-rest
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adexchangebuyer/v1_4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adexchangebuyer/v1_4/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Adexchangebuyer($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = creativesListDealsExample($service, $accountId, $buyerCreativeId, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: Accesses the latest features for managing Ad Exchange accounts, Real-Time Bidding configurations and auction metrics, and Marketplace programmatic deals.
 // API Documentation Link https://developers.google.com/ad-exchange/buyer-rest/reference/rest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adexchangebuyerii/v2beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adexchangebuyer2/v2beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Adexchangebuyerii($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageSize' => '[YourValue]',  //Requested page size. Server may return fewer associations than requested.If unspecified, server will pick an appropriate default.
+            
+  //'query' => '[YourValue]',  //An optional query string to filter deal associations. If no filter isspecified, all associations will be returned.Supported queries are:<ul><li>accountId=<i>account_id_string</i><li>creativeId=<i>creative_id_string</i><li>dealsId=<i>deals_id_string</i><li>dealsStatus:{approved, conditionally_approved, disapproved,                  not_checked}<li>openAuctionStatus:{approved, conditionally_approved, disapproved,                         not_checked}</ul>Example: 'dealsId=12345 AND dealsStatus:disapproved'
+            
+  //'pageToken' => '[YourValue]',  //A token identifying a page of results the server should return.Typically, this is the value ofListDealAssociationsResponse.next_page_tokenreturned from the previous call to 'ListDealAssociations' method.
   'fields' => '*'
 );
+// Single Request.
 $results = dealAssociationsListExample($service, $accountId, $creativeId, $optParams);
 
 // Paginiation Example

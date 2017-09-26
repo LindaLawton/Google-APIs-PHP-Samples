@@ -28,7 +28,7 @@
 // API Description: Cloud Spanner is a managed, mission-critical, globally consistent and scalable relational database service.
 // API Documentation Link https://cloud.google.com/spanner/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Spanner/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/spanner/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Spanner($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'filter' => '[YourValue]',  //The standard list filter.
+            
+  //'pageToken' => '[YourValue]',  //The standard list page token.
+            
+  //'pageSize' => '[YourValue]',  //The standard list page size.
   'fields' => '*'
 );
+// Single Request.
 $results = operationsListExample($service, $name, $optParams);
 
 // Paginiation Example

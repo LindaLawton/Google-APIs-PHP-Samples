@@ -28,7 +28,7 @@
 // API Description: The API for Google Play Game Services.
 // API Documentation Link https://developers.google.com/games/services/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Games/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/games/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Games($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'consistencyToken' => '[YourValue]',  //The last-seen mutation timestamp.
   'fields' => '*'
 );
+// Single Request.
 $results = achievementsUpdateMultipleExample($service, $optParams);
 
 

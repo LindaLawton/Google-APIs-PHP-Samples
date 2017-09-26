@@ -28,7 +28,7 @@
 // API Description: Lets you store and retrieve potentially-large, immutable data objects.
 // API Documentation Link https://developers.google.com/storage/docs/json_api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Storage/v1beta2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/storage/v1beta2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,23 @@ session_start();
 * $service = new Google_Service_Storage($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'delimiter' => '[YourValue]',  //Returns results in a directory-like mode. items will contain only objects whose names, aside from the prefix, do not contain delimiter. Objects whose names, aside from the prefix, contain delimiter will have their name, truncated after the delimiter, returned in prefixes. Duplicate prefixes are omitted.
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of items plus prefixes to return. As duplicate prefixes are omitted, fewer total results may be returned than requested.
+            
+  //'pageToken' => '[YourValue]',  //A previously-returned page token representing part of the larger set of results to view.
+            
+  //'prefix' => '[YourValue]',  //Filter results to objects whose names begin with this prefix.
+            
+  //'projection' => '[YourValue]',  //Set of properties to return. Defaults to noAcl.
+            
+  //'versions' => '[YourValue]',  //If true, lists all versions of a file as distinct results.
   'fields' => '*'
 );
+// Single Request.
 $results = objectsWatchAllExample($service, $bucket, $optParams);
 
 // Paginiation Example

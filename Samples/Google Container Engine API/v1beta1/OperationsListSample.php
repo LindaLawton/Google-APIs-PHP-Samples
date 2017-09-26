@@ -28,7 +28,7 @@
 // API Description: The Google Container Engine API is used for building and managing container based applications, powered by the open source Kubernetes technology.
 // API Documentation Link https://cloud.google.com/container-engine/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Container/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/container/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Container($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'projectId' => '[YourValue]',  //The Google Developers Console [project ID or projectnumber](https://support.google.com/cloud/answer/6158840).This field is deprecated, use parent instead.
+            
+  //'zone' => '[YourValue]',  //The name of the Google Compute Engine [zone](/compute/docs/zones#available)to return operations for, or `-` for all zones.This field is deprecated, use parent instead.
   'fields' => '*'
 );
+// Single Request.
 $results = operationsListExample($service, $parent, $optParams);
 
 

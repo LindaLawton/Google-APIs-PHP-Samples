@@ -28,7 +28,7 @@
 // API Description: Analyzes the performance of a web page and provides tailored suggestions to make that page faster.
 // API Documentation Link https://developers.google.com/speed/docs/insights/v1/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Pagespeedonline/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/pagespeedonline/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

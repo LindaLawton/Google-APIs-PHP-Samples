@@ -28,7 +28,7 @@
 // API Description: Accesses Tag Manager accounts and containers.
 // API Documentation Link https://developers.google.com/tag-manager/api/v2/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Tagmanager/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/tagmanager/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Tagmanager($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'fingerprint' => '[YourValue]',  //When provided, this fingerprint must match the fingerprint of thetag in storage.
   'fields' => '*'
 );
+// Single Request.
 $results = tagsRevertExample($service, $path, $optParams);
 
 

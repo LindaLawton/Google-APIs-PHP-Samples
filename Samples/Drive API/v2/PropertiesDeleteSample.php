@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Drive($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'visibility' => '[YourValue]',  //The visibility of the property.
   'fields' => '*'
 );
+// Single Request.
 $results = propertiesDeleteExample($service, $fileId, $propertyKey, $optParams);
 
 
@@ -84,7 +87,7 @@ function propertiesDeleteExample($service, $fileId, $propertyKey, $optParams)
 		if (propertyKey == null)
 			throw new Exception("propertyKey is required.");
 		// Make the request and return the results.
-		return $service->properties->DeleteProperties($fileId, $propertyKey, $optParams);
+		 $service->properties->DeleteProperties($fileId, $propertyKey, $optParams);
 	}
 	catch (Exception $e)
 	{

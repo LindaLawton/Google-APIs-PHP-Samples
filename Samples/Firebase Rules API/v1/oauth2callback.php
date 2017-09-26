@@ -28,7 +28,7 @@
 // API Description: Creates and manages rules that determine when a Firebase Rules-enabled service should permit a request.
 // API Documentation Link https://firebase.google.com/docs/storage/security
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Firebaserules/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/firebaserules/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

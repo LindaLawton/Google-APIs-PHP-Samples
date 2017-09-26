@@ -28,7 +28,7 @@
 // API Description: The Publishing API for Google Play Game Services.
 // API Documentation Link https://developers.google.com/games/services
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Gamesconfiguration/v1configuration/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/gamesConfiguration/v1configuration/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Gamesconfiguration($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = achievementConfigurationsDeleteExample($service, $achievementId, $optParams);
 
 
@@ -81,7 +82,7 @@ function achievementConfigurationsDeleteExample($service, $achievementId, $optPa
 		if (achievementId == null)
 			throw new Exception("achievementId is required.");
 		// Make the request and return the results.
-		return $service->achievementConfigurations->DeleteAchievementConfigurations($achievementId, $optParams);
+		 $service->achievementConfigurations->DeleteAchievementConfigurations($achievementId, $optParams);
 	}
 	catch (Exception $e)
 	{

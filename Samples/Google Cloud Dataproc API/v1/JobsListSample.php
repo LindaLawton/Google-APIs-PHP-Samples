@@ -28,7 +28,7 @@
 // API Description: Manages Hadoop-based clusters and jobs on Google Cloud Platform.
 // API Documentation Link https://cloud.google.com/dataproc/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Dataproc/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/dataproc/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Dataproc($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'clusterName' => '[YourValue]',  //Optional. If set, the returned jobs list includes only jobs that were submitted to the named cluster.
+            
+  //'filter' => '[YourValue]',  //Optional. A filter constraining the jobs to list. Filters are case-sensitive and have the following syntax:field = value AND field = value ...where field is status.state or labels.[KEY], and [KEY] is a label key. value can be * to match all values. status.state can be either ACTIVE or INACTIVE. Only the logical AND operator is supported; space-separated items are treated as having an implicit AND operator.Example filter:status.state = ACTIVE AND labels.env = staging AND labels.starred = *
+            
+  //'jobStateMatcher' => '[YourValue]',  //Optional. Specifies enumerated categories of jobs to list (default = match ALL jobs).
+            
+  //'pageToken' => '[YourValue]',  //Optional. The page token, returned by a previous call, to request the next page of results.
+            
+  //'pageSize' => '[YourValue]',  //Optional. The number of results to return in each response.
   'fields' => '*'
 );
+// Single Request.
 $results = jobsListExample($service, $projectId, $region, $optParams);
 
 // Paginiation Example

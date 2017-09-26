@@ -1,6 +1,6 @@
 ﻿![Google Analytics API](https://www.google.com/images/icons/product/analytics-32.png)
 
-# Unoffical Google Analytics API Samples for .NET  
+# Unoffical Google Analytics API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Views and manages your Google Analytics data.
 
 ## Sample Description
 
-These samples show how to access the [Google Analytics API](https://developers.google.com/analytics/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google Analytics API](https://developers.google.com/analytics/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

@@ -28,7 +28,7 @@
 // API Description: An API to enable creating and using machine learning models.
 // API Documentation Link https://cloud.google.com/ml/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudmachinelearningengine/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/ml/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Cloudmachinelearningengine($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'filter' => '[YourValue]',  //The standard list filter.
+            
+  //'pageToken' => '[YourValue]',  //The standard list page token.
+            
+  //'pageSize' => '[YourValue]',  //The standard list page size.
   'fields' => '*'
 );
+// Single Request.
 $results = operationsListExample($service, $name, $optParams);
 
 // Paginiation Example

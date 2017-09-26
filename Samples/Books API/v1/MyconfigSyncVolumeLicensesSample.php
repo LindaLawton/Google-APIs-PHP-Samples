@@ -28,7 +28,7 @@
 // API Description: Searches for books and manages your Google Books library.
 // API Documentation Link https://developers.google.com/books/docs/v1/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Books/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/books/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Books($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'features' => '[YourValue]',  //List of features supported by the client, i.e., 'RENTALS'
+            
+  //'includeNonComicsSeries' => '[YourValue]',  //Set to true to include non-comics series. Defaults to false.
+            
+  //'locale' => '[YourValue]',  //ISO-639-1, ISO-3166-1 codes for message localization, i.e. en_US.
+            
+  //'showPreorders' => '[YourValue]',  //Set to true to show pre-ordered books. Defaults to false.
+            
+  //'volumeIds' => '[YourValue]',  //The volume(s) to request download restrictions for.
   'fields' => '*'
 );
+// Single Request.
 $results = myconfigSyncVolumeLicensesExample($service, $source, $nonce, $cpksver, $optParams);
 
 

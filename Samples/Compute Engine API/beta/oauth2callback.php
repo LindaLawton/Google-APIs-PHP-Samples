@@ -28,7 +28,7 @@
 // API Description: Creates and runs virtual machines on Google Cloud Platform.
 // API Documentation Link https://developers.google.com/compute/docs/reference/latest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Compute/beta/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/compute/beta/rest
 //
 //------------------------------------------------------------------------------
 // Installation

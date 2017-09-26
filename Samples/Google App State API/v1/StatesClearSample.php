@@ -28,7 +28,7 @@
 // API Description: The Google App State API.
 // API Documentation Link https://developers.google.com/games/services/web/api/states
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Appstate/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/appstate/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Appstate($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'currentDataVersion' => '[YourValue]',  //The version of the data to be cleared. Version strings are returned by the server.
   'fields' => '*'
 );
+// Single Request.
 $results = statesClearExample($service, $stateKey, $optParams);
 
 

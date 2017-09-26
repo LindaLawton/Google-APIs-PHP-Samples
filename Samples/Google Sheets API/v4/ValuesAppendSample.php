@@ -28,7 +28,7 @@
 // API Description: Reads and writes Google Sheets.
 // API Documentation Link https://developers.google.com/sheets/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Sheets/v4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/sheets/v4/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Sheets($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'responseValueRenderOption' => '[YourValue]',  //Determines how values in the response should be rendered.The default render option is ValueRenderOption.FORMATTED_VALUE.
+            
+  //'insertDataOption' => '[YourValue]',  //How the input data should be inserted.
+            
+  //'valueInputOption' => '[YourValue]',  //How the input data should be interpreted.
+            
+  //'responseDateTimeRenderOption' => '[YourValue]',  //Determines how dates, times, and durations in the response should berendered. This is ignored if response_value_render_option isFORMATTED_VALUE.The default dateTime render option is [DateTimeRenderOption.SERIAL_NUMBER].
+            
+  //'includeValuesInResponse' => '[YourValue]',  //Determines if the update response should include the valuesof the cells that were appended. By default, responsesdo not include the updated values.
   'fields' => '*'
 );
+// Single Request.
 $results = valuesAppendExample($service, $spreadsheetId, $range, $optParams);
 
 

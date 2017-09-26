@@ -28,7 +28,7 @@
 // API Description: Lets you manage your tasks and task lists.
 // API Documentation Link https://developers.google.com/google-apps/tasks/firstapp
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Tasks/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/tasks/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,31 @@ session_start();
 * $service = new Google_Service_Tasks($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'completedMax' => '[YourValue]',  //Upper bound for a task's completion date (as a RFC 3339 timestamp) to filter by. Optional. The default is not to filter by completion date.
+            
+  //'completedMin' => '[YourValue]',  //Lower bound for a task's completion date (as a RFC 3339 timestamp) to filter by. Optional. The default is not to filter by completion date.
+            
+  //'dueMax' => '[YourValue]',  //Upper bound for a task's due date (as a RFC 3339 timestamp) to filter by. Optional. The default is not to filter by due date.
+            
+  //'dueMin' => '[YourValue]',  //Lower bound for a task's due date (as a RFC 3339 timestamp) to filter by. Optional. The default is not to filter by due date.
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of task lists returned on one page. Optional. The default is 100.
+            
+  //'pageToken' => '[YourValue]',  //Token specifying the result page to return. Optional.
+            
+  //'showCompleted' => '[YourValue]',  //Flag indicating whether completed tasks are returned in the result. Optional. The default is True.
+            
+  //'showDeleted' => '[YourValue]',  //Flag indicating whether deleted tasks are returned in the result. Optional. The default is False.
+            
+  //'showHidden' => '[YourValue]',  //Flag indicating whether hidden tasks are returned in the result. Optional. The default is False.
+            
+  //'updatedMin' => '[YourValue]',  //Lower bound for a task's last modification time (as a RFC 3339 timestamp) to filter by. Optional. The default is not to filter by last modification time.
   'fields' => '*'
 );
+// Single Request.
 $results = tasksListExample($service, $tasklist, $optParams);
 
 // Paginiation Example

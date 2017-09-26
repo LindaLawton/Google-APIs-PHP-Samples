@@ -28,7 +28,7 @@
 // API Description: Registers, manages, indexes, and searches beacons.
 // API Documentation Link https://developers.google.com/beacons/proximity/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Proximitybeacon/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/proximitybeacon/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Proximitybeacon($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'alertFilter' => '[YourValue]',  //Requests only beacons that have the given alert. For example, to findbeacons that have low batteries use `alert_filter=LOW_BATTERY`.
+            
+  //'pageSize' => '[YourValue]',  //Specifies the maximum number of results to return. Defaults to10. Maximum 1000. Optional.
+            
+  //'projectId' => '[YourValue]',  //Requests only diagnostic records for the given project id. If not set,then the project making the request will be used for looking updiagnostic records. Optional.
+            
+  //'pageToken' => '[YourValue]',  //Requests results that occur after the `page_token`, obtained from theresponse to a previous request. Optional.
   'fields' => '*'
 );
+// Single Request.
 $results = diagnosticsListExample($service, $beaconName, $optParams);
 
 // Paginiation Example

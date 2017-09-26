@@ -28,7 +28,7 @@
 // API Description: Manages Google Cloud Dataflow projects on Google Cloud Platform.
 // API Documentation Link https://cloud.google.com/dataflow
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Dataflow/v1b3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/dataflow/v1b3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Dataflow($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = workItemsReportStatusExample($service, $projectId, $jobId, $optParams);
 
 

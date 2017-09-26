@@ -28,7 +28,7 @@
 // API Description: Accesses Tag Manager accounts and containers.
 // API Documentation Link https://developers.google.com/tag-manager/api/v1/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Tagmanager/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/tagmanager/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

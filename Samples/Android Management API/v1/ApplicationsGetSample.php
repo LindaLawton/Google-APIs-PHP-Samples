@@ -28,7 +28,7 @@
 // API Description: The Android Management API provides remote enterprise management of Android devices and apps.
 // API Documentation Link https://developers.google.com/android/management
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Androidmanagement/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/androidmanagement/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Androidmanagement($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'languageCode' => '[YourValue]',  //The preferred language for localized application info, as a BCP47 tag (e.g. "en-US", "de"). If not specified the default language of the application will be used.
   'fields' => '*'
 );
+// Single Request.
 $results = applicationsGetExample($service, $name, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: Gets the delivery status of titles for Google Play Movies Partners.
 // API Documentation Link https://developers.google.com/playmoviespartner/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Playmovies/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/playmoviespartner/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Playmovies($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = ordersGetExample($service, $accountId, $orderId, $optParams);
 
 

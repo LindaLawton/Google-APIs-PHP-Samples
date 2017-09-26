@@ -28,7 +28,7 @@
 // API Description: Lets you manage your tasks and task lists.
 // API Documentation Link https://developers.google.com/google-apps/tasks/firstapp
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Tasks/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/tasks/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Tasks($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of task lists returned on one page. Optional. The default is 100.
+            
+  //'pageToken' => '[YourValue]',  //Token specifying the result page to return. Optional.
   'fields' => '*'
 );
+// Single Request.
 $results = tasklistsListExample($service, $optParams);
 
 // Paginiation Example

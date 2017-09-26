@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Drive($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'acknowledgeAbuse' => '[YourValue]',  //Whether the user is acknowledging the risk of downloading known malware or other abusive files. This is only applicable when alt=media.
+            
+  //'supportsTeamDrives' => '[YourValue]',  //Whether the requesting application supports Team Drives.
   'fields' => '*'
 );
+// Single Request.
 $results = filesGetExample($service, $fileId, $optParams);
 
 

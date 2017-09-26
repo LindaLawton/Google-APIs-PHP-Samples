@@ -28,7 +28,7 @@
 // API Description: Provides natural language understanding technologies to developers. Examples include sentiment analysis, entity recognition, entity sentiment analysis, and text annotations.
 // API Documentation Link https://cloud.google.com/natural-language/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudnaturallanguage/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/language/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

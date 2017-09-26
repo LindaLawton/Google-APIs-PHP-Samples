@@ -28,7 +28,7 @@
 // API Description: Accesses Tag Manager accounts and containers.
 // API Documentation Link https://developers.google.com/tag-manager/api/v2/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Tagmanager/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/tagmanager/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Tagmanager($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'tagId' => '[YourValue]',  //The tags to be moved to the folder.
+            
+  //'triggerId' => '[YourValue]',  //The triggers to be moved to the folder.
+            
+  //'variableId' => '[YourValue]',  //The variables to be moved to the folder.
   'fields' => '*'
 );
+// Single Request.
 $results = foldersMove_entities_to_folderExample($service, $path, $optParams);
 
 
@@ -81,7 +88,7 @@ function foldersMove_entities_to_folderExample($service, $path, $optParams)
 		if (path == null)
 			throw new Exception("path is required.");
 		// Make the request and return the results.
-		return $service->folders->Move_entities_to_folderFolders($path, $optParams);
+		 $service->folders->Move_entities_to_folderFolders($path, $optParams);
 	}
 	catch (Exception $e)
 	{

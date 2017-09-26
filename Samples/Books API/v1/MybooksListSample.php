@@ -28,7 +28,7 @@
 // API Description: Searches for books and manages your Google Books library.
 // API Documentation Link https://developers.google.com/books/docs/v1/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Books/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/books/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,25 @@ session_start();
 * $service = new Google_Service_Books($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'acquireMethod' => '[YourValue]',  //How the book was acquired
+            
+  //'country' => '[YourValue]',  //ISO-3166-1 code to override the IP-based location.
+            
+  //'locale' => '[YourValue]',  //ISO-639-1 language and ISO-3166-1 country code. Ex:'en_US'. Used for generating recommendations.
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of results to return.
+            
+  //'processingState' => '[YourValue]',  //The processing state of the user uploaded volumes to be returned. Applicable only if the UPLOADED is specified in the acquireMethod.
+            
+  //'source' => '[YourValue]',  //String to identify the originator of this request.
+            
+  //'startIndex' => '[YourValue]',  //Index of the first result to return (starts at 0)
   'fields' => '*'
 );
+// Single Request.
 $results = mybooksListExample($service, $optParams);
 
 

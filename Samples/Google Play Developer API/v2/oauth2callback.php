@@ -28,7 +28,7 @@
 // API Description: Lets Android application developers access their Google Play accounts.
 // API Documentation Link https://developers.google.com/android-publisher
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Androidpublisher/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/androidpublisher/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation

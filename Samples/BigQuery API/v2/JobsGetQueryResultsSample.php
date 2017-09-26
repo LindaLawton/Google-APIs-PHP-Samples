@@ -28,7 +28,7 @@
 // API Description: A data platform for customers to create, manage, share and query data.
 // API Documentation Link https://cloud.google.com/bigquery/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Bigquery/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/bigquery/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Bigquery($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of results to read
+            
+  //'pageToken' => '[YourValue]',  //Page token, returned by a previous call, to request the next page of results
+            
+  //'startIndex' => '[YourValue]',  //Zero-based index of the starting row
+            
+  //'timeoutMs' => '[YourValue]',  //How long to wait for the query to complete, in milliseconds, before returning. Default is 10 seconds. If the timeout passes before the job completes, the 'jobComplete' field in the response will be false
   'fields' => '*'
 );
+// Single Request.
 $results = jobsGetQueryResultsExample($service, $projectId, $jobId, $optParams);
 
 // Paginiation Example

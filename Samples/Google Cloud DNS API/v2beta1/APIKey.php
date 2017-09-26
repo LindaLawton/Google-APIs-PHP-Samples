@@ -28,7 +28,7 @@
 // API Description: Configures and serves authoritative DNS records.
 // API Documentation Link https://developers.google.com/cloud-dns
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Dns/v2beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/dns/v2beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

@@ -28,7 +28,7 @@
 // API Description: Creates and configures Cloud SQL instances, which provide fully-managed MySQL databases.
 // API Documentation Link https://cloud.google.com/sql/docs/reference/latest
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Sqladmin/v1beta4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/sqladmin/v1beta4/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Sqladmin($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'databaseVersion' => '[YourValue]',  //Database version for flag retrieval. Flags are specific to the database version.
   'fields' => '*'
 );
+// Single Request.
 $results = flagsListExample($service, $optParams);
 
 

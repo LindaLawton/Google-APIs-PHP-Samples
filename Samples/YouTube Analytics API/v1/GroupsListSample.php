@@ -28,7 +28,7 @@
 // API Description: Retrieves your YouTube Analytics data.
 // API Documentation Link http://developers.google.com/youtube/analytics/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Youtubeanalytics/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/youtubeAnalytics/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Youtubeanalytics($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'id' => '[YourValue]',  //The id parameter specifies a comma-separated list of the YouTube group ID(s) for the resource(s) that are being retrieved. In a group resource, the id property specifies the group's YouTube group ID.
+            
+  //'mine' => '[YourValue]',  //Set this parameter's value to true to instruct the API to only return groups owned by the authenticated user.
+            
+  //'onBehalfOfContentOwner' => '[YourValue]',  //Note: This parameter is intended exclusively for YouTube content partners.The onBehalfOfContentOwner parameter indicates that the request's authorization credentials identify a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value. This parameter is intended for YouTube content partners that own and manage many different YouTube channels. It allows content owners to authenticate once and get access to all their video and channel data, without having to provide authentication credentials for each individual channel. The CMS account that the user authenticates with must be linked to the specified YouTube content owner.
+            
+  //'pageToken' => '[YourValue]',  //The pageToken parameter identifies a specific page in the result set that should be returned. In an API response, the nextPageToken property identifies the next page that can be retrieved.
   'fields' => '*'
 );
+// Single Request.
 $results = groupsListExample($service, $optParams);
 
 // Paginiation Example

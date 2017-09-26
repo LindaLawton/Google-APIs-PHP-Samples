@@ -28,7 +28,7 @@
 // API Description: Archiving and eDiscovery for G Suite.
 // API Documentation Link https://developers.google.com/vault
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Vault/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/vault/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

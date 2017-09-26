@@ -28,7 +28,7 @@
 // API Description: Upload, process, query, and search Genomics data in the cloud.
 // API Documentation Link https://cloud.google.com/genomics
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Genomics/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/genomics/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Genomics($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'updateMask' => '[YourValue]',  //An optional mask specifying which fields to update. At this time, the onlymutable field is name. The onlyacceptable value is "name". If unspecified, all mutable fields will beupdated.
   'fields' => '*'
 );
+// Single Request.
 $results = datasetsPatchExample($service, $datasetId, $optParams);
 
 

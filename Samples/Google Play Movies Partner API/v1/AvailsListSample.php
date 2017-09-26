@@ -28,7 +28,7 @@
 // API Description: Gets the delivery status of titles for Google Play Movies Partners.
 // API Documentation Link https://developers.google.com/playmoviespartner/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Playmovies/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/playmoviespartner/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,29 @@ session_start();
 * $service = new Google_Service_Playmovies($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageSize' => '[YourValue]',  //See _List methods rules_ for info about this field.
+            
+  //'altIds' => '[YourValue]',  //Filter Avails that match (case-insensitive) any of the given partner-specific custom ids.
+            
+  //'pphNames' => '[YourValue]',  //See _List methods rules_ for info about this field.
+            
+  //'altId' => '[YourValue]',  //Filter Avails that match a case-insensitive, partner-specific custom id.NOTE: this field is deprecated and will be removed on V2; `alt_ids`should be used instead.
+            
+  //'studioNames' => '[YourValue]',  //See _List methods rules_ for info about this field.
+            
+  //'territories' => '[YourValue]',  //Filter Avails that match (case-insensitive) any of the given country codes,using the "ISO 3166-1 alpha-2" format (examples: "US", "us", "Us").
+            
+  //'title' => '[YourValue]',  //Filter that matches Avails with a `title_internal_alias`,`series_title_internal_alias`, `season_title_internal_alias`,or `episode_title_internal_alias` that contains the givencase-insensitive title.
+            
+  //'videoIds' => '[YourValue]',  //Filter Avails that match any of the given `video_id`s.
+            
+  //'pageToken' => '[YourValue]',  //See _List methods rules_ for info about this field.
   'fields' => '*'
 );
+// Single Request.
 $results = availsListExample($service, $accountId, $optParams);
 
 // Paginiation Example

@@ -1,6 +1,6 @@
 ﻿![Fitness](https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png)
 
-# Unoffical Fitness Samples for .NET  
+# Unoffical Fitness Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Stores and accesses user data in the fitness store from apps on any platform.
 
 ## Sample Description
 
-These samples show how to access the [Fitness](https://developers.google.com/fit/rest/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Fitness](https://developers.google.com/fit/rest/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

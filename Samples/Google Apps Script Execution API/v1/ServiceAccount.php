@@ -28,7 +28,7 @@
 // API Description: Executes functions in Google Apps Script projects.
 // API Documentation Link https://developers.google.com/apps-script/execution/rest/v1/scripts/run
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Script/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/script/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

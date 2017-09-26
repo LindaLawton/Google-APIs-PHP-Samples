@@ -1,6 +1,6 @@
 ﻿![Google Site Verification API](https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png)
 
-# Unoffical Google Site Verification API Samples for .NET  
+# Unoffical Google Site Verification API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Verifies ownership of websites or domains with Google.
 
 ## Sample Description
 
-These samples show how to access the [Google Site Verification API](https://developers.google.com/site-verification/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google Site Verification API](https://developers.google.com/site-verification/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

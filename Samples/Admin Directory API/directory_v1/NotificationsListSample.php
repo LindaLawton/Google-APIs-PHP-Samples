@@ -28,7 +28,7 @@
 // API Description: The Admin SDK Directory API lets you view and manage enterprise resources such as users and groups, administrative notifications, security features, and more.
 // API Documentation Link https://developers.google.com/admin-sdk/directory/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Directory/directory_v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/admin/directory_v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Directory($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'language' => '[YourValue]',  //The ISO 639-1 code of the language notifications are returned in. The default is English (en).
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of notifications to return per page. The default is 100.
+            
+  //'pageToken' => '[YourValue]',  //The token to specify the page of results to retrieve.
   'fields' => '*'
 );
+// Single Request.
 $results = notificationsListExample($service, $customer, $optParams);
 
 // Paginiation Example

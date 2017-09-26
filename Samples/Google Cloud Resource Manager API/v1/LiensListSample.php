@@ -28,7 +28,7 @@
 // API Description: The Google Cloud Resource Manager API provides methods for creating, reading, and updating project metadata.
 // API Documentation Link https://cloud.google.com/resource-manager
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudresourcemanager/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudresourcemanager/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Cloudresourcemanager($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageToken' => '[YourValue]',  //The `next_page_token` value returned from a previous List request, if any.
+            
+  //'pageSize' => '[YourValue]',  //The maximum number of items to return. This is a suggestion for the server.
+            
+  //'parent' => '[YourValue]',  //The name of the resource to list all attached Liens.For example, `projects/1234`.
   'fields' => '*'
 );
+// Single Request.
 $results = liensListExample($service, $optParams);
 
 // Paginiation Example

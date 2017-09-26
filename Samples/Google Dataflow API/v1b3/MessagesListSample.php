@@ -28,7 +28,7 @@
 // API Description: Manages Google Cloud Dataflow projects on Google Cloud Platform.
 // API Documentation Link https://cloud.google.com/dataflow
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Dataflow/v1b3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/dataflow/v1b3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,23 @@ session_start();
 * $service = new Google_Service_Dataflow($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'location' => '[YourValue]',  //The location which contains the job specified by job_id.
+            
+  //'endTime' => '[YourValue]',  //Return only messages with timestamps < end_time. The default is now(i.e. return up to the latest messages available).
+            
+  //'pageToken' => '[YourValue]',  //If supplied, this should be the value of next_page_token returnedby an earlier call. This will cause the next page of results tobe returned.
+            
+  //'startTime' => '[YourValue]',  //If specified, return only messages with timestamps >= start_time.The default is the job creation time (i.e. beginning of messages).
+            
+  //'pageSize' => '[YourValue]',  //If specified, determines the maximum number of messages toreturn.  If unspecified, the service may choose an appropriatedefault, or may return an arbitrarily large number of results.
+            
+  //'minimumImportance' => '[YourValue]',  //Filter to only get messages with importance >= level
   'fields' => '*'
 );
+// Single Request.
 $results = messagesListExample($service, $projectId, $jobId, $optParams);
 
 // Paginiation Example

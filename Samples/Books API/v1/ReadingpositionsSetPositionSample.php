@@ -28,7 +28,7 @@
 // API Description: Searches for books and manages your Google Books library.
 // API Documentation Link https://developers.google.com/books/docs/v1/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Books/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/books/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Books($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'action' => '[YourValue]',  //Action that caused this reading position to be set.
+            
+  //'contentVersion' => '[YourValue]',  //Volume content version for which this reading position applies.
+            
+  //'deviceCookie' => '[YourValue]',  //Random persistent device cookie optional on set position.
+            
+  //'source' => '[YourValue]',  //String to identify the originator of this request.
   'fields' => '*'
 );
+// Single Request.
 $results = readingpositionsSetPositionExample($service, $volumeId, $timestamp, $position, $optParams);
 
 
@@ -87,7 +96,7 @@ function readingpositionsSetPositionExample($service, $volumeId, $timestamp, $po
 		if (volumeId == null)
 			throw new Exception("volumeId is required.");
 		// Make the request and return the results.
-		return $service->readingpositions->SetPositionReadingpositions($volumeId, $timestamp, $position, $optParams);
+		 $service->readingpositions->SetPositionReadingpositions($volumeId, $timestamp, $position, $optParams);
 	}
 	catch (Exception $e)
 	{

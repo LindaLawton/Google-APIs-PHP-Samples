@@ -28,7 +28,7 @@
 // API Description: [Deprecated. Please use Instance Group Manager in Compute API] Provides groups of homogenous Compute Engine instances.
 // API Documentation Link https://developers.google.com/compute/docs/instance-groups/manager/v1beta2
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Replicapool/v1beta2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/replicapool/v1beta2/rest
 //
 //------------------------------------------------------------------------------
 // Installation

@@ -28,7 +28,7 @@
 // API Description: Accesses a Google App Engine Pull Task Queue over REST.
 // API Documentation Link https://developers.google.com/appengine/docs/python/taskqueue/rest
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Taskqueue/v1beta2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/taskqueue/v1beta2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Taskqueue($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'groupByTag' => '[YourValue]',  //When true, all returned tasks will have the same tag
+            
+  //'tag' => '[YourValue]',  //The tag allowed for tasks in the response. Must only be specified if group_by_tag is true. If group_by_tag is true and tag is not specified the tag will be that of the oldest task by eta, i.e. the first available tag
   'fields' => '*'
 );
+// Single Request.
 $results = tasksLeaseExample($service, $project, $taskqueue, $numTasks, $leaseSecs, $optParams);
 
 

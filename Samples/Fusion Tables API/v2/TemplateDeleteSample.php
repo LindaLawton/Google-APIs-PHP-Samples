@@ -28,7 +28,7 @@
 // API Description: API for working with Fusion Tables data.
 // API Documentation Link https://developers.google.com/fusiontables
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Fusiontables/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/fusiontables/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Fusiontables($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = templateDeleteExample($service, $tableId, $templateId, $optParams);
 
 
@@ -84,7 +85,7 @@ function templateDeleteExample($service, $tableId, $templateId, $optParams)
 		if (templateId == null)
 			throw new Exception("templateId is required.");
 		// Make the request and return the results.
-		return $service->template->DeleteTemplate($tableId, $templateId, $optParams);
+		 $service->template->DeleteTemplate($tableId, $templateId, $optParams);
 	}
 	catch (Exception $e)
 	{

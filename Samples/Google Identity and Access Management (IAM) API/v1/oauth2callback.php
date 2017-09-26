@@ -28,7 +28,7 @@
 // API Description: Manages identity and access control for Google Cloud Platform resources, including the creation of service accounts, which you can use to authenticate to Google and make API calls.
 // API Documentation Link https://cloud.google.com/iam/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Iam/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/iam/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

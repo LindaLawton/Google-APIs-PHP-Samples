@@ -28,7 +28,7 @@
 // API Description: Lets Android application developers access their Google Play accounts.
 // API Documentation Link https://developers.google.com/android-publisher
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Androidpublisher/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/androidpublisher/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Androidpublisher($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'autoConvertMissingPrices' => '[YourValue]',  //If true the prices for all regions targeted by the parent app that don't have a price specified for this in-app product will be auto converted to the target currency based on the default price. Defaults to false.
   'fields' => '*'
 );
+// Single Request.
 $results = inappproductsInsertExample($service, $packageName, $optParams);
 
 

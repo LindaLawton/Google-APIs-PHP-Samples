@@ -28,7 +28,7 @@
 // API Description: Transfers data from partner SaaS applications to Google BigQuery on a scheduled, managed basis.
 // API Documentation Link https://cloud.google.com/bigquery/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Bigquerydatatransfer/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/bigquerydatatransfer/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

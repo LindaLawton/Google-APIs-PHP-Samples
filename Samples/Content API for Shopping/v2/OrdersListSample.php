@@ -28,7 +28,7 @@
 // API Description: Manages product items, inventory, and Merchant Center accounts for Google Shopping.
 // API Documentation Link https://developers.google.com/shopping-content
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Shoppingcontent/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/content/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,25 @@ session_start();
 * $service = new Google_Service_Shoppingcontent($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'acknowledged' => '[YourValue]',  //Obtains orders that match the acknowledgement status. When set to true, obtains orders that have been acknowledged. When false, obtains orders that have not been acknowledged.We recommend using this filter set to false, in conjunction with the acknowledge call, such that only un-acknowledged orders are returned.
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of orders to return in the response, used for paging. The default value is 25 orders per page, and the maximum allowed value is 250 orders per page.Known issue: All List calls will return all Orders without limit regardless of the value of this field.
+            
+  //'orderBy' => '[YourValue]',  //The ordering of the returned list. The only supported value are placedDate desc and placedDate asc for now, which returns orders sorted by placement date. "placedDate desc" stands for listing orders by placement date, from oldest to most recent. "placedDate asc" stands for listing orders by placement date, from most recent to oldest. In future releases we'll support other sorting criteria.
+            
+  //'pageToken' => '[YourValue]',  //The token returned by the previous request.
+            
+  //'placedDateEnd' => '[YourValue]',  //Obtains orders placed before this date (exclusively), in ISO 8601 format.
+            
+  //'placedDateStart' => '[YourValue]',  //Obtains orders placed after this date (inclusively), in ISO 8601 format.
+            
+  //'statuses' => '[YourValue]',  //Obtains orders that match any of the specified statuses. Multiple values can be specified with comma separation. Additionally, please note that active is a shortcut for pendingShipment and partiallyShipped, and completed is a shortcut for shipped , partiallyDelivered, delivered, partiallyReturned, returned, and canceled.
   'fields' => '*'
 );
+// Single Request.
 $results = ordersListExample($service, $merchantId, $optParams);
 
 // Paginiation Example

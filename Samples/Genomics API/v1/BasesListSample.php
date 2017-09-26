@@ -28,7 +28,7 @@
 // API Description: Upload, process, query, and search Genomics data in the cloud.
 // API Documentation Link https://cloud.google.com/genomics
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Genomics/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/genomics/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Genomics($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'end' => '[YourValue]',  //The end position (0-based, exclusive) of this query. Defaults to the lengthof this reference.
+            
+  //'pageToken' => '[YourValue]',  //The continuation token, which is used to page through large result sets.To get the next page of results, set this parameter to the value of`nextPageToken` from the previous response.
+            
+  //'pageSize' => '[YourValue]',  //The maximum number of bases to return in a single page. If unspecified,defaults to 200Kbp (kilo base pairs). The maximum value is 10Mbp (mega basepairs).
+            
+  //'start' => '[YourValue]',  //The start position (0-based) of this query. Defaults to 0.
   'fields' => '*'
 );
+// Single Request.
 $results = basesListExample($service, $referenceId, $optParams);
 
 // Paginiation Example

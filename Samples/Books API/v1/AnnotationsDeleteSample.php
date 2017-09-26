@@ -28,7 +28,7 @@
 // API Description: Searches for books and manages your Google Books library.
 // API Documentation Link https://developers.google.com/books/docs/v1/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Books/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/books/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Books($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'source' => '[YourValue]',  //String to identify the originator of this request.
   'fields' => '*'
 );
+// Single Request.
 $results = annotationsDeleteExample($service, $annotationId, $optParams);
 
 
@@ -81,7 +84,7 @@ function annotationsDeleteExample($service, $annotationId, $optParams)
 		if (annotationId == null)
 			throw new Exception("annotationId is required.");
 		// Make the request and return the results.
-		return $service->annotations->DeleteAnnotations($annotationId, $optParams);
+		 $service->annotations->DeleteAnnotations($annotationId, $optParams);
 	}
 	catch (Exception $e)
 	{

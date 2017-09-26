@@ -28,7 +28,7 @@
 // API Description: Views and manages your Google Analytics data.
 // API Documentation Link https://developers.google.com/analytics/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Analytics/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/analytics/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Analytics($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'ignoreCustomDataSourceLinks' => '[YourValue]',  //Force the update and ignore any warnings related to the custom metric being linked to a custom data source / data set.
   'fields' => '*'
 );
+// Single Request.
 $results = customMetricsUpdateExample($service, $accountId, $webPropertyId, $customMetricId, $optParams);
 
 

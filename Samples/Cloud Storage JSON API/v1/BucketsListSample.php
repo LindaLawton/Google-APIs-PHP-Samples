@@ -28,7 +28,7 @@
 // API Description: Stores and retrieves potentially large, immutable data objects.
 // API Documentation Link https://developers.google.com/storage/docs/json_api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Storage/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/storage/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Storage($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of buckets to return in a single response. The service will use this parameter or 1,000 items, whichever is smaller.
+            
+  //'pageToken' => '[YourValue]',  //A previously-returned page token representing part of the larger set of results to view.
+            
+  //'prefix' => '[YourValue]',  //Filter results to buckets whose names begin with this prefix.
+            
+  //'projection' => '[YourValue]',  //Set of properties to return. Defaults to noAcl.
+            
+  //'userProject' => '[YourValue]',  //The project to be billed for this request, for Requester Pays buckets.
   'fields' => '*'
 );
+// Single Request.
 $results = bucketsListExample($service, $project, $optParams);
 
 // Paginiation Example

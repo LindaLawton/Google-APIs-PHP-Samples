@@ -28,7 +28,7 @@
 // API Description: Groups and counts similar errors from cloud services and applications, reports new errors, and provides access to error groups and their associated errors.
 // API Documentation Link https://cloud.google.com/error-reporting/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Clouderrorreporting/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/clouderrorreporting/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,25 @@ session_start();
 * $service = new Google_Service_Clouderrorreporting($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'timeRange.period' => '[YourValue]',  //Restricts the query to the specified time range.
+            
+  //'groupId' => '[YourValue]',  //[Required] The group for which events shall be returned.
+            
+  //'pageToken' => '[YourValue]',  //[Optional] A `next_page_token` provided by a previous response.
+            
+  //'serviceFilter.service' => '[YourValue]',  //[Optional] The exact value to match against[`ServiceContext.service`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
+            
+  //'pageSize' => '[YourValue]',  //[Optional] The maximum number of results to return per response.
+            
+  //'serviceFilter.version' => '[YourValue]',  //[Optional] The exact value to match against[`ServiceContext.version`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
+            
+  //'serviceFilter.resourceType' => '[YourValue]',  //[Optional] The exact value to match against[`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
   'fields' => '*'
 );
+// Single Request.
 $results = eventsListExample($service, $projectName, $optParams);
 
 // Paginiation Example

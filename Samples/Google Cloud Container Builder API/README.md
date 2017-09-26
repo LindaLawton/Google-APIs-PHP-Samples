@@ -1,6 +1,6 @@
 ﻿![Google Cloud Container Builder API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Google Cloud Container Builder API Samples for .NET  
+# Unoffical Google Cloud Container Builder API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Builds container images in the cloud.
 
 ## Sample Description
 
-These samples show how to access the [Google Cloud Container Builder API](https://cloud.google.com/container-builder/docs/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google Cloud Container Builder API](https://cloud.google.com/container-builder/docs/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

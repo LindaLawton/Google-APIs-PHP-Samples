@@ -28,7 +28,7 @@
 // API Description: Accesses Analytics report data.
 // API Documentation Link https://developers.google.com/analytics/devguides/reporting/core/v4/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Analyticsreporting/v4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/analyticsreporting/v4/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Analyticsreporting($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = reportsBatchGetExample($service, $optParams);
 
 

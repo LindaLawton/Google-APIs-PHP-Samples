@@ -28,7 +28,7 @@
 // API Description: Builds on top of the Google+ platform for Google Apps Domains.
 // API Documentation Link https://developers.google.com/+/domains/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Plusdomains/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/plusDomains/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

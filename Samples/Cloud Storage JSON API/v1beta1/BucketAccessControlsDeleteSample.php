@@ -28,7 +28,7 @@
 // API Description: Lets you store and retrieve potentially-large, immutable data objects.
 // API Documentation Link https://developers.google.com/storage/docs/json_api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Storage/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/storage/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Storage($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = bucketAccessControlsDeleteExample($service, $bucket, $entity, $optParams);
 
 
@@ -84,7 +85,7 @@ function bucketAccessControlsDeleteExample($service, $bucket, $entity, $optParam
 		if (entity == null)
 			throw new Exception("entity is required.");
 		// Make the request and return the results.
-		return $service->bucketAccessControls->DeleteBucketAccessControls($bucket, $entity, $optParams);
+		 $service->bucketAccessControls->DeleteBucketAccessControls($bucket, $entity, $optParams);
 	}
 	catch (Exception $e)
 	{

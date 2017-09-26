@@ -28,7 +28,7 @@
 // API Description: Manages the execution of large numbers of distributed requests. Cloud Tasks is in Alpha.
 // API Documentation Link https://cloud.google.com/cloud-tasks/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudtasks/v2beta2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudtasks/v2beta2/rest
 //
 //------------------------------------------------------------------------------
 // Installation

@@ -28,7 +28,7 @@
 // API Description: Views and manages your Google Analytics data.
 // API Documentation Link https://developers.google.com/analytics/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Analytics/v2_4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/analytics/v2_4/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Analytics($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'max-results' => '[YourValue]',  //The maximum number of accounts to include in this response.
+            
+  //'start-index' => '[YourValue]',  //An index of the first account to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.
   'fields' => '*'
 );
+// Single Request.
 $results = accountsListExample($service, $optParams);
 
 
@@ -78,7 +83,7 @@ function accountsListExample($service, $optParams)
 		if ($optParams == null)
 			throw new Exception("optParams is required.");
 		// Make the request and return the results.
-		return $service->accounts->ListAccounts($optParams);
+		 $service->accounts->ListAccounts($optParams);
 	}
 	catch (Exception $e)
 	{

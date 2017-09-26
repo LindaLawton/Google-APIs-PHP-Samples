@@ -28,7 +28,7 @@
 // API Description: Accesses Google Cloud Monitoring data.
 // API Documentation Link https://cloud.google.com/monitoring/v2beta2/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudmonitoring/v2beta2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudmonitoring/v2beta2/rest
 //
 //------------------------------------------------------------------------------
 // Installation

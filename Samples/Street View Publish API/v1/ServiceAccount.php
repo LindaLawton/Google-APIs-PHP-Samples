@@ -28,7 +28,7 @@
 // API Description: Publishes 360 photos to Google Maps, along with position, orientation, and connectivity metadata. Apps can offer an interface for positioning, connecting, and uploading user-generated Street View images.
 // API Documentation Link https://developers.google.com/streetview/publish/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Streetviewpublish/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/streetviewpublish/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

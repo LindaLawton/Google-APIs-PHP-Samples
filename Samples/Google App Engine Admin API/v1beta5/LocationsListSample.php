@@ -28,7 +28,7 @@
 // API Description: The App Engine Admin API enables developers to provision and manage their App Engine applications.
 // API Documentation Link https://cloud.google.com/appengine/docs/admin-api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Appengine/v1beta5/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/appengine/v1beta5/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Appengine($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageToken' => '[YourValue]',  //The standard list page token.
+            
+  //'pageSize' => '[YourValue]',  //The standard list page size.
+            
+  //'filter' => '[YourValue]',  //The standard list filter.
   'fields' => '*'
 );
+// Single Request.
 $results = locationsListExample($service, $appsId, $optParams);
 
 // Paginiation Example

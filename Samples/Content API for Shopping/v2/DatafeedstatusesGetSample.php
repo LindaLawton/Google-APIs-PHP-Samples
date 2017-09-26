@@ -28,7 +28,7 @@
 // API Description: Manages product items, inventory, and Merchant Center accounts for Google Shopping.
 // API Documentation Link https://developers.google.com/shopping-content
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Shoppingcontent/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/content/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Shoppingcontent($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'country' => '[YourValue]',  //The country for which to get the datafeed status. If this parameter is provided then language must also be provided. Note that this parameter is required for feeds targeting multiple countries and languages, since a feed may have a different status for each target.
+            
+  //'language' => '[YourValue]',  //The language for which to get the datafeed status. If this parameter is provided then country must also be provided. Note that this parameter is required for feeds targeting multiple countries and languages, since a feed may have a different status for each target.
   'fields' => '*'
 );
+// Single Request.
 $results = datafeedstatusesGetExample($service, $merchantId, $datafeedId, $optParams);
 
 

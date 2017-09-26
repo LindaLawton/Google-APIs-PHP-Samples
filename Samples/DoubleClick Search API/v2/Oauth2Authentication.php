@@ -28,7 +28,7 @@
 // API Description: Reports and modifies your advertising data in DoubleClick Search (for example, campaigns, ad groups, keywords, and conversions).
 // API Documentation Link https://developers.google.com/doubleclick-search/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Doubleclicksearch/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/doubleclicksearch/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation

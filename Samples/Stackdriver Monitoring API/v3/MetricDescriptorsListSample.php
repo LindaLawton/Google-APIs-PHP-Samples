@@ -28,7 +28,7 @@
 // API Description: Manages your Stackdriver Monitoring data and configurations. Most projects must be associated with a Stackdriver account, with a few exceptions as noted on the individual method pages.
 // API Documentation Link https://cloud.google.com/monitoring/api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Monitoring/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/monitoring/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Monitoring($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'filter' => '[YourValue]',  //If this field is empty, all custom and system-defined metric descriptors are returned. Otherwise, the filter specifies which metric descriptors are to be returned. For example, the following filter matches all custom metrics:metric.type = starts_with("custom.googleapis.com/")
+            
+  //'pageToken' => '[YourValue]',  //If this field is not empty then it must contain the nextPageToken value returned by a previous call to this method. Using this field causes the method to return additional results from the previous method call.
+            
+  //'pageSize' => '[YourValue]',  //A positive number that is the maximum number of results to return.
   'fields' => '*'
 );
+// Single Request.
 $results = metricDescriptorsListExample($service, $name, $optParams);
 
 // Paginiation Example

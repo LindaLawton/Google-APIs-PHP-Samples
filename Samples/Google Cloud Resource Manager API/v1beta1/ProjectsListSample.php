@@ -28,7 +28,7 @@
 // API Description: The Google Cloud Resource Manager API provides methods for creating, reading, and updating project metadata.
 // API Documentation Link https://cloud.google.com/resource-manager
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudresourcemanager/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudresourcemanager/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Cloudresourcemanager($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'filter' => '[YourValue]',  //An expression for filtering the results of the request.  Filter rules arecase insensitive. The fields eligible for filtering are:+ `name`+ `id`+ <code>labels.<em>key</em></code> where *key* is the name of a labelSome examples of using labels as filters:|Filter|Description||------|-----------||name:how*|The project's name starts with "how".||name:Howl|The project's name is `Howl` or `howl`.||name:HOWL|Equivalent to above.||NAME:howl|Equivalent to above.||labels.color:*|The project has the label `color`.||labels.color:red|The project's label `color` has the value `red`.||labels.color:red&nbsp;labels.size:big|The project's label `color` has the value `red` and its label `size` has the value `big`.If you specify a filter that has both `parent.type` and `parent.id`, thenthe `resourcemanager.projects.list` permission is checked on the parent.If the user has this permission, all projects under the parent will bereturned after remaining filters have been applied. If the user lacks thispermission, then all projects for which the user has the`resourcemanager.projects.get` permission will be returned after remainingfilters have been applied. If no filter is specified, the call will returnprojects for which the user has `resourcemanager.projects.get` permissions.Optional.
+            
+  //'pageToken' => '[YourValue]',  //A pagination token returned from a previous call to ListProjectsthat indicates from where listing should continue.Optional.
+            
+  //'pageSize' => '[YourValue]',  //The maximum number of Projects to return in the response.The server can return fewer Projects than requested.If unspecified, server picks an appropriate default.Optional.
   'fields' => '*'
 );
+// Single Request.
 $results = projectsListExample($service, $optParams);
 
 // Paginiation Example

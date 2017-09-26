@@ -28,7 +28,7 @@
 // API Description: Transfers data from partner SaaS applications to Google BigQuery on a scheduled, managed basis.
 // API Documentation Link https://cloud.google.com/bigquery/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Bigquerydatatransfer/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/bigquerydatatransfer/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Bigquerydatatransfer($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageToken' => '[YourValue]',  //Pagination token, which can be used to request a specific pageof `ListTransferLogsRequest` list results. For multiple-pageresults, `ListTransferLogsResponse` outputsa `next_page` token, which can be used as the`page_token` value to request the next page of list results.
+            
+  //'pageSize' => '[YourValue]',  //Page size. The default page size is the maximum value of 1000 results.
+            
+  //'messageTypes' => '[YourValue]',  //Message types to return. If not populated - INFO, WARNING and ERRORmessages are returned.
   'fields' => '*'
 );
+// Single Request.
 $results = transferLogsListExample($service, $parent, $optParams);
 
 // Paginiation Example

@@ -28,7 +28,7 @@
 // API Description: Manages classes, rosters, and invitations in Google Classroom.
 // API Documentation Link https://developers.google.com/classroom/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Classroom/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/classroom/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Classroom($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'updateMask' => '[YourValue]',  //Mask that identifies which fields on the announcement to update.This field is required to do an update. The update fails if invalidfields are specified. If a field supports empty values, it can be clearedby specifying it in the update mask and not in the Announcement object. Ifa field that does not support empty values is included in the update maskand not set in the Announcement object, an `INVALID_ARGUMENT` error will bereturned.The following fields may be specified by teachers:* `text`* `state`* `scheduled_time`
   'fields' => '*'
 );
+// Single Request.
 $results = announcementsPatchExample($service, $courseId, $id, $optParams);
 
 

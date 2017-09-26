@@ -28,7 +28,7 @@
 // API Description: Provides polling places, early vote locations, contest data, election officials, and government representatives for U.S. residential addresses.
 // API Documentation Link https://developers.google.com/civic-information
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Civicinfo/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/civicinfo/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation

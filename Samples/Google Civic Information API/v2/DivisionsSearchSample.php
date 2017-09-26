@@ -28,7 +28,7 @@
 // API Description: Provides polling places, early vote locations, contest data, election officials, and government representatives for U.S. residential addresses.
 // API Documentation Link https://developers.google.com/civic-information
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Civicinfo/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/civicinfo/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Civicinfo($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'query' => '[YourValue]',  //The search query. Queries can cover any parts of a OCD ID or a human readable division name. All words given in the query are treated as required patterns. In addition to that, most query operators of the Apache Lucene library are supported. See http://lucene.apache.org/core/2_9_4/queryparsersyntax.html
   'fields' => '*'
 );
+// Single Request.
 $results = divisionsSearchExample($service, $optParams);
 
 

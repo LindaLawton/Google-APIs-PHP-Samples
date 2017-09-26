@@ -28,7 +28,7 @@
 // API Description: The App Engine Admin API enables developers to provision and manage their App Engine applications.
 // API Documentation Link https://cloud.google.com/appengine/docs/admin-api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Appengine/v1beta/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/appengine/v1beta/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Appengine($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'matchingAddress' => '[YourValue]',  //A valid IP Address. If set, only rules matching this address will be returned. The first returned rule will be the rule that fires on requests from this IP.
+            
+  //'pageToken' => '[YourValue]',  //Continuation token for fetching the next page of results.
+            
+  //'pageSize' => '[YourValue]',  //Maximum results to return per page.
   'fields' => '*'
 );
+// Single Request.
 $results = ingressRulesListExample($service, $appsId, $optParams);
 
 // Paginiation Example

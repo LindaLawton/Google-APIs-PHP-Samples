@@ -28,7 +28,7 @@
 // API Description: Configures and serves authoritative DNS records.
 // API Documentation Link https://developers.google.com/cloud-dns
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Dns/v2beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/dns/v2beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Dns($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'maxResults' => '[YourValue]',  //Optional. Maximum number of results to be returned. If unspecified, the server will decide how many results to return.
+            
+  //'pageToken' => '[YourValue]',  //Optional. A tag returned by a previous list request that was truncated. Use this parameter to continue a previous list request.
+            
+  //'sortBy' => '[YourValue]',  //Sorting criterion. The only supported value is change sequence.
+            
+  //'sortOrder' => '[YourValue]',  //Sorting order direction: 'ascending' or 'descending'.
   'fields' => '*'
 );
+// Single Request.
 $results = changesListExample($service, $project, $managedZone, $optParams);
 
 // Paginiation Example

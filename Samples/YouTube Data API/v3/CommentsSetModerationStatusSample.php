@@ -28,7 +28,7 @@
 // API Description: Supports core YouTube features, such as uploading videos, creating and managing playlists, searching for content, and much more.
 // API Documentation Link https://developers.google.com/youtube/v3
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Youtube/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Youtube($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'banAuthor' => '[YourValue]',  //The banAuthor parameter lets you indicate that you want to automatically reject any additional comments written by the comment's author. Set the parameter value to true to ban the author.Note: This parameter is only valid if the moderationStatus parameter is also set to rejected.
   'fields' => '*'
 );
+// Single Request.
 $results = commentsSetModerationStatusExample($service, $id, $moderationStatus, $optParams);
 
 
@@ -84,7 +87,7 @@ function commentsSetModerationStatusExample($service, $id, $moderationStatus, $o
 		if (moderationStatus == null)
 			throw new Exception("moderationStatus is required.");
 		// Make the request and return the results.
-		return $service->comments->SetModerationStatusComments($id, $moderationStatus, $optParams);
+		 $service->comments->SetModerationStatusComments($id, $moderationStatus, $optParams);
 	}
 	catch (Exception $e)
 	{

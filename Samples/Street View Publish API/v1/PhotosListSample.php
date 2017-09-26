@@ -28,7 +28,7 @@
 // API Description: Publishes 360 photos to Google Maps, along with position, orientation, and connectivity metadata. Apps can offer an interface for positioning, connecting, and uploading user-generated Street View images.
 // API Documentation Link https://developers.google.com/streetview/publish/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Streetviewpublish/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/streetviewpublish/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Streetviewpublish($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'filter' => '[YourValue]',  //The filter expression. For example: `placeId=ChIJj61dQgK6j4AR4GeTYWZsKWw`.
+            
+  //'pageToken' => '[YourValue]',  //ThenextPageTokenvalue returned from a previousListPhotosrequest, if any.
+            
+  //'pageSize' => '[YourValue]',  //The maximum number of photos to return.`pageSize` must be non-negative. If `pageSize` is zero or is not provided,the default page size of 100 will be used.The number of photos returned in the response may be less than `pageSize`if the number of photos that belong to the user is less than `pageSize`.
+            
+  //'view' => '[YourValue]',  //Specifies if a download URL for the photos bytes should be returned in thePhotos response.
   'fields' => '*'
 );
+// Single Request.
 $results = photosListExample($service, $optParams);
 
 // Paginiation Example

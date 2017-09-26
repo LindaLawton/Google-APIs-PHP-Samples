@@ -28,7 +28,7 @@
 // API Description: Writes log entries and manages your Stackdriver Logging configuration.
 // API Documentation Link https://cloud.google.com/logging/docs/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Logging/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/logging/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation

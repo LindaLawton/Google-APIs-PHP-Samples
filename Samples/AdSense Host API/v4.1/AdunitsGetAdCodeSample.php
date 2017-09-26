@@ -28,7 +28,7 @@
 // API Description: Generates performance reports, generates ad codes, and provides publisher management capabilities for AdSense Hosts.
 // API Documentation Link https://developers.google.com/adsense/host/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adsensehost/v4_1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adsensehost/v4_1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Adsensehost($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'hostCustomChannelId' => '[YourValue]',  //Host custom channel to attach to the ad code.
   'fields' => '*'
 );
+// Single Request.
 $results = adunitsGetAdCodeExample($service, $accountId, $adClientId, $adUnitId, $optParams);
 
 

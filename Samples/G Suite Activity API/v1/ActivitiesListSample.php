@@ -28,7 +28,7 @@
 // API Description: Provides a historical view of activity.
 // API Documentation Link https://developers.google.com/google-apps/activity/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Appsactivity/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/appsactivity/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,25 @@ session_start();
 * $service = new Google_Service_Appsactivity($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'drive.ancestorId' => '[YourValue]',  //Identifies the Drive folder containing the items for which to return activities.
+            
+  //'drive.fileId' => '[YourValue]',  //Identifies the Drive item to return activities for.
+            
+  //'groupingStrategy' => '[YourValue]',  //Indicates the strategy to use when grouping singleEvents items in the associated combinedEvent object.
+            
+  //'pageSize' => '[YourValue]',  //The maximum number of events to return on a page. The response includes a continuation token if there are more events.
+            
+  //'pageToken' => '[YourValue]',  //A token to retrieve a specific page of results.
+            
+  //'source' => '[YourValue]',  //The Google service from which to return activities. Possible values of source are: - drive.google.com
+            
+  //'userId' => '[YourValue]',  //Indicates the user to return activity for. Use the special value me to indicate the currently authenticated user.
   'fields' => '*'
 );
+// Single Request.
 $results = activitiesListExample($service, $optParams);
 
 // Paginiation Example

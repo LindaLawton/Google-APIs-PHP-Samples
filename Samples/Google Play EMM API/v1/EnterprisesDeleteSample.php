@@ -28,7 +28,7 @@
 // API Description: Manages the deployment of apps to Android for Work users.
 // API Documentation Link https://developers.google.com/android/work/play/emm-api
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Androidenterprise/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/androidenterprise/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Androidenterprise($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = enterprisesDeleteExample($service, $enterpriseId, $optParams);
 
 
@@ -81,7 +82,7 @@ function enterprisesDeleteExample($service, $enterpriseId, $optParams)
 		if (enterpriseId == null)
 			throw new Exception("enterpriseId is required.");
 		// Make the request and return the results.
-		return $service->enterprises->DeleteEnterprises($enterpriseId, $optParams);
+		 $service->enterprises->DeleteEnterprises($enterpriseId, $optParams);
 	}
 	catch (Exception $e)
 	{

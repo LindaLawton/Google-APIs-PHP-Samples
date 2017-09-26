@@ -28,7 +28,7 @@
 // API Description: Firebase Remote Config API allows the 3P clients to manage Remote Config conditions and parameters for Firebase applications.
 // API Documentation Link https://firebase.google.com/docs/remote-config/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Firebaseremoteconfig/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/firebaseremoteconfig/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Firebaseremoteconfig($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'validateOnly' => '[YourValue]',  //Optional. Defaults to <code>false</code> (UpdateRemoteConfig call shouldupdate the backend if there are no validation/interal errors). May be setto <code>true</code> to indicate that, should no validation errors occur,the call should return a "200 OK" instead of performing the update. Notethat other error messages (500 Internal Error, 412 Version Mismatch, etc)may still result after flipping to <code>false</code>, even if getting a"200 OK" when calling with <code>true</code>.
   'fields' => '*'
 );
+// Single Request.
 $results = projectsUpdateRemoteConfigExample($service, $project, $optParams);
 
 

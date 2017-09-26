@@ -28,7 +28,7 @@
 // API Description: Manages the execution of large numbers of distributed requests. Cloud Tasks is in Alpha.
 // API Documentation Link https://cloud.google.com/cloud-tasks/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudtasks/v2beta2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudtasks/v2beta2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Cloudtasks($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageToken' => '[YourValue]',  //A token identifying the page of results to return.To request the first page results, page_token must be empty. Torequest the next page of results, page_token must be the value ofListTasksResponse.next_page_token returned from the previouscall to CloudTasks.ListTasks method.The page token is valid for only 2 hours.
+            
+  //'orderBy' => '[YourValue]',  //Sort order used for the query. The fields supported for sortingare Task.schedule_time and PullMessage.tag. All results will bereturned in ascending order. The default ordering is byTask.schedule_time.
+            
+  //'responseView' => '[YourValue]',  //The response_view specifies which subset of the Task will bereturned.By default response_view is Task.View.BASIC; not allinformation is retrieved by default because some data, such aspayloads, might be desirable to return only when needed becauseof its large size or because of the sensitivity of data that itcontains.Authorization for Task.View.FULL requires `cloudtasks.tasks.fullView`[Google IAM](/iam/) permission on theTask.name resource.
+            
+  //'pageSize' => '[YourValue]',  //Requested page size. Fewer tasks than requested might be returned.The maximum page size is 1000. If unspecified, the page size willbe the maximum. Fewer tasks than requested might be returned,even if more tasks exist; useListTasksResponse.next_page_token to determine if more tasksexist.
   'fields' => '*'
 );
+// Single Request.
 $results = tasksListExample($service, $parent, $optParams);
 
 // Paginiation Example

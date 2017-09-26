@@ -1,6 +1,6 @@
 ﻿![Ad Exchange Buyer API II](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Ad Exchange Buyer API II Samples for .NET  
+# Unoffical Ad Exchange Buyer API II Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Accesses the latest features for managing Ad Exchange accounts, Real-Time Biddin
 
 ## Sample Description
 
-These samples show how to access the [Ad Exchange Buyer API II](https://developers.google.com/ad-exchange/buyer-rest/reference/rest/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Ad Exchange Buyer API II](https://developers.google.com/ad-exchange/buyer-rest/reference/rest/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

@@ -28,7 +28,7 @@
 // API Description: Retrieves your YouTube Analytics data.
 // API Documentation Link http://developers.google.com/youtube/analytics/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Youtubeanalytics/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/youtubeAnalytics/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,25 @@ session_start();
 * $service = new Google_Service_Youtubeanalytics($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'currency' => '[YourValue]',  //The currency to which financial metrics should be converted. The default is US Dollar (USD). If the result contains no financial metrics, this flag will be ignored. Responds with an error if the specified currency is not recognized.
+            
+  //'dimensions' => '[YourValue]',  //A comma-separated list of YouTube Analytics dimensions, such as views or ageGroup,gender. See the Available Reports document for a list of the reports that you can retrieve and the dimensions used for those reports. Also see the Dimensions document for definitions of those dimensions.
+            
+  //'filters' => '[YourValue]',  //A list of filters that should be applied when retrieving YouTube Analytics data. The Available Reports document identifies the dimensions that can be used to filter each report, and the Dimensions document defines those dimensions. If a request uses multiple filters, join them together with a semicolon (;), and the returned result table will satisfy both filters. For example, a filters parameter value of video==dMH0bHeiRNg;country==IT restricts the result set to include data for the given video in Italy.
+            
+  //'include-historical-channel-data' => '[YourValue]',  //If set to true historical data (i.e. channel data from before the linking of the channel to the content owner) will be retrieved.
+            
+  //'max-results' => '[YourValue]',  //The maximum number of rows to include in the response.
+            
+  //'sort' => '[YourValue]',  //A comma-separated list of dimensions or metrics that determine the sort order for YouTube Analytics data. By default the sort order is ascending. The '-' prefix causes descending sort order.
+            
+  //'start-index' => '[YourValue]',  //An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter (one-based, inclusive).
   'fields' => '*'
 );
+// Single Request.
 $results = reportsQueryExample($service, $ids, $start-date, $end-date, $metrics, $optParams);
 
 

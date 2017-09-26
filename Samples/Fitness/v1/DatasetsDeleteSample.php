@@ -28,7 +28,7 @@
 // API Description: Stores and accesses user data in the fitness store from apps on any platform.
 // API Documentation Link https://developers.google.com/fit/rest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Fitness/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/fitness/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Fitness($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'currentTimeMillis' => '[YourValue]',  //The client's current time in milliseconds since epoch.
+            
+  //'modifiedTimeMillis' => '[YourValue]',  //When the operation was performed on the client.
   'fields' => '*'
 );
+// Single Request.
 $results = datasetsDeleteExample($service, $userId, $dataSourceId, $datasetId, $optParams);
 
 
@@ -87,7 +92,7 @@ function datasetsDeleteExample($service, $userId, $dataSourceId, $datasetId, $op
 		if (userId == null)
 			throw new Exception("userId is required.");
 		// Make the request and return the results.
-		return $service->datasets->DeleteDatasets($userId, $dataSourceId, $datasetId, $optParams);
+		 $service->datasets->DeleteDatasets($userId, $dataSourceId, $datasetId, $optParams);
 	}
 	catch (Exception $e)
 	{

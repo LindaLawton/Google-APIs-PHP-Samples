@@ -28,7 +28,7 @@
 // API Description: Provides information about other Google APIs, such as what APIs are available, the resource, and method details for each API.
 // API Documentation Link https://developers.google.com/discovery/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Discovery/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/discovery/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Discovery($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'name' => '[YourValue]',  //Only include APIs with the given name.
+            
+  //'preferred' => '[YourValue]',  //Return only the preferred version of an API.
   'fields' => '*'
 );
+// Single Request.
 $results = apisListExample($service, $optParams);
 
 

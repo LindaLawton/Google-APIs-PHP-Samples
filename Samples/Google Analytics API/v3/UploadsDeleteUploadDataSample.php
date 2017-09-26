@@ -28,7 +28,7 @@
 // API Description: Views and manages your Google Analytics data.
 // API Documentation Link https://developers.google.com/analytics/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Analytics/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/analytics/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Analytics($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = uploadsDeleteUploadDataExample($service, $accountId, $webPropertyId, $customDataSourceId, $optParams);
 
 
@@ -87,7 +88,7 @@ function uploadsDeleteUploadDataExample($service, $accountId, $webPropertyId, $c
 		if (webPropertyId == null)
 			throw new Exception("webPropertyId is required.");
 		// Make the request and return the results.
-		return $service->uploads->DeleteUploadDataUploads($accountId, $webPropertyId, $customDataSourceId, $optParams);
+		 $service->uploads->DeleteUploadDataUploads($accountId, $webPropertyId, $customDataSourceId, $optParams);
 	}
 	catch (Exception $e)
 	{

@@ -28,7 +28,7 @@
 // API Description: Provides tools for running validation tests against single URLs
 // API Documentation Link https://developers.google.com/webmaster-tools/search-console-api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Searchconsole/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/searchconsole/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Searchconsole($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = mobileFriendlyTestRunExample($service, $optParams);
 
 

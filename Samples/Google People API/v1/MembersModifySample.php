@@ -28,7 +28,7 @@
 // API Description: Provides access to information about profiles and contacts.
 // API Documentation Link https://developers.google.com/people/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Peopleservice/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/people/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Peopleservice($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = membersModifyExample($service, $resourceName, $optParams);
 
 

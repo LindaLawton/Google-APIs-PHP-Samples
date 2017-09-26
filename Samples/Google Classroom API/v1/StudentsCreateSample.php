@@ -28,7 +28,7 @@
 // API Description: Manages classes, rosters, and invitations in Google Classroom.
 // API Documentation Link https://developers.google.com/classroom/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Classroom/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/classroom/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Classroom($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'enrollmentCode' => '[YourValue]',  //Enrollment code of the course to create the student in.This code is required if userIdcorresponds to the requesting user; it may be omitted if the requestinguser has administrative permissions to create students for any user.
   'fields' => '*'
 );
+// Single Request.
 $results = studentsCreateExample($service, $courseId, $optParams);
 
 

@@ -1,6 +1,6 @@
 ﻿![Google Proximity Beacon API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Google Proximity Beacon API Samples for .NET  
+# Unoffical Google Proximity Beacon API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Registers, manages, indexes, and searches beacons.
 
 ## Sample Description
 
-These samples show how to access the [Google Proximity Beacon API](https://developers.google.com/beacons/proximity/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google Proximity Beacon API](https://developers.google.com/beacons/proximity/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

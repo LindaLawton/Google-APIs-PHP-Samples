@@ -28,7 +28,7 @@
 // API Description: Transfers user data from one user to another.
 // API Documentation Link https://developers.google.com/admin-sdk/data-transfer/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Datatransfer/datatransfer_v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/admin/datatransfer_v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Datatransfer($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = transfersInsertExample($service, $optParams);
 
 

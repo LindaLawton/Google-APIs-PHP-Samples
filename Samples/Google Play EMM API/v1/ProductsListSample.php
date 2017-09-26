@@ -28,7 +28,7 @@
 // API Description: Manages the deployment of apps to Android for Work users.
 // API Documentation Link https://developers.google.com/android/work/play/emm-api
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Androidenterprise/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/androidenterprise/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Androidenterprise($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'approved' => '[YourValue]',  //Specifies whether to search among all products (false) or among only products that have been approved (true). Only "true" is supported, and should be specified.
+            
+  //'language' => '[YourValue]',  //The BCP47 tag for the user's preferred language (e.g. "en-US", "de"). Results are returned in the language best matching the preferred language.
+            
+  //'maxResults' => '[YourValue]',  //Specifies the maximum number of products that can be returned per request. If not specified, uses a default value of 100, which is also the maximum retrievable within a single response.
+            
+  //'query' => '[YourValue]',  //The search query as typed in the Google Play store search box. If omitted, all approved apps will be returned (using the pagination parameters), including apps that are not available in the store (e.g. unpublished apps).
+            
+  //'token' => '[YourValue]',  //A pagination token is contained in a request''s response when there are more products. The token can be used in a subsequent request to obtain more products, and so forth. This parameter cannot be used in the initial request.
   'fields' => '*'
 );
+// Single Request.
 $results = productsListExample($service, $enterpriseId, $optParams);
 
 

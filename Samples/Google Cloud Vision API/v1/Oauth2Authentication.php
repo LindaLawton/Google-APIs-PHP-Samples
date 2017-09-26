@@ -28,7 +28,7 @@
 // API Description: Integrates Google Vision features, including image labeling, face, logo, and landmark detection, optical character recognition (OCR), and detection of explicit content, into applications.
 // API Documentation Link https://cloud.google.com/vision/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Vision/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/vision/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

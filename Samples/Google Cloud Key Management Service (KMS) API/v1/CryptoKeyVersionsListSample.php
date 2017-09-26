@@ -28,7 +28,7 @@
 // API Description: Manages encryption for your cloud services the same way you do on-premises. You can generate, use, rotate, and destroy AES256 encryption keys.
 // API Documentation Link https://cloud.google.com/kms/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudkms/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudkms/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Cloudkms($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageToken' => '[YourValue]',  //Optional pagination token, returned earlier viaListCryptoKeyVersionsResponse.next_page_token.
+            
+  //'pageSize' => '[YourValue]',  //Optional limit on the number of CryptoKeyVersions toinclude in the response. Further CryptoKeyVersions cansubsequently be obtained by including theListCryptoKeyVersionsResponse.next_page_token in a subsequent request.If unspecified, the server will pick an appropriate default.
   'fields' => '*'
 );
+// Single Request.
 $results = cryptoKeyVersionsListExample($service, $parent, $optParams);
 
 // Paginiation Example

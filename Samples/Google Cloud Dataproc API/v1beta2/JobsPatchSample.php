@@ -28,7 +28,7 @@
 // API Description: Manages Hadoop-based clusters and jobs on Google Cloud Platform.
 // API Documentation Link https://cloud.google.com/dataproc/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Dataproc/v1beta2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/dataproc/v1beta2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Dataproc($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'updateMask' => '[YourValue]',  //Required. Specifies the path, relative to <code>Job</code>, of the field to update. For example, to update the labels of a Job the <code>update_mask</code> parameter would be specified as <code>labels</code>, and the PATCH request body would specify the new value. <strong>Note:</strong> Currently, <code>labels</code> is the only field that can be updated.
   'fields' => '*'
 );
+// Single Request.
 $results = jobsPatchExample($service, $projectId, $region, $jobId, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: View Google Search Console data for your verified sites.
 // API Documentation Link https://developers.google.com/webmaster-tools/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Webmasters/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/webmasters/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation

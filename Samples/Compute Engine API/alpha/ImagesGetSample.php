@@ -28,7 +28,7 @@
 // API Description: Creates and runs virtual machines on Google Cloud Platform.
 // API Documentation Link https://developers.google.com/compute/docs/reference/latest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Compute/alpha/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/compute/alpha/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Compute($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = imagesGetExample($service, $project, $image, $optParams);
 
 

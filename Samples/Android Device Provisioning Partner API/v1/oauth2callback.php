@@ -28,7 +28,7 @@
 // API Description: Automates reseller integration into zero-touch enrollment by assigning devices to customers and creating device reports.
 // API Documentation Link https://developers.google.com/zero-touch/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Androidprovisioningpartner/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/androiddeviceprovisioning/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

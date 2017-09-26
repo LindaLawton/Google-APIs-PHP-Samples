@@ -28,7 +28,7 @@
 // API Description: A data platform for customers to create, manage, share and query data.
 // API Documentation Link https://cloud.google.com/bigquery/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Bigquery/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/bigquery/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Bigquery($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'deleteContents' => '[YourValue]',  //If True, delete all the tables in the dataset. If False and the dataset contains tables, the request will fail. Default is False
   'fields' => '*'
 );
+// Single Request.
 $results = datasetsDeleteExample($service, $projectId, $datasetId, $optParams);
 
 
@@ -84,7 +87,7 @@ function datasetsDeleteExample($service, $projectId, $datasetId, $optParams)
 		if (projectId == null)
 			throw new Exception("projectId is required.");
 		// Make the request and return the results.
-		return $service->datasets->DeleteDatasets($projectId, $datasetId, $optParams);
+		 $service->datasets->DeleteDatasets($projectId, $datasetId, $optParams);
 	}
 	catch (Exception $e)
 	{

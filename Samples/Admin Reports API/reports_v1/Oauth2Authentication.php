@@ -28,7 +28,7 @@
 // API Description: Fetches reports for the administrators of G Suite customers about the usage, collaboration, security, and risk for their users.
 // API Documentation Link https://developers.google.com/admin-sdk/reports/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Reports/reports_v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/admin/reports_v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

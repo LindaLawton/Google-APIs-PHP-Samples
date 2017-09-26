@@ -28,7 +28,7 @@
 // API Description: Accesses Tag Manager accounts and containers.
 // API Documentation Link https://developers.google.com/tag-manager/api/v1/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Tagmanager/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/tagmanager/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Tagmanager($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = triggersDeleteExample($service, $accountId, $containerId, $triggerId, $optParams);
 
 
@@ -87,7 +88,7 @@ function triggersDeleteExample($service, $accountId, $containerId, $triggerId, $
 		if (triggerId == null)
 			throw new Exception("triggerId is required.");
 		// Make the request and return the results.
-		return $service->triggers->DeleteTriggers($accountId, $containerId, $triggerId, $optParams);
+		 $service->triggers->DeleteTriggers($accountId, $containerId, $triggerId, $optParams);
 	}
 	catch (Exception $e)
 	{

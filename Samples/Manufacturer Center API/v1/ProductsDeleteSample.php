@@ -28,7 +28,7 @@
 // API Description: Public API for managing Manufacturer Center related data.
 // API Documentation Link https://developers.google.com/manufacturers/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Manufacturercenter/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/manufacturers/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Manufacturercenter($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = productsDeleteExample($service, $parent, $name, $optParams);
 
 

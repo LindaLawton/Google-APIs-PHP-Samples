@@ -28,7 +28,7 @@
 // API Description: Google Service Management allows service producers to publish their services on Google Cloud Platform so that they can be discovered and used by service consumers.
 // API Documentation Link https://cloud.google.com/service-management/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Servicemanagement/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/servicemanagement/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Servicemanagement($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageToken' => '[YourValue]',  //The token of the page to retrieve.
+            
+  //'pageSize' => '[YourValue]',  //The max number of items to include in the response list.
   'fields' => '*'
 );
+// Single Request.
 $results = configsListExample($service, $serviceName, $optParams);
 
 // Paginiation Example

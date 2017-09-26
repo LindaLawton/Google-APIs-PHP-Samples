@@ -28,7 +28,7 @@
 // API Description: Creates and runs virtual machines on Google Cloud Platform.
 // API Documentation Link https://developers.google.com/compute/docs/reference/latest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Compute/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/compute/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Compute($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = regionOperationsDeleteExample($service, $project, $region, $operation, $optParams);
 
 
@@ -87,7 +88,7 @@ function regionOperationsDeleteExample($service, $project, $region, $operation, 
 		if (region == null)
 			throw new Exception("region is required.");
 		// Make the request and return the results.
-		return $service->regionOperations->DeleteRegionOperations($project, $region, $operation, $optParams);
+		 $service->regionOperations->DeleteRegionOperations($project, $region, $operation, $optParams);
 	}
 	catch (Exception $e)
 	{

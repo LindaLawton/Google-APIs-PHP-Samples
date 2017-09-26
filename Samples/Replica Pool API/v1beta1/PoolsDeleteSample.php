@@ -28,7 +28,7 @@
 // API Description: The Replica Pool API allows users to declaratively provision and manage groups of Google Compute Engine instances based on a common template.
 // API Documentation Link https://developers.google.com/compute/docs/replica-pool/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Replicapool/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/replicapool/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Replicapool($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = poolsDeleteExample($service, $projectName, $zone, $poolName, $optParams);
 
 
@@ -87,7 +88,7 @@ function poolsDeleteExample($service, $projectName, $zone, $poolName, $optParams
 		if (zone == null)
 			throw new Exception("zone is required.");
 		// Make the request and return the results.
-		return $service->pools->DeletePools($projectName, $zone, $poolName, $optParams);
+		 $service->pools->DeletePools($projectName, $zone, $poolName, $optParams);
 	}
 	catch (Exception $e)
 	{

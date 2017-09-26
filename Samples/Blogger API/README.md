@@ -1,6 +1,6 @@
 ﻿![Blogger API](https://www.google.com/images/icons/product/blogger-32.png)
 
-# Unoffical Blogger API Samples for .NET  
+# Unoffical Blogger API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ API for access to the data within Blogger.
 
 ## Sample Description
 
-These samples show how to access the [Blogger API](https://developers.google.com/blogger/docs/3.0/getting_started) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Blogger API](https://developers.google.com/blogger/docs/3.0/getting_started) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

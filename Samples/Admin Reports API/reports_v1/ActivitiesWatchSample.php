@@ -28,7 +28,7 @@
 // API Description: Fetches reports for the administrators of G Suite customers about the usage, collaboration, security, and risk for their users.
 // API Documentation Link https://developers.google.com/admin-sdk/reports/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Reports/reports_v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/admin/reports_v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,27 @@ session_start();
 * $service = new Google_Service_Reports($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'actorIpAddress' => '[YourValue]',  //IP Address of host where the event was performed. Supports both IPv4 and IPv6 addresses.
+            
+  //'customerId' => '[YourValue]',  //Represents the customer for which the data is to be fetched.
+            
+  //'endTime' => '[YourValue]',  //Return events which occurred at or before this time.
+            
+  //'eventName' => '[YourValue]',  //Name of the event being queried.
+            
+  //'filters' => '[YourValue]',  //Event parameters in the form [parameter1 name][operator][parameter1 value],[parameter2 name][operator][parameter2 value],...
+            
+  //'maxResults' => '[YourValue]',  //Number of activity records to be shown in each page.
+            
+  //'pageToken' => '[YourValue]',  //Token to specify next page.
+            
+  //'startTime' => '[YourValue]',  //Return events which occurred at or after this time.
   'fields' => '*'
 );
+// Single Request.
 $results = activitiesWatchExample($service, $userKey, $applicationName, $optParams);
 
 // Paginiation Example

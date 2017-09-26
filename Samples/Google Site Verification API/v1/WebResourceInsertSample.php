@@ -28,7 +28,7 @@
 // API Description: Verifies ownership of websites or domains with Google.
 // API Documentation Link https://developers.google.com/site-verification/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Siteverification/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/siteVerification/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Siteverification($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = webResourceInsertExample($service, $verificationMethod, $optParams);
 
 

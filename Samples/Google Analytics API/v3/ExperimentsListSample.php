@@ -28,7 +28,7 @@
 // API Description: Views and manages your Google Analytics data.
 // API Documentation Link https://developers.google.com/analytics/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Analytics/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/analytics/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Analytics($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'max-results' => '[YourValue]',  //The maximum number of experiments to include in this response.
+            
+  //'start-index' => '[YourValue]',  //An index of the first experiment to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.
   'fields' => '*'
 );
+// Single Request.
 $results = experimentsListExample($service, $accountId, $webPropertyId, $profileId, $optParams);
 
 

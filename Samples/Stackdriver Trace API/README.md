@@ -1,6 +1,6 @@
 ﻿![Stackdriver Trace API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Stackdriver Trace API Samples for .NET  
+# Unoffical Stackdriver Trace API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Send and retrieve trace data from Stackdriver Trace. Data is generated and avail
 
 ## Sample Description
 
-These samples show how to access the [Stackdriver Trace API](https://cloud.google.com/trace) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Stackdriver Trace API](https://cloud.google.com/trace) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

@@ -28,7 +28,7 @@
 // API Description: Builds container images in the cloud.
 // API Documentation Link https://cloud.google.com/container-builder/docs/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudbuild/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudbuild/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Cloudbuild($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageToken' => '[YourValue]',  //Token to provide to skip to a particular spot in the list.
+            
+  //'pageSize' => '[YourValue]',  //Number of results to return in the list.
+            
+  //'filter' => '[YourValue]',  //The raw filter text to constrain the results.
   'fields' => '*'
 );
+// Single Request.
 $results = buildsListExample($service, $projectId, $optParams);
 
 // Paginiation Example

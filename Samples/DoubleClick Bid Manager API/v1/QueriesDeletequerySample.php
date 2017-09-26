@@ -28,7 +28,7 @@
 // API Description: API for viewing and managing your reports in DoubleClick Bid Manager.
 // API Documentation Link https://developers.google.com/bid-manager/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Doubleclickbidmanager/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/doubleclickbidmanager/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Doubleclickbidmanager($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = queriesDeletequeryExample($service, $queryId, $optParams);
 
 
@@ -81,7 +82,7 @@ function queriesDeletequeryExample($service, $queryId, $optParams)
 		if (queryId == null)
 			throw new Exception("queryId is required.");
 		// Make the request and return the results.
-		return $service->queries->DeletequeryQueries($queryId, $optParams);
+		 $service->queries->DeletequeryQueries($queryId, $optParams);
 	}
 	catch (Exception $e)
 	{

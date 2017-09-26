@@ -28,7 +28,7 @@
 // API Description: Lets Android application developers access their Google Play accounts.
 // API Documentation Link https://developers.google.com/android-publisher
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Androidpublisher/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/androidpublisher/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Androidpublisher($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'endTime' => '[YourValue]',  //The time, in milliseconds since the Epoch, of the newest voided in-app product purchase that you want to see in the response. The value of this parameter cannot be greater than the current time and is ignored if a pagination token is set. Default value is current time. Note: This filter is applied on the time at which the record is seen as voided by our systems and not the actual voided time returned in the response.
+            
+  //'maxResults' => '[YourValue]',  //
+            
+  //'startIndex' => '[YourValue]',  //
+            
+  //'startTime' => '[YourValue]',  //The time, in milliseconds since the Epoch, of the oldest voided in-app product purchase that you want to see in the response. The value of this parameter cannot be older than 30 days and is ignored if a pagination token is set. Default value is current time minus 30 days. Note: This filter is applied on the time at which the record is seen as voided by our systems and not the actual voided time returned in the response.
+            
+  //'token' => '[YourValue]',  //
   'fields' => '*'
 );
+// Single Request.
 $results = voidedpurchasesListExample($service, $packageName, $optParams);
 
 

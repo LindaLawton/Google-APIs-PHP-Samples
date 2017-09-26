@@ -28,7 +28,7 @@
 // API Description: Manages identity and access control for Google Cloud Platform resources, including the creation of service accounts, which you can use to authenticate to Google and make API calls.
 // API Documentation Link https://cloud.google.com/iam/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Iam/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/iam/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Iam($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'showDeleted' => '[YourValue]',  //Include Roles that have been deleted.
+            
+  //'pageToken' => '[YourValue]',  //Optional pagination token returned in an earlier ListRolesResponse.
+            
+  //'pageSize' => '[YourValue]',  //Optional limit on the number of roles to include in the response.
+            
+  //'view' => '[YourValue]',  //Optional view for the returned Role objects.
+            
+  //'parent' => '[YourValue]',  //The resource name of the parent resource in one of the following formats:`` (empty string) -- this refers to curated roles.`organizations/{ORGANIZATION_ID}``projects/{PROJECT_ID}`
   'fields' => '*'
 );
+// Single Request.
 $results = rolesListExample($service, $optParams);
 
 // Paginiation Example

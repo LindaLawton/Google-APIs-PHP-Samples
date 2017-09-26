@@ -28,7 +28,7 @@
 // API Description: Firebase Remote Config API allows the 3P clients to manage Remote Config conditions and parameters for Firebase applications.
 // API Documentation Link https://firebase.google.com/docs/remote-config/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Firebaseremoteconfig/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/firebaseremoteconfig/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Firebaseremoteconfig($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = projectsGetRemoteConfigExample($service, $project, $optParams);
 
 

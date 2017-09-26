@@ -28,7 +28,7 @@
 // API Description: Searches for books and manages your Google Books library.
 // API Documentation Link https://developers.google.com/books/docs/v1/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Books/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/books/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,23 @@ session_start();
 * $service = new Google_Service_Books($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'allowWebDefinitions' => '[YourValue]',  //For the dictionary layer. Whether or not to allow web definitions.
+            
+  //'h' => '[YourValue]',  //The requested pixel height for any images. If height is provided width must also be provided.
+            
+  //'locale' => '[YourValue]',  //The locale information for the data. ISO-639-1 language and ISO-3166-1 country code. Ex: 'en_US'.
+            
+  //'scale' => '[YourValue]',  //The requested scale for the image.
+            
+  //'source' => '[YourValue]',  //String to identify the originator of this request.
+            
+  //'w' => '[YourValue]',  //The requested pixel width for any images. If width is provided height must also be provided.
   'fields' => '*'
 );
+// Single Request.
 $results = annotationDataGetExample($service, $volumeId, $layerId, $annotationDataId, $contentVersion, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: The App Engine Admin API enables developers to provision and manage their App Engine applications.
 // API Documentation Link https://cloud.google.com/appengine/docs/admin-api/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Appengine/v1alpha/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/appengine/v1alpha/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Appengine($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'noManagedCertificate' => '[YourValue]',  //Whether a managed certificate should be provided by App Engine. If true, a certificate ID must be manually set in the DomainMapping resource to configure SSL for this domain. If false, a managed certificate will be provisioned and a certificate ID will be automatically populated. Only applicable if ssl_settings.certificate_id is specified in the update mask.
+            
+  //'updateMask' => '[YourValue]',  //Standard field mask for the set of fields to be updated.
   'fields' => '*'
 );
+// Single Request.
 $results = domainMappingsPatchExample($service, $appsId, $domainMappingsId, $optParams);
 
 

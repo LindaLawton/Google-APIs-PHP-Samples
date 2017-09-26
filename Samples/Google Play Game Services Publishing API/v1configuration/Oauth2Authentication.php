@@ -28,7 +28,7 @@
 // API Description: The Publishing API for Google Play Game Services.
 // API Documentation Link https://developers.google.com/games/services
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Gamesconfiguration/v1configuration/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/gamesConfiguration/v1configuration/rest
 //
 //------------------------------------------------------------------------------
 // Installation

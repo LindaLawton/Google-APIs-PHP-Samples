@@ -28,7 +28,7 @@
 // API Description: Manipulates events and other calendar data.
 // API Documentation Link https://developers.google.com/google-apps/calendar/firstapp
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Calendar/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Calendar($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'alwaysIncludeEmail' => '[YourValue]',  //Whether to always include a value in the email field for the organizer, creator and attendees, even if no real email is available (i.e. a generated, non-working value will be provided). The use of this option is discouraged and should only be used by clients which cannot handle the absence of an email address value in the mentioned places. Optional. The default is False.
+            
+  //'maxAttendees' => '[YourValue]',  //The maximum number of attendees to include in the response. If there are more than the specified number of attendees, only the participant is returned. Optional.
+            
+  //'timeZone' => '[YourValue]',  //Time zone used in the response. Optional. The default is the time zone of the calendar.
   'fields' => '*'
 );
+// Single Request.
 $results = eventsGetExample($service, $calendarId, $eventId, $optParams);
 
 

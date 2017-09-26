@@ -28,7 +28,7 @@
 // API Description: Groups Migration Api.
 // API Documentation Link https://developers.google.com/google-apps/groups-migration/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Groupsmigration/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/groupsmigration/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

@@ -28,7 +28,7 @@
 // API Description: Registers, manages, indexes, and searches beacons.
 // API Documentation Link https://developers.google.com/beacons/proximity/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Proximitybeacon/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/proximitybeacon/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Proximitybeacon($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'projectId' => '[YourValue]',  //The project id of the namespace to update. If the project id is notspecified then the project making the request is used. The project idmust match the project that owns the beacon.Optional.
   'fields' => '*'
 );
+// Single Request.
 $results = namespacesUpdateExample($service, $namespaceName, $optParams);
 
 

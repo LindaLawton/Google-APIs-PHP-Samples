@@ -28,7 +28,7 @@
 // API Description: Lets you access a cloud hosted machine learning service that makes it easy to build smart apps
 // API Documentation Link https://developers.google.com/prediction/docs/developer-guide
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Prediction/v1_3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/prediction/v1_3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Prediction($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = trainingDeleteExample($service, $data, $optParams);
 
 
@@ -81,7 +82,7 @@ function trainingDeleteExample($service, $data, $optParams)
 		if (data == null)
 			throw new Exception("data is required.");
 		// Make the request and return the results.
-		return $service->training->DeleteTraining($data, $optParams);
+		 $service->training->DeleteTraining($data, $optParams);
 	}
 	catch (Exception $e)
 	{

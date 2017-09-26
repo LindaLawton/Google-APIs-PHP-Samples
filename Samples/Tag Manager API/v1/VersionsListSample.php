@@ -28,7 +28,7 @@
 // API Description: Accesses Tag Manager accounts and containers.
 // API Documentation Link https://developers.google.com/tag-manager/api/v1/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Tagmanager/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/tagmanager/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Tagmanager($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'headers' => '[YourValue]',  //Retrieve headers only when true.
+            
+  //'includeDeleted' => '[YourValue]',  //Also retrieve deleted (archived) versions when true.
   'fields' => '*'
 );
+// Single Request.
 $results = versionsListExample($service, $accountId, $containerId, $optParams);
 
 

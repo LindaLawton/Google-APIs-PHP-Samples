@@ -1,6 +1,6 @@
 ﻿![Google Apps Script Execution API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Google Apps Script Execution API Samples for .NET  
+# Unoffical Google Apps Script Execution API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Executes functions in Google Apps Script projects.
 
 ## Sample Description
 
-These samples show how to access the [Google Apps Script Execution API](https://developers.google.com/apps-script/execution/rest/v1/scripts/run) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google Apps Script Execution API](https://developers.google.com/apps-script/execution/rest/v1/scripts/run) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

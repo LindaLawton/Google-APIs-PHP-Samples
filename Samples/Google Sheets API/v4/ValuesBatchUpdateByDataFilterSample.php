@@ -28,7 +28,7 @@
 // API Description: Reads and writes Google Sheets.
 // API Documentation Link https://developers.google.com/sheets/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Sheets/v4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/sheets/v4/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Sheets($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = valuesBatchUpdateByDataFilterExample($service, $spreadsheetId, $optParams);
 
 

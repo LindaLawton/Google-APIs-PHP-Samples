@@ -28,7 +28,7 @@
 // API Description: Manages product items, inventory, and Merchant Center accounts for Google Shopping.
 // API Documentation Link https://developers.google.com/shopping-content
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Shoppingcontent/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/content/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Shoppingcontent($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'overwrite' => '[YourValue]',  //Only available to selected merchants. When set to True, this flag removes any existing claim on the requested website by another account and replaces it with a claim from this account.
   'fields' => '*'
 );
+// Single Request.
 $results = accountsClaimwebsiteExample($service, $merchantId, $accountId, $optParams);
 
 

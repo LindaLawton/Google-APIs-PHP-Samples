@@ -28,7 +28,7 @@
 // API Description: Manages product items, inventory, and Merchant Center accounts for Google Shopping.
 // API Documentation Link https://developers.google.com/shopping-content
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Shoppingcontent/v2sandbox/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/content/v2sandbox/rest
 //
 //------------------------------------------------------------------------------
 // Installation

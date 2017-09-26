@@ -1,6 +1,6 @@
 ﻿![Calendar API](http://www.google.com/images/icons/product/calendar-32.png)
 
-# Unoffical Calendar API Samples for .NET  
+# Unoffical Calendar API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Manipulates events and other calendar data.
 
 ## Sample Description
 
-These samples show how to access the [Calendar API](https://developers.google.com/google-apps/calendar/firstapp) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Calendar API](https://developers.google.com/google-apps/calendar/firstapp) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

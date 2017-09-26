@@ -28,7 +28,7 @@
 // API Description: Manages OS login configuration for Directory API users.
 // API Documentation Link https://cloud.google.com/compute/docs/oslogin/rest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudoslogin/v1beta/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/oslogin/v1beta/rest
 //
 //------------------------------------------------------------------------------
 // Installation

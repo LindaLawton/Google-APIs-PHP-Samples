@@ -28,7 +28,7 @@
 // API Description: Provides polling places, early vote locations, contest data, election officials, and government representatives for U.S. residential addresses.
 // API Documentation Link https://developers.google.com/civic-information
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Civicinfo/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/civicinfo/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Civicinfo($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'electionId' => '[YourValue]',  //The unique ID of the election to look up. A list of election IDs can be obtained at https://www.googleapis.com/civicinfo/{version}/elections
+            
+  //'officialOnly' => '[YourValue]',  //If set to true, only data from official state sources will be returned.
+            
+  //'returnAllAvailableData' => '[YourValue]',  //If set to true, the query will return the success codeand include any partial information when it is unable to determine a matching address or unable to determine the election for electionId=0 queries.
   'fields' => '*'
 );
+// Single Request.
 $results = electionsVoterInfoQueryExample($service, $address, $optParams);
 
 

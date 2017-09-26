@@ -28,7 +28,7 @@
 // API Description: Schedules reporting jobs containing your YouTube Analytics data and downloads the resulting bulk data reports in the form of CSV files.
 // API Documentation Link https://developers.google.com/youtube/reporting/v1/reports/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Youtubereporting/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/youtubereporting/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Youtubereporting($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'includeSystemManaged' => '[YourValue]',  //If set to true, also system-managed report types will be returned;otherwise only the report types that can be used to create new reportingjobs will be returned.
+            
+  //'pageToken' => '[YourValue]',  //A token identifying a page of results the server should return. Typically,this is the value ofListReportTypesResponse.next_page_tokenreturned in response to the previous call to the `ListReportTypes` method.
+            
+  //'pageSize' => '[YourValue]',  //Requested page size. Server may return fewer report types than requested.If unspecified, server will pick an appropriate default.
+            
+  //'onBehalfOfContentOwner' => '[YourValue]',  //The content owner's external ID on which behalf the user is acting on. Ifnot set, the user is acting for himself (his own channel).
   'fields' => '*'
 );
+// Single Request.
 $results = reportTypesListExample($service, $optParams);
 
 // Paginiation Example

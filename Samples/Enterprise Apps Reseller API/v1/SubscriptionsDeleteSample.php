@@ -28,7 +28,7 @@
 // API Description: Creates and manages your customers and their subscriptions.
 // API Documentation Link https://developers.google.com/google-apps/reseller/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Reseller/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/reseller/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Reseller($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = subscriptionsDeleteExample($service, $customerId, $subscriptionId, $deletionType, $optParams);
 
 
@@ -87,7 +88,7 @@ function subscriptionsDeleteExample($service, $customerId, $subscriptionId, $del
 		if (subscriptionId == null)
 			throw new Exception("subscriptionId is required.");
 		// Make the request and return the results.
-		return $service->subscriptions->DeleteSubscriptions($customerId, $subscriptionId, $deletionType, $optParams);
+		 $service->subscriptions->DeleteSubscriptions($customerId, $subscriptionId, $deletionType, $optParams);
 	}
 	catch (Exception $e)
 	{

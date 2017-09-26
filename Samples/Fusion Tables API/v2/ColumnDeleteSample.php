@@ -28,7 +28,7 @@
 // API Description: API for working with Fusion Tables data.
 // API Documentation Link https://developers.google.com/fusiontables
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Fusiontables/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/fusiontables/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Fusiontables($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = columnDeleteExample($service, $tableId, $columnId, $optParams);
 
 
@@ -84,7 +85,7 @@ function columnDeleteExample($service, $tableId, $columnId, $optParams)
 		if (tableId == null)
 			throw new Exception("tableId is required.");
 		// Make the request and return the results.
-		return $service->column->DeleteColumn($tableId, $columnId, $optParams);
+		 $service->column->DeleteColumn($tableId, $columnId, $optParams);
 	}
 	catch (Exception $e)
 	{

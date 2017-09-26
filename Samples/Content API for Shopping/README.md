@@ -1,6 +1,6 @@
 ﻿![Content API for Shopping](https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png)
 
-# Unoffical Content API for Shopping Samples for .NET  
+# Unoffical Content API for Shopping Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Manages product items, inventory, and Merchant Center accounts for Google Shoppi
 
 ## Sample Description
 
-These samples show how to access the [Content API for Shopping](https://developers.google.com/shopping-content) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Content API for Shopping](https://developers.google.com/shopping-content) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

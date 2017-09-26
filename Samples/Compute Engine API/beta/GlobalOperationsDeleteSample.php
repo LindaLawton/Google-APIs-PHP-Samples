@@ -28,7 +28,7 @@
 // API Description: Creates and runs virtual machines on Google Cloud Platform.
 // API Documentation Link https://developers.google.com/compute/docs/reference/latest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Compute/beta/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/compute/beta/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Compute($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = globalOperationsDeleteExample($service, $project, $operation, $optParams);
 
 
@@ -84,7 +85,7 @@ function globalOperationsDeleteExample($service, $project, $operation, $optParam
 		if (project == null)
 			throw new Exception("project is required.");
 		// Make the request and return the results.
-		return $service->globalOperations->DeleteGlobalOperations($project, $operation, $optParams);
+		 $service->globalOperations->DeleteGlobalOperations($project, $operation, $optParams);
 	}
 	catch (Exception $e)
 	{

@@ -1,6 +1,6 @@
 ﻿![Google Play Developer API](https://www.google.com/images/icons/product/android-32.png)
 
-# Unoffical Google Play Developer API Samples for .NET  
+# Unoffical Google Play Developer API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Lets Android application developers access their Google Play accounts.
 
 ## Sample Description
 
-These samples show how to access the [Google Play Developer API](https://developers.google.com/android-publisher) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Google Play Developer API](https://developers.google.com/android-publisher) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

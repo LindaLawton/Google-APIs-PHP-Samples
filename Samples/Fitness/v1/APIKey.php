@@ -28,7 +28,7 @@
 // API Description: Stores and accesses user data in the fitness store from apps on any platform.
 // API Documentation Link https://developers.google.com/fit/rest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Fitness/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/fitness/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

@@ -28,7 +28,7 @@
 // API Description: Searches the Google Knowledge Graph for entities.
 // API Documentation Link https://developers.google.com/knowledge-graph/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Kgsearch/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/kgsearch/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,25 @@ session_start();
 * $service = new Google_Service_Kgsearch($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'prefix' => '[YourValue]',  //Enables prefix match against names and aliases of entities
+            
+  //'query' => '[YourValue]',  //The literal query string for search.
+            
+  //'types' => '[YourValue]',  //Restricts returned entities with these types, e.g. Person(as defined in http://schema.org/Person). If multiple types are specified,returned entities will contain one or more of these types.
+            
+  //'indent' => '[YourValue]',  //Enables indenting of json results.
+            
+  //'languages' => '[YourValue]',  //The list of language codes (defined in ISO 693) to run the query with,e.g. 'en'.
+            
+  //'ids' => '[YourValue]',  //The list of entity id to be used for search instead of query string.To specify multiple ids in the HTTP request, repeat the parameter in theURL as in ...?ids=A&ids=B
+            
+  //'limit' => '[YourValue]',  //Limits the number of entities to be returned.
   'fields' => '*'
 );
+// Single Request.
 $results = entitiesSearchExample($service, $optParams);
 
 

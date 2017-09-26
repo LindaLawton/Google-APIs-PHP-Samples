@@ -28,7 +28,7 @@
 // API Description: Creates and manages users and groups for accessing Google Compute Engine virtual machines.
 // API Documentation Link https://cloud.google.com/compute/docs/access/user-accounts/api/latest/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Clouduseraccounts/beta/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/clouduseraccounts/beta/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Clouduseraccounts($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = globalAccountsOperationsDeleteExample($service, $project, $operation, $optParams);
 
 
@@ -84,7 +85,7 @@ function globalAccountsOperationsDeleteExample($service, $project, $operation, $
 		if (project == null)
 			throw new Exception("project is required.");
 		// Make the request and return the results.
-		return $service->globalAccountsOperations->DeleteGlobalAccountsOperations($project, $operation, $optParams);
+		 $service->globalAccountsOperations->DeleteGlobalAccountsOperations($project, $operation, $optParams);
 	}
 	catch (Exception $e)
 	{

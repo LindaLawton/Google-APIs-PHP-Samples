@@ -28,7 +28,7 @@
 // API Description: The Android Management API provides remote enterprise management of Android devices and apps.
 // API Documentation Link https://developers.google.com/android/management
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Androidmanagement/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/androidmanagement/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

@@ -1,6 +1,6 @@
 ﻿![Ad Exchange Buyer API](https://www.google.com/images/icons/product/doubleclick-32.gif)
 
-# Unoffical Ad Exchange Buyer API Samples for .NET  
+# Unoffical Ad Exchange Buyer API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Accesses your bidding-account information, submits creatives for validation, fin
 
 ## Sample Description
 
-These samples show how to access the [Ad Exchange Buyer API](https://developers.google.com/ad-exchange/buyer-rest) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Ad Exchange Buyer API](https://developers.google.com/ad-exchange/buyer-rest) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

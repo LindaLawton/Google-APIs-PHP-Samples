@@ -1,6 +1,6 @@
 ﻿![Manufacturer Center API](http://www.google.com/images/icons/product/search-32.gif)
 
-# Unoffical Manufacturer Center API Samples for .NET  
+# Unoffical Manufacturer Center API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Public API for managing Manufacturer Center related data.
 
 ## Sample Description
 
-These samples show how to access the [Manufacturer Center API](https://developers.google.com/manufacturers/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Manufacturer Center API](https://developers.google.com/manufacturers/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

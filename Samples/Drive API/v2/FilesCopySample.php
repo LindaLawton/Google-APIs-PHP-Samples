@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,27 @@ session_start();
 * $service = new Google_Service_Drive($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'convert' => '[YourValue]',  //Whether to convert this file to the corresponding Google Docs format.
+            
+  //'ocr' => '[YourValue]',  //Whether to attempt OCR on .jpg, .png, .gif, or .pdf uploads.
+            
+  //'ocrLanguage' => '[YourValue]',  //If ocr is true, hints at the language to use. Valid values are BCP 47 codes.
+            
+  //'pinned' => '[YourValue]',  //Whether to pin the head revision of the new copy. A file can have a maximum of 200 pinned revisions.
+            
+  //'supportsTeamDrives' => '[YourValue]',  //Whether the requesting application supports Team Drives.
+            
+  //'timedTextLanguage' => '[YourValue]',  //The language of the timed text.
+            
+  //'timedTextTrackName' => '[YourValue]',  //The timed text track name.
+            
+  //'visibility' => '[YourValue]',  //The visibility of the new file. This parameter is only relevant when the source is not a native Google Doc and convert=false.
   'fields' => '*'
 );
+// Single Request.
 $results = filesCopyExample($service, $fileId, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: Manipulates events and other calendar data.
 // API Documentation Link https://developers.google.com/google-apps/calendar/firstapp
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Calendar/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Calendar($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = calendarListDeleteExample($service, $calendarId, $optParams);
 
 
@@ -81,7 +82,7 @@ function calendarListDeleteExample($service, $calendarId, $optParams)
 		if (calendarId == null)
 			throw new Exception("calendarId is required.");
 		// Make the request and return the results.
-		return $service->calendarList->DeleteCalendarList($calendarId, $optParams);
+		 $service->calendarList->DeleteCalendarList($calendarId, $optParams);
 	}
 	catch (Exception $e)
 	{

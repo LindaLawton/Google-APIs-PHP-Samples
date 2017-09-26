@@ -28,7 +28,7 @@
 // API Description: Analyzes the performance of a web page and provides tailored suggestions to make that page faster.
 // API Documentation Link https://developers.google.com/speed/docs/insights/v2/getting-started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Pagespeedonline/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/pagespeedonline/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,21 @@ session_start();
 * $service = new Google_Service_Pagespeedonline($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'filter_third_party_resources' => '[YourValue]',  //Indicates if third party resources should be filtered out before PageSpeed analysis.
+            
+  //'locale' => '[YourValue]',  //The locale used to localize formatted results
+            
+  //'rule' => '[YourValue]',  //A PageSpeed rule to run; if none are given, all rules are run
+            
+  //'screenshot' => '[YourValue]',  //Indicates if binary data containing a screenshot should be included
+            
+  //'strategy' => '[YourValue]',  //The analysis strategy to use
   'fields' => '*'
 );
+// Single Request.
 $results = pagespeedapiRunpagespeedExample($service, $url, $optParams);
 
 

@@ -28,7 +28,7 @@
 // API Description: Google Service Management allows service producers to publish their services on Google Cloud Platform so that they can be discovered and used by service consumers.
 // API Documentation Link https://cloud.google.com/service-management/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Servicemanagement/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/servicemanagement/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Servicemanagement($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageSize' => '[YourValue]',  //The maximum number of operations to return. If unspecified, defaults to50. The maximum value is 100.
+            
+  //'filter' => '[YourValue]',  //A string for filtering Operations.  The following filter fields are supported&#58;  * serviceName&#58; Required. Only `=` operator is allowed.  * startTime&#58; The time this job was started, in ISO 8601 format.    Allowed operators are `>=`,  `>`, `<=`, and `<`.  * status&#58; Can be `done`, `in_progress`, or `failed`. Allowed    operators are `=`, and `!=`.  Filter expression supports conjunction (AND) and disjunction (OR)  logical operators. However, the serviceName restriction must be at the  top-level and can only be combined with other restrictions via the AND  logical operator.  Examples&#58;  * `serviceName={some-service}.googleapis.com`  * `serviceName={some-service}.googleapis.com AND startTime>="2017-02-01"`  * `serviceName={some-service}.googleapis.com AND status=done`  * `serviceName={some-service}.googleapis.com AND (status=done OR startTime>="2017-02-01")`
+            
+  //'pageToken' => '[YourValue]',  //The standard list page token.
+            
+  //'name' => '[YourValue]',  //Not used.
   'fields' => '*'
 );
+// Single Request.
 $results = operationsListExample($service, $optParams);
 
 // Paginiation Example

@@ -28,7 +28,7 @@
 // API Description: Lets you access a cloud hosted machine learning service that makes it easy to build smart apps
 // API Documentation Link https://developers.google.com/prediction/docs/developer-guide
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Prediction/v1_2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/prediction/v1_2/rest
 //
 //------------------------------------------------------------------------------
 // Installation

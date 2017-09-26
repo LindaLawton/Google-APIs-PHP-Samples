@@ -28,7 +28,7 @@
 // API Description: Manages files in Drive including uploading, downloading, searching, detecting changes, and updating sharing permissions.
 // API Documentation Link https://developers.google.com/drive/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Drive/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/drive/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Drive($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'includeDeleted' => '[YourValue]',  //Whether to include deleted comments. Deleted comments will not include their original content.
+            
+  //'pageSize' => '[YourValue]',  //The maximum number of comments to return per page.
+            
+  //'pageToken' => '[YourValue]',  //The token for continuing a previous list request on the next page. This should be set to the value of 'nextPageToken' from the previous response.
+            
+  //'startModifiedTime' => '[YourValue]',  //The minimum value of 'modifiedTime' for the result comments (RFC 3339 date-time).
   'fields' => '*'
 );
+// Single Request.
 $results = commentsListExample($service, $fileId, $optParams);
 
 // Paginiation Example

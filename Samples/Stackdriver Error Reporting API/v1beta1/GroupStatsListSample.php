@@ -28,7 +28,7 @@
 // API Description: Groups and counts similar errors from cloud services and applications, reports new errors, and provides access to error groups and their associated errors.
 // API Documentation Link https://cloud.google.com/error-reporting/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Clouderrorreporting/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/clouderrorreporting/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,33 @@ session_start();
 * $service = new Google_Service_Clouderrorreporting($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'timedCountDuration' => '[YourValue]',  //[Optional] The preferred duration for a single returned `TimedCount`.If not set, no timed counts are returned.
+            
+  //'pageToken' => '[YourValue]',  //[Optional] A `next_page_token` provided by a previous response. To viewadditional results, pass this token along with the identical queryparameters as the first request.
+            
+  //'timeRange.period' => '[YourValue]',  //Restricts the query to the specified time range.
+            
+  //'alignment' => '[YourValue]',  //[Optional] The alignment of the timed counts to be returned.Default is `ALIGNMENT_EQUAL_AT_END`.
+            
+  //'groupId' => '[YourValue]',  //[Optional] List all <code>ErrorGroupStats</code> with these IDs.
+            
+  //'serviceFilter.service' => '[YourValue]',  //[Optional] The exact value to match against[`ServiceContext.service`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
+            
+  //'pageSize' => '[YourValue]',  //[Optional] The maximum number of results to return per response.Default is 20.
+            
+  //'order' => '[YourValue]',  //[Optional] The sort order in which the results are returned.Default is `COUNT_DESC`.
+            
+  //'serviceFilter.version' => '[YourValue]',  //[Optional] The exact value to match against[`ServiceContext.version`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
+            
+  //'serviceFilter.resourceType' => '[YourValue]',  //[Optional] The exact value to match against[`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
+            
+  //'alignmentTime' => '[YourValue]',  //[Optional] Time where the timed counts shall be aligned if roundedalignment is chosen. Default is 00:00 UTC.
   'fields' => '*'
 );
+// Single Request.
 $results = groupStatsListExample($service, $projectName, $optParams);
 
 // Paginiation Example

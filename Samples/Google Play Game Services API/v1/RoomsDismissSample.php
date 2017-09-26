@@ -28,7 +28,7 @@
 // API Description: The API for Google Play Game Services.
 // API Documentation Link https://developers.google.com/games/services/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Games/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/games/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Games($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'consistencyToken' => '[YourValue]',  //The last-seen mutation timestamp.
   'fields' => '*'
 );
+// Single Request.
 $results = roomsDismissExample($service, $roomId, $optParams);
 
 
@@ -81,7 +84,7 @@ function roomsDismissExample($service, $roomId, $optParams)
 		if (roomId == null)
 			throw new Exception("roomId is required.");
 		// Make the request and return the results.
-		return $service->rooms->DismissRooms($roomId, $optParams);
+		 $service->rooms->DismissRooms($roomId, $optParams);
 	}
 	catch (Exception $e)
 	{

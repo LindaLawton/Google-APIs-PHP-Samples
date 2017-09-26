@@ -1,6 +1,6 @@
 ﻿![Drive API](https://ssl.gstatic.com/docs/doclist/images/drive_icon_32.png)
 
-# Unoffical Drive API Samples for .NET  
+# Unoffical Drive API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Manages files in Drive including uploading, downloading, searching, detecting ch
 
 ## Sample Description
 
-These samples show how to access the [Drive API](https://developers.google.com/drive/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Drive API](https://developers.google.com/drive/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

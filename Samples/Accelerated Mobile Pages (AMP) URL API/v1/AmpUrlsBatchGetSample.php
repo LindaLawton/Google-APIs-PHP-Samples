@@ -28,7 +28,7 @@
 // API Description: Retrieves the list of AMP URLs (and equivalent AMP Cache URLs) for a given list of public URL(s).
 // API Documentation Link https://developers.google.com/amp/cache/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Acceleratedmobilepageurl/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/acceleratedmobilepageurl/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Acceleratedmobilepageurl($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = ampUrlsBatchGetExample($service, $optParams);
 
 

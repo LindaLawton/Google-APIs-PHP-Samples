@@ -28,7 +28,7 @@
 // API Description: Reads and publishes results from Firebase Test Lab.
 // API Documentation Link https://firebase.google.com/docs/test-lab/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Toolresults/v1beta3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/toolresults/v1beta3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Toolresults($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageSize' => '[YourValue]',  //The maximum number of thumbnails to fetch.Default value: 50. The server will use this default if the field is not set or has a value of 0.Optional.
+            
+  //'pageToken' => '[YourValue]',  //A continuation token to resume the query at the next item.Optional.
   'fields' => '*'
 );
+// Single Request.
 $results = thumbnailsListExample($service, $projectId, $historyId, $executionId, $stepId, $optParams);
 
 // Paginiation Example

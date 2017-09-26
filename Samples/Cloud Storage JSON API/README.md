@@ -1,6 +1,6 @@
 ﻿![Cloud Storage JSON API](https://www.google.com/images/icons/product/cloud_storage-32.png)
 
-# Unoffical Cloud Storage JSON API Samples for .NET  
+# Unoffical Cloud Storage JSON API Samples for PHP
 
 ## API Description
 
@@ -10,7 +10,7 @@ Lets you store and retrieve potentially-large, immutable data objects.
 
 ## Sample Description
 
-These samples show how to access the [Cloud Storage JSON API](https://developers.google.com/storage/docs/json_api/) with the Offical [Google .Net client library](https://github.com/google/google-api-dotnet-client)
+These samples show how to access the [Cloud Storage JSON API](https://developers.google.com/storage/docs/json_api/) with the Offical [Google PHP client library](https://github.com/google/google-api-php-client)
 
 Tutorials to go along with some of these samples can be found on [www.daimto.com](http://www.daimto.com/)
 

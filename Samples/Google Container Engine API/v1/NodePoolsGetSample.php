@@ -28,7 +28,7 @@
 // API Description: The Google Container Engine API is used for building and managing container based applications, powered by the open source Kubernetes technology.
 // API Documentation Link https://cloud.google.com/container-engine/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Container/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/container/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,11 @@ session_start();
 * $service = new Google_Service_Container($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
   'fields' => '*'
 );
+// Single Request.
 $results = nodePoolsGetExample($service, $projectId, $zone, $clusterId, $nodePoolId, $optParams);
 
 

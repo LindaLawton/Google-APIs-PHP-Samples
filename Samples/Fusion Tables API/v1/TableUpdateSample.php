@@ -28,7 +28,7 @@
 // API Description: API for working with Fusion Tables data.
 // API Documentation Link https://developers.google.com/fusiontables
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Fusiontables/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/fusiontables/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Fusiontables($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'replaceViewDefinition' => '[YourValue]',  //Should the view definition also be updated? The specified view definition replaces the existing one. Only a view can be updated with a new definition.
   'fields' => '*'
 );
+// Single Request.
 $results = tableUpdateExample($service, $tableId, $optParams);
 
 

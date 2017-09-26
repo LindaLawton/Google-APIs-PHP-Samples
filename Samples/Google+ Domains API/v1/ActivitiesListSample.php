@@ -28,7 +28,7 @@
 // API Description: Builds on top of the Google+ platform for Google Apps Domains.
 // API Documentation Link https://developers.google.com/+/domains/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Plusdomains/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/plusDomains/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Plusdomains($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of activities to include in the response, which is used for paging. For any response, the actual number returned might be less than the specified maxResults.
+            
+  //'pageToken' => '[YourValue]',  //The continuation token, which is used to page through large result sets. To get the next page of results, set this parameter to the value of "nextPageToken" from the previous response.
   'fields' => '*'
 );
+// Single Request.
 $results = activitiesListExample($service, $userId, $collection, $optParams);
 
 // Paginiation Example

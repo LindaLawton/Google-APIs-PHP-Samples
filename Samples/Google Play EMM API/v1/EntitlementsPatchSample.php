@@ -28,7 +28,7 @@
 // API Description: Manages the deployment of apps to Android for Work users.
 // API Documentation Link https://developers.google.com/android/work/play/emm-api
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Androidenterprise/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/androidenterprise/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Androidenterprise($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'install' => '[YourValue]',  //Set to true to also install the product on all the user's devices where possible. Failure to install on one or more devices will not prevent this operation from returning successfully, as long as the entitlement was successfully assigned to the user.
   'fields' => '*'
 );
+// Single Request.
 $results = entitlementsPatchExample($service, $enterpriseId, $userId, $entitlementId, $optParams);
 
 

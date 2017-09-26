@@ -28,7 +28,7 @@
 // API Description: Manages product items, inventory, and Merchant Center accounts for Google Shopping.
 // API Documentation Link https://developers.google.com/shopping-content
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Shoppingcontent/v2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/content/v2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Shoppingcontent($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'dryRun' => '[YourValue]',  //Flag to run the request in dry-run mode.
   'fields' => '*'
 );
+// Single Request.
 $results = productsDeleteExample($service, $merchantId, $productId, $optParams);
 
 
@@ -84,7 +87,7 @@ function productsDeleteExample($service, $merchantId, $productId, $optParams)
 		if (productId == null)
 			throw new Exception("productId is required.");
 		// Make the request and return the results.
-		return $service->products->DeleteProducts($merchantId, $productId, $optParams);
+		 $service->products->DeleteProducts($merchantId, $productId, $optParams);
 	}
 	catch (Exception $e)
 	{

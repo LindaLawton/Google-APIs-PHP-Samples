@@ -28,7 +28,7 @@
 // API Description: Reads and writes Google Sheets.
 // API Documentation Link https://developers.google.com/sheets/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Sheets/v4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/sheets/v4/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Sheets($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'majorDimension' => '[YourValue]',  //The major dimension that results should use.For example, if the spreadsheet data is: `A1=1,B1=2,A2=3,B2=4`,then requesting `range=A1:B2,majorDimension=ROWS` will return`[[1,2],[3,4]]`,whereas requesting `range=A1:B2,majorDimension=COLUMNS` will return`[[1,3],[2,4]]`.
+            
+  //'ranges' => '[YourValue]',  //The A1 notation of the values to retrieve.
+            
+  //'dateTimeRenderOption' => '[YourValue]',  //How dates, times, and durations should be represented in the output.This is ignored if value_render_option isFORMATTED_VALUE.The default dateTime render option is [DateTimeRenderOption.SERIAL_NUMBER].
+            
+  //'valueRenderOption' => '[YourValue]',  //How values should be represented in the output.The default render option is ValueRenderOption.FORMATTED_VALUE.
   'fields' => '*'
 );
+// Single Request.
 $results = valuesBatchGetExample($service, $spreadsheetId, $optParams);
 
 

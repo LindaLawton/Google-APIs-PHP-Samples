@@ -28,7 +28,7 @@
 // API Description: Searches the Google Knowledge Graph for entities.
 // API Documentation Link https://developers.google.com/knowledge-graph/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Kgsearch/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/kgsearch/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

@@ -28,7 +28,7 @@
 // API Description: Accesses AdSense publishers' inventory and generates performance reports.
 // API Documentation Link https://developers.google.com/adsense/management/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adsense/v1_4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adsense/v1_4/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Adsense($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'locale' => '[YourValue]',  //The locale to use for translating alert messages. The account locale will be used if this is not supplied. The AdSense default (English) will be used if the supplied locale is invalid or unsupported.
   'fields' => '*'
 );
+// Single Request.
 $results = alertsListExample($service, $optParams);
 
 

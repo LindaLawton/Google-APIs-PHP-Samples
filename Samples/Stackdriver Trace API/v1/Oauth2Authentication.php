@@ -28,7 +28,7 @@
 // API Description: Send and retrieve trace data from Stackdriver Trace. Data is generated and available by default for all App Engine applications. Data from other applications can be written to Stackdriver Trace for display, reporting, and analysis.
 // API Documentation Link https://cloud.google.com/trace
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudtrace/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudtrace/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation

@@ -28,7 +28,7 @@
 // API Description: Accesses AdSense publishers' inventory and generates performance reports.
 // API Documentation Link https://developers.google.com/adsense/management/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Adsense/v1_4/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/adsense/v1_4/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Adsense($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'maxResults' => '[YourValue]',  //The maximum number of custom channels to include in the response, used for paging.
+            
+  //'pageToken' => '[YourValue]',  //A continuation token, used to page through custom channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
   'fields' => '*'
 );
+// Single Request.
 $results = customchannelsListExample($service, $adClientId, $adUnitId, $optParams);
 
 // Paginiation Example

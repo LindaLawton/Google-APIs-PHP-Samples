@@ -28,7 +28,7 @@
 // API Description: Upload, process, query, and search Genomics data in the cloud.
 // API Documentation Link https://cloud.google.com/genomics
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Genomics/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/genomics/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,17 @@ session_start();
 * $service = new Google_Service_Genomics($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'pageToken' => '[YourValue]',  //The continuation token, which is used to page through large result sets.To get the next page of results, set this parameter to the value of`nextPageToken` from the previous response.
+            
+  //'pageSize' => '[YourValue]',  //The maximum number of results to return in a single page. If unspecified,defaults to 50. The maximum value is 1024.
+            
+  //'projectId' => '[YourValue]',  //Required. The Google Cloud project ID to list datasets for.
   'fields' => '*'
 );
+// Single Request.
 $results = datasetsListExample($service, $optParams);
 
 // Paginiation Example

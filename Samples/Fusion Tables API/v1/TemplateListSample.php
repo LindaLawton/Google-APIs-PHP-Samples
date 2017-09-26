@@ -28,7 +28,7 @@
 // API Description: API for working with Fusion Tables data.
 // API Documentation Link https://developers.google.com/fusiontables
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Fusiontables/v1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/fusiontables/v1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,15 @@ session_start();
 * $service = new Google_Service_Fusiontables($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'maxResults' => '[YourValue]',  //Maximum number of templates to return. Optional. Default is 5.
+            
+  //'pageToken' => '[YourValue]',  //Continuation token specifying which results page to return. Optional.
   'fields' => '*'
 );
+// Single Request.
 $results = templateListExample($service, $tableId, $optParams);
 
 // Paginiation Example

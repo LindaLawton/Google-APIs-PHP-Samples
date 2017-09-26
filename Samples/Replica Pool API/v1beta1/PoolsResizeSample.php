@@ -28,7 +28,7 @@
 // API Description: The Replica Pool API allows users to declaratively provision and manage groups of Google Compute Engine instances based on a common template.
 // API Documentation Link https://developers.google.com/compute/docs/replica-pool/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Replicapool/v1beta1/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/replicapool/v1beta1/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,13 @@ session_start();
 * $service = new Google_Service_Replicapool($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'numReplicas' => '[YourValue]',  //The desired number of replicas to resize to. If this number is larger than the existing number of replicas, new replicas will be added. If the number is smaller, then existing replicas will be deleted.
   'fields' => '*'
 );
+// Single Request.
 $results = poolsResizeExample($service, $projectName, $zone, $poolName, $optParams);
 
 

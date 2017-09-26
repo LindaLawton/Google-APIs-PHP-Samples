@@ -28,7 +28,7 @@
 // API Description: Accesses Google Cloud Monitoring data.
 // API Documentation Link https://cloud.google.com/monitoring/v2beta2/
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Cloudmonitoring/v2beta2/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/cloudmonitoring/v2beta2/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,25 @@ session_start();
 * $service = new Google_Service_Cloudmonitoring($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'aggregator' => '[YourValue]',  //The aggregation function that will reduce the data points in each window to a single point. This parameter is only valid for non-cumulative metrics with a value type of INT64 or DOUBLE.
+            
+  //'count' => '[YourValue]',  //Maximum number of time series descriptors per page. Used for pagination. If not specified, count = 100.
+            
+  //'labels' => '[YourValue]',  //A collection of labels for the matching time series, which are represented as:  - key==value: key equals the value - key=~value: key regex matches the value - key!=value: key does not equal the value - key!~value: key regex does not match the value  For example, to list all of the time series descriptors for the region us-central1, you could specify:label=cloud.googleapis.com%2Flocation=~us-central1.*
+            
+  //'oldest' => '[YourValue]',  //Start of the time interval (exclusive), which is expressed as an RFC 3339 timestamp. If neither oldest nor timespan is specified, the default time interval will be (youngest - 4 hours, youngest]
+            
+  //'pageToken' => '[YourValue]',  //The pagination token, which is used to page through large result sets. Set this value to the value of the nextPageToken to retrieve the next page of results.
+            
+  //'timespan' => '[YourValue]',  //Length of the time interval to query, which is an alternative way to declare the interval: (youngest - timespan, youngest]. The timespan and oldest parameters should not be used together. Units:  - s: second - m: minute - h: hour - d: day - w: week  Examples: 2s, 3m, 4w. Only one unit is allowed, for example: 2w3d is not allowed; you should use 17d instead.If neither oldest nor timespan is specified, the default time interval will be (youngest - 4 hours, youngest].
+            
+  //'window' => '[YourValue]',  //The sampling window. At most one data point will be returned for each window in the requested time interval. This parameter is only valid for non-cumulative metric types. Units:  - m: minute - h: hour - d: day - w: week  Examples: 3m, 4w. Only one unit is allowed, for example: 2w3d is not allowed; you should use 17d instead.
   'fields' => '*'
 );
+// Single Request.
 $results = timeseriesDescriptorsListExample($service, $project, $metric, $youngest, $optParams);
 
 // Paginiation Example

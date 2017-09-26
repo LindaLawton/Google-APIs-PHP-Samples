@@ -28,7 +28,7 @@
 // API Description: API for access to the data within Blogger.
 // API Documentation Link https://developers.google.com/blogger/docs/3.0/getting_started
 //
-// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/Blogger/v3/rest
+// Discovery Doc  https://www.googleapis.com/discovery/v1/apis/blogger/v3/rest
 //
 //------------------------------------------------------------------------------
 // Installation
@@ -55,10 +55,19 @@ session_start();
 * $service = new Google_Service_Blogger($client); 
 ****************************************************/
 
-// Single Request.
+// Option paramaters can be set as needed.
  $optParams = array(
+            
+  //'fetchUserInfo' => '[YourValue]',  //Whether the response is a list of blogs with per-user information instead of just blogs.
+            
+  //'role' => '[YourValue]',  //User access types for blogs to include in the results, e.g. AUTHOR will return blogs where the user has author level access. If no roles are specified, defaults to ADMIN and AUTHOR roles.
+            
+  //'status' => '[YourValue]',  //Blog statuses to include in the result (default: Live blogs only). Note that ADMIN access is required to view deleted blogs.
+            
+  //'view' => '[YourValue]',  //Access level with which to view the blogs. Note that some fields require elevated access.
   'fields' => '*'
 );
+// Single Request.
 $results = blogsListByUserExample($service, $userId, $optParams);
 
 
